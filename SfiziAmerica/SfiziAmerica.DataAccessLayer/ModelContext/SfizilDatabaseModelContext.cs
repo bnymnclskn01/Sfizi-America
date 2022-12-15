@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace SfiziAmerica.DataAccessLayer.ModelContext
 {
-    public class CanadaSchoolDatabaseModelContext : DbContext
+    public class SfizilDatabaseModelContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-
+            optionsBuilder.UseSqlServer(@"Server=94.73.170.33;Database=u8434080_Sfizi;User ID=u8434080_Sfizi;Password=4muAUi47wFmP7bl;Trusted_Connection=False;");
         }
         public virtual DbSet<About> Abouts { get; set; }
         public virtual DbSet<ApplicationForm> ApplicationForms { get; set; }

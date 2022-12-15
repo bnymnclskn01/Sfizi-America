@@ -12,7 +12,7 @@ namespace SfiziAmerica.EntityLayer.Model
     public class CategoryMenu : BasicEntity, IEntity
     {
         public Guid MenuCategoryID { get; set; }
-        public CategoryMenu ParentCategory { get; set; }
+        public MenuCategory MenuCategory { get; set; }
         public Guid MenuID { get; set; }
         public Menu Menu { get; set; }
     }
