@@ -35,6 +35,9 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.DataAccessLayer\\SfiziAmerica.DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.DataAccessLayer\\SfiziAmerica.DataAccessLayer.csproj"
+              },
               "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.EntityLayer\\SfiziAmerica.EntityLayer.csproj": {
                 "projectPath": "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.EntityLayer\\SfiziAmerica.EntityLayer.csproj"
               }

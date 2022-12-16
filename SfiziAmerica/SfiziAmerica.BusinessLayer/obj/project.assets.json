@@ -1764,6 +1764,21 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "SfiziAmerica.DataAccessLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.17",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17",
+          "SfiziAmerica.EntityLayer": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SfiziAmerica.DataAccessLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SfiziAmerica.DataAccessLayer.dll": {}
+        }
+      },
       "SfiziAmerica.EntityLayer/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -6046,6 +6061,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "SfiziAmerica.DataAccessLayer/1.0.0": {
+      "type": "project",
+      "path": "../SfiziAmerica.DataAccessLayer/SfiziAmerica.DataAccessLayer.csproj",
+      "msbuildProject": "../SfiziAmerica.DataAccessLayer/SfiziAmerica.DataAccessLayer.csproj"
+    },
     "SfiziAmerica.EntityLayer/1.0.0": {
       "type": "project",
       "path": "../SfiziAmerica.EntityLayer/SfiziAmerica.EntityLayer.csproj",
@@ -6058,6 +6078,7 @@
       "Microsoft.EntityFrameworkCore.Design >= 5.0.17",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.17",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.17",
+      "SfiziAmerica.DataAccessLayer >= 1.0.0",
       "SfiziAmerica.EntityLayer >= 1.0.0"
     ]
   },
@@ -6097,6 +6118,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.DataAccessLayer\\SfiziAmerica.DataAccessLayer.csproj": {
+              "projectPath": "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.DataAccessLayer\\SfiziAmerica.DataAccessLayer.csproj"
+            },
             "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.EntityLayer\\SfiziAmerica.EntityLayer.csproj": {
               "projectPath": "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.EntityLayer\\SfiziAmerica.EntityLayer.csproj"
             }
