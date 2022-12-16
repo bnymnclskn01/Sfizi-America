@@ -10,16 +10,16 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="mt-0 header-title">About List (Hakkımızda Listele)</h4>
+                <h4 class="mt-0 header-title">About List</h4>
 
                 <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap">
                     <thead>
                         <tr>
-                            <th>Title (Başlık)</th>
-                            <th>Image (Resim)</th>
-                            <th>Create Date (Ekleme Tarihi)</th>
-                            <th>Update Date(Güncelleme Tarihi)</th>
-                            <th>Aktif Durumu (Status)</th>
+                            <th>Title</th>
+                            <th>Image</th>
+                            <th>Create Date</th>
+                            <th>Update Date</th>
+                            <th>Status</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -35,17 +35,15 @@
                                 <td>@item.LastDate.ToShortDateString()</td>
                                 @if (item.IsActive)
                                 {
-                                    <td>Aktif (Active)</td>
+                                    <td>Active</td>
                                 }
                                 else
                                 {
-                                    <td>Pasif (Passive)</td>
+                                    <td>Passive</td>
                                 }
                                 <td>
-                                    <a href="/admin/hakkimizda-guncelle/@item.ID" class="btn btn-sm btn-primary"><i class='bx bx-edit'></i></a>
-                                </td>
-                                <td>
-                                    <button data-id="@item.ID" class="btn btn-danger btn-sm btnDelete"><i class='bx bx-trash'></i></button>
+                                    <a href="/admin/hakkimizda-guncelle/@item.ID" class="btn btn-sm btn-primary"><i class='fa fa-edit'></i></a>
+                                    <button data-id="@item.ID" class="btn btn-danger btn-sm btnDelete"><i class='fa fa-trash'></i></button>
                                 </td>
                             </tr>
                         }
