@@ -1837,6 +1837,7 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.17",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17",
+          "SfiziAmerica.DataAccessLayer": "1.0.0",
           "SfiziAmerica.EntityLayer": "1.0.0"
         },
         "runtime": {

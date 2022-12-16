@@ -13,7 +13,7 @@ namespace SfiziAmerica.EntityLayer.Model
     {
         public string NameSurname { get; set; }
         public string Email { get; set; }
-        public string Phone { get; set; }// CKEDITOR
+        public string Phone { get; set; }
         public string Password { get; set; }
     }
 }

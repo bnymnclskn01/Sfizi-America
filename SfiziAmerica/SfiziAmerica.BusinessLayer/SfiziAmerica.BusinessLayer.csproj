@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SfiziAmerica.DataAccessLayer\SfiziAmerica.DataAccessLayer.csproj" />
     <ProjectReference Include="..\SfiziAmerica.EntityLayer\SfiziAmerica.EntityLayer.csproj" />
   </ItemGroup>
 
