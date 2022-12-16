@@ -1,6 +1,5 @@
-﻿@model SfiziAmerica.WebUIandUX.Areas.Admin.ViewModel.updateAboutViewModel
-@{
-    ViewData["Title"] = "Update New About";
+﻿@{
+    ViewData["Title"] = "Update New Mission";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 @section scripts{
@@ -8,13 +7,13 @@
         CKEDITOR.replace('Description');
         CKEDITOR.instances.Description.setData(`@Html.Raw(Model.About.Description)`);
     </script>
-    <script src="/PageJs/updateAbout.js"></script>
+    <script src="/PageJs/updateMission.js"></script>
 }
 <div class="row">
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="header-title">Update New About</h4>
+                <h4 class="header-title">Update New Mission</h4>
                 <div class="row">
                     <div class="col-lg-12">
                         <form id="form-submit">
@@ -51,7 +50,7 @@
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <button type="submit" class="btn btn-outline-primary d-inline-block"><i class="fa fa-edit"></i> Update New About</button>
+                                <button type="submit" class="btn btn-outline-primary d-inline-block"><i class="fa fa-edit"></i> Update New Mission</button>
                                 <a href="/admin/hakkimizda-listele" class="btn btn-outline-dark"><i class="fa fa-reply-all"></i> Back To List</a>
                             </div>
                         </form>
