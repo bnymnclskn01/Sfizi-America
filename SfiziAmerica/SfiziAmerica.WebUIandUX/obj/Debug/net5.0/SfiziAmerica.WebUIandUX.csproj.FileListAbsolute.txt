@@ -163,3 +163,6 @@ C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.
 C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Debug\net5.0\Razor\Areas\Admin\Views\ActionAbout\Edit.cshtml.g.cs
 C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Debug\net5.0\Razor\Areas\Admin\Views\ActionMission\Index.cshtml.g.cs
 C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Debug\net5.0\Razor\Areas\Admin\Views\ActionMission\Create.cshtml.g.cs
+C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Debug\net5.0\Razor\Areas\Admin\Views\ActionMission\Edit.cshtml.g.cs
+C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Debug\net5.0\Razor\Areas\Admin\Views\ActionVision\Create.cshtml.g.cs
+C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Debug\net5.0\Razor\Areas\Admin\Views\ActionVision\Index.cshtml.g.cs

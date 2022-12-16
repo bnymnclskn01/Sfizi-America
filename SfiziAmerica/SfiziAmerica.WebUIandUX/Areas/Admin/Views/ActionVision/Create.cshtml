@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewData["Title"] = "Add New Vision";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+@section scripts{
+    <script src="/PageJs/addVision.js"></script>
+}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="header-title">Add New Vision</h4>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form id="form-submit">
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Picture</label>
+                                <input type="file" class="form-control" name="ImageUrl" required accept="image/*">
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Title</label>
+                                <input required class="form-control" name="Title" type="text" placeholder="Please Enter About Title">
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Short Description</label>
+                                <textarea class="form-control" name="ShortDescription" placeholder="Please Enter Short Description"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Description</label>
+                                <textarea id="Description" class="form-control ckeditor" name="Description" required placeholder="Please Enter Description"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Status</label>
+                                <select required name="IsActive" class="form-select">
+                                    <option value="1">Active</option>
+                                    <option value="0">Passive</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <button type="submit" class="btn btn-outline-success d-inline-block"><i class="fa fa-check"></i> Add New Vision</button>
+                                <a href="/admin/vizyon-listele" class="btn btn-outline-dark"><i class="fa fa-reply-all"></i> Back To List</a>
+                            </div>
+                        </form>
+                    </div> <!-- end col -->
+                </div>
+                <!-- end row-->
+
+            </div> <!-- end card-body -->
+        </div> <!-- end card -->
+    </div><!-- end col -->
+</div>
+<!-- end row -->

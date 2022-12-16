@@ -14,7 +14,7 @@ namespace SfiziAmerica.DataAccessLayer.ModelContext
         {
             optionsBuilder.UseSqlServer(@"Server=94.73.170.33;Database=u8434080_Sfizi;User ID=u8434080_Sfizi;Password=4muAUi47wFmP7bl;Trusted_Connection=False;");
         }
-        public virtual DbSet<About> Abouts { get; set; }
+        public virtual DbSet<About> Abouts { get; set; } // BİTTİ
         public virtual DbSet<ApplicationForm> ApplicationForms { get; set; }
         public virtual DbSet<BookComment> BookComments { get; set; }
         public virtual DbSet<CategoryMenu> CategoryMenus { get; set; }
@@ -28,13 +28,13 @@ namespace SfiziAmerica.DataAccessLayer.ModelContext
         public virtual DbSet<Menu> Menus { get; set; }
         public virtual DbSet<MenuCategory> MenuCategories { get; set; }
         public virtual DbSet<MenuSeo> MenuSeo { get; set; }
-        public virtual DbSet<Mision> Misions { get; set; }
+        public virtual DbSet<Mision> Misions { get; set; } // BİTTİ
         public virtual DbSet<Rezervation> Rezervations { get; set; }
         public virtual DbSet<Slider> Sliders { get; set; }
         public virtual DbSet<SocialMedia> SocialMedias { get; set; }
         public virtual DbSet<UserMember> UserMembers { get; set; }
         public virtual DbSet<UserRole> UserRoles { get; set; }
-        public virtual DbSet<Vision> Visions { get; set; }
+        public virtual DbSet<Vision> Visions { get; set; } // BİTTİ
 
     }
 }
