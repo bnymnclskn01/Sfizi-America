@@ -1,0 +1,66 @@
+﻿@model SfiziAmerica.WebUIandUX.Areas.Admin.ViewModel.updateSliderViewModel
+@{
+    ViewData["Title"] = "Update New Slider";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+@section scripts{
+    <script>
+        CKEDITOR.replace('Description');
+        CKEDITOR.instances.Description.setData(`@Html.Raw(Model.Slider.Description)`);
+    </script>
+    <script src="/PageJs/updateSlider.js"></script>
+}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="header-title">Update New About</h4>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form id="form-submit">
+                            <input hidden name="ID" value="@Model.Slider.ID" />
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Rank</label>
+                                <input required class="form-control" name="Rank" type="number" maxlength="3" value="@Model.Slider.Rank" placeholder="Please Enter Slider Rank">
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Picture</label>
+                                <input type="file" class="form-control" name="ImageUrl" accept="image/*">
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Title</label>
+                                <input required value="@Model.Slider.Title" class="form-control" name="Title" type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Description</label>
+                                <textarea id="Description" class="form-control ckeditor" name="Description" required></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Status</label>
+                                <select required name="IsActive" class="form-select">
+                                    @if (Model.Slider.IsActive == true)
+                                    {
+                                        <option selected value="1">Aktif</option>
+                                        <option value="0">Pasif</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="1">Aktif</option>
+                                        <option selected value="0">Pasif</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <button type="submit" class="btn btn-outline-primary d-inline-block"><i class="fa fa-edit"></i> Update New Slider</button>
+                                <a href="/admin/slider-listele" class="btn btn-outline-dark"><i class="fa fa-reply-all"></i> Back To List</a>
+                            </div>
+                        </form>
+                    </div> <!-- end col -->
+                </div>
+                <!-- end row-->
+
+            </div> <!-- end card-body -->
+        </div> <!-- end card -->
+    </div><!-- end col -->
+</div>
+<!-- end row -->

@@ -1,0 +1,59 @@
+﻿@model IList<SfiziAmerica.EntityLayer.Model.Slider>
+@{
+    ViewData["Title"] = "Slider Listele";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+@section scripts{
+    <script src="/PageJs/slider.js"></script>
+}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="mt-0 header-title">Slider List</h4>
+
+                <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Title</th>
+                            <th>Image</th>
+                            <th>Create Date</th>
+                            <th>Update Date</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.Rank</td>
+                                <td>@item.Title</td>
+                                <td><img src="/Image/Slider/@item.ImageVideoUrl" width="100" /></td>
+                                <td>@item.CreateDate.ToShortDateString()</td>
+                                <td>@item.LastDate.ToShortDateString()</td>
+                                @if (item.IsActive)
+                                {
+                                    <td>Active</td>
+                                }
+                                else
+                                {
+                                    <td>Passive</td>
+                                }
+                                <td>
+                                    <a href="/admin/slider-guncelle/@item.ID" class="btn btn-sm btn-primary"><i class='fa fa-edit'></i></a>
+                                    <button data-id="@item.ID" class="btn btn-danger btn-sm btnDelete"><i class='fa fa-trash'></i></button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- end row -->
