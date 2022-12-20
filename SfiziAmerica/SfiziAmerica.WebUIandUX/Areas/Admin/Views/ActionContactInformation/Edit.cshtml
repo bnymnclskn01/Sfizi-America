@@ -1,0 +1,93 @@
+﻿@model SfiziAmerica.WebUIandUX.Areas.Admin.ViewModel.updateContactInformationViewModel
+@{
+    ViewData["Title"] = "Update New Contact Information";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+@section scripts{
+    <script src="/PageJs/updateContactInformation.js"></script>
+}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="header-title">Update New Contact Information</h4>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form id="form-submit">
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Address</label>
+                                <textarea class="form-control" name="Address" maxlength="500" required placeholder="Please Enter Address" rows="5">@Model.ContactInformation.Address</textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Address - 2</label>
+                                <textarea class="form-control" name="Address2" maxlength="500" placeholder="Not a Required Field. Please Enter Address" rows="5">@Model.ContactInformation.Address2</textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Address - 3</label>
+                                <textarea class="form-control" name="Address3" maxlength="500" placeholder="Not a Required Field. Please Enter Address" rows="5">@Model.ContactInformation.Address3</textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Address - 4</label>
+                                <textarea class="form-control" name="Address4" maxlength="500" placeholder="Not a Required Field. Please Enter Address" rows="5">@Model.ContactInformation.Address4</textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Phone</label>
+                                <input type="tel" class="form-control" value="@Model.ContactInformation.Phone" name="Phone" maxlength="15" required placeholder="Please Enter Phone Trial : 7035331191" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Phone - 2</label>
+                                <input type="tel" class="form-control" value="@Model.ContactInformation.Phone2" name="Phone2" maxlength="15" placeholder="Not a Required Field. Please Enter Phone Trial : 7035331191" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Phone - 3</label>
+                                <input type="tel" class="form-control" value="@Model.ContactInformation.Phone3" name="Phone3" maxlength="15" placeholder="Not a Required Field. Please Enter Phone Trial : 7035331191" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Phone - 4</label>
+                                <input type="tel" class="form-control" value="@Model.ContactInformation.Phone4" name="Phone4" maxlength="15" placeholder="Not a Required Field. Please Enter Phone Trial : 7035331191" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Email</label>
+                                <input type="email" class="form-control" value="@Model.ContactInformation.Email" name="Email" maxlength="100" required placeholder="Please Enter Email Trial : info@sfizi.com" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Email - 2</label>
+                                <input type="email" class="form-control" value="@Model.ContactInformation.Email2" name="Email2" maxlength="100" placeholder="Not a Required Field.Please Enter Email Trial : info@sfizi.com" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Email - 3</label>
+                                <input type="email" class="form-control" value="@Model.ContactInformation.Email3" name="Email3" maxlength="100" placeholder="Not a Required Field.Please Enter Email Trial : info@sfizi.com" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Email - 4</label>
+                                <input type="email" class="form-control" value="@Model.ContactInformation.Email4" name="Email4" maxlength="100" placeholder="Not a Required Field.Please Enter Email Trial : info@sfizi.com" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Status</label>
+                                <select required name="IsActive" class="form-select">
+                                    @if (Model.ContactInformation.IsActive == true)
+                                    {
+                                        <option selected value="1">Aktif</option>
+                                            <option value="0">Pasif</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="1">Aktif</option>
+                                        <option selected value="0">Pasif</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <button type="submit" class="btn btn-outline-primary d-inline-block"><i class="fa fa-edit"></i> Update New Contact Information</button>
+                                <a href="/admin/iletisim-bilgileri-listele" class="btn btn-outline-dark"><i class="fa fa-reply-all"></i> Back To List</a>
+                            </div>
+                        </form>
+                    </div> <!-- end col -->
+                </div>
+                <!-- end row-->
+
+            </div> <!-- end card-body -->
+        </div> <!-- end card -->
+    </div><!-- end col -->
+</div>
+<!-- end row -->
