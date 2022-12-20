@@ -21,7 +21,7 @@ namespace SfiziAmerica.DataAccessLayer.ModelContext
         public virtual DbSet<Catering> Caterings { get; set; }
         public virtual DbSet<CateringMenu> CateringMenus { get; set; }
         public virtual DbSet<ContactForm> ContactForms { get; set; }
-        public virtual DbSet<ContactInformation> ContactInformations { get; set; }
+        public virtual DbSet<ContactInformation> ContactInformations { get; set; } // Bitti
         public virtual DbSet<CustomerSigin> CustomerSigin { get; set; }
         public virtual DbSet<HR> HR { get; set; }
         public virtual DbSet<MailSetting> MailSettings { get; set; }
