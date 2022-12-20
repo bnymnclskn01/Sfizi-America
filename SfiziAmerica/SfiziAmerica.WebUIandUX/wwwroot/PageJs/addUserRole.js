@@ -4,8 +4,8 @@
     const activeValue = Number($('select[name=IsActive]').val())
     const fdata = new FormData();
 
-    fdata.append('WhatsApp', $('input[name=RoleName]').val())
-    fdata.append('Phone', $('input[name=RoleCode]').val())
+    fdata.append('RoleName', $('input[name=RoleName]').val())
+    fdata.append('RoleCode', $('input[name=RoleCode]').val())
     fdata.append('IsActive', activeValue === 1 ? true : false)
 
     addRequest(fdata)
