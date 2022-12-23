@@ -15,8 +15,8 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.Controllers
     [Area("Admin")]
     public class ActionVisionController : Controller
     {
-        DbContext context = new SfizilDatabaseModelContext();
-        UnitOfWork unitOfWork;
+        private DbContext context = new SfizilDatabaseModelContext();
+        private UnitOfWork unitOfWork;
         public ActionVisionController()
         {
             unitOfWork = new(context);

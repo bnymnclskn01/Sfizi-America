@@ -14,8 +14,8 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.Controllers
     [Area("Admin")]
     public class ActionUserMemberController : Controller
     {
-        DbContext context = new SfizilDatabaseModelContext();
-        UnitOfWork unitOfWork;
+        private DbContext context = new SfizilDatabaseModelContext();
+        private UnitOfWork unitOfWork;
         public ActionUserMemberController()
         {
             unitOfWork = new(context);
