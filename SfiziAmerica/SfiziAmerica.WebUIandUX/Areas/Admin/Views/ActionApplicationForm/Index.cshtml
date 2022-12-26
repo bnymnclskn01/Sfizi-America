@@ -1,0 +1,70 @@
+﻿@model IEnumerable<SfiziAmerica.EntityLayer.Model.ApplicationForm>
+@{
+    ViewData["Title"] = "Application Form List";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+@section scripts{
+    <script src="/PageJs/applicationForm.js"></script>
+}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="mt-0 header-title">Application Form List</h4>
+
+                <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap">
+                    <thead>
+                        <tr>
+                            <th>Name Surname</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Subject</th>
+                            <th>Create Date</th>
+                            <th>Update Date</th>
+                            <th>Status</th>
+                            <th>Read Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.NameSurname</td>
+                                <td>@item.Email</td>
+                                <td>@item.Phone</td>
+                                <td>@item.Subject</td>
+                                <td>@item.CreateDate.ToShortDateString()</td>
+                                <td>@item.LastDate.ToShortDateString()</td>
+                                @if (item.IsActive)
+                                {
+                                    <td>Active</td>
+                                }
+                                else
+                                {
+                                    <td>Passive</td>
+                                }
+                                @if (item.IsRead)
+                                {
+                                    <td>Read</td>
+                                }
+                                else
+                                {
+                                    <td>Unread</td>
+                                }
+                                <td>
+                                    <a href="/admin/basvuru-formu-detayi/@item.ID" class="btn btn-sm btn-warning"><i class='fa fa-eye'></i></a>
+                                    <button data-id="@item.ID" class="btn btn-danger btn-sm btnDelete"><i class='fa fa-trash'></i></button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- end row -->

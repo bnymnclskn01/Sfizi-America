@@ -15,15 +15,15 @@ namespace SfiziAmerica.DataAccessLayer.ModelContext
             optionsBuilder.UseSqlServer(@"Server=94.73.170.33;Database=u8434080_Sfizi;User ID=u8434080_Sfizi;Password=4muAUi47wFmP7bl;Trusted_Connection=False;");
         }
         public virtual DbSet<About> Abouts { get; set; } // BİTTİ
-        public virtual DbSet<ApplicationForm> ApplicationForms { get; set; }
+        public virtual DbSet<ApplicationForm> ApplicationForms { get; set; } //BİTTİ
         public virtual DbSet<BookComment> BookComments { get; set; }
         public virtual DbSet<CategoryMenu> CategoryMenus { get; set; }
         public virtual DbSet<Catering> Caterings { get; set; }
         public virtual DbSet<CateringMenu> CateringMenus { get; set; }
         public virtual DbSet<ContactForm> ContactForms { get; set; } //BİTTİ
-        public virtual DbSet<ContactInformation> ContactInformations { get; set; } // Bitti
+        public virtual DbSet<ContactInformation> ContactInformations { get; set; } // BİTTİ
         public virtual DbSet<CustomerSigin> CustomerSigin { get; set; }
-        public virtual DbSet<HR> HR { get; set; }
+        public virtual DbSet<HR> HR { get; set; } //BİTTİ
         public virtual DbSet<MailSetting> MailSettings { get; set; } // BİTTİ
         public virtual DbSet<Menu> Menus { get; set; }
         public virtual DbSet<MenuCategory> MenuCategories { get; set; }

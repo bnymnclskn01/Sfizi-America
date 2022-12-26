@@ -183,3 +183,7 @@ C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.
 C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Debug\net5.0\Razor\Areas\Admin\Views\ActionMailSetting\Create.cshtml.g.cs
 C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Debug\net5.0\Razor\Areas\Admin\Views\ActionMailSetting\Edit.cshtml.g.cs
 C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Debug\net5.0\Razor\Areas\Admin\Views\ActionContactForm\Index.cshtml.g.cs
+C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Debug\net5.0\Razor\Areas\Admin\Views\ActionContactForm\Details.cshtml.g.cs
+C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Debug\net5.0\Razor\Areas\Admin\Views\ActionApplicationForm\Index.cshtml.g.cs
+C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Debug\net5.0\Razor\Areas\Admin\Views\ActionApplicationForm\Details.cshtml.g.cs
+C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Debug\net5.0\Razor\Areas\Admin\Views\ActionHRForm\Index.cshtml.g.cs
