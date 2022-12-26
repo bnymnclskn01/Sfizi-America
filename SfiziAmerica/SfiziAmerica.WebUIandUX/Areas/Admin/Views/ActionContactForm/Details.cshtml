@@ -1,0 +1,68 @@
+﻿@model SfiziAmerica.EntityLayer.Model.ContactForm
+@{
+    ViewData["Title"] = "Contact Form Details";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="header-title">Add New Contact Information</h4>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form id="form-submit">
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Name Surname</label><hr />
+                                <label for="simpleinput" class="form-label">@Model.NameSurname</label>
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Subject</label><hr />
+                                <label for="simpleinput" class="form-label">@Model.Subject</label>
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Phone</label><hr />
+                                <label for="simpleinput" class="form-label">@Model.Phone</label>
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Email</label><hr />
+                                <label for="simpleinput" class="form-label">@Model.Email</label>
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Message</label><hr />
+                                <label for="simpleinput" class="form-label">@Model.Message</label>
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Status</label>
+                                @if (Model.IsActive == true)
+                                {
+                                   <label for="simpleinput" class="form-label">Active</label>
+                                }
+                                else
+                                {
+                                  <label for="simpleinput" class="form-label">Passive</label>
+                                }
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Read</label>
+                                @if (Model.IsRead == true)
+                                {
+                                       <label for="simpleinput" class="form-label">Read</label>
+                                }
+                                else
+                                {
+                                      <label for="simpleinput" class="form-label">Unread</label>
+                                }
+                            </div>
+                            <div class="mb-3">
+                                <a href="/admin/iletisim-formu-listele" class="btn btn-outline-dark"><i class="fa fa-reply-all"></i> Back To List</a>
+                            </div>
+                        </form>
+                    </div> <!-- end col -->
+                </div>
+                <!-- end row-->
+
+            </div> <!-- end card-body -->
+        </div> <!-- end card -->
+    </div><!-- end col -->
+</div>
+<!-- end row -->

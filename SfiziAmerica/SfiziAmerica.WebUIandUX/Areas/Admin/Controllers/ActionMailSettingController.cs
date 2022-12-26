@@ -5,13 +5,13 @@ using SfiziAmerica.BusinessLayer.Repository.Concrete;
 using SfiziAmerica.DataAccessLayer.ModelContext;
 using SfiziAmerica.EntityLayer.Model;
 using SfiziAmerica.WebUIandUX.Areas.Admin.ViewDTO;
+using SfiziAmerica.WebUIandUX.Areas.Admin.ViewModel;
 using System;
 using System.Threading.Tasks;
 
 namespace SfiziAmerica.WebUIandUX.Areas.Admin.Controllers
 {
-
-
+    [Area("Admin")]
     public class ActionMailSettingController : Controller
     {
         private DbContext context = new SfizilDatabaseModelContext();
@@ -50,6 +50,44 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.Controllers
             await unitOfWork.SaveAsync();
             return Ok();
         }
+
+        [Route("admin/mail-gonderim-ayarlari-guncelle/{id}")]
+        [HttpGet]
+        public async Task<IActionResult> Edit(Guid id)
+        {
+            var mailSetting = await unitOfWork.mailSettingRepository.GetAsync(x => x.ID == id);
+            if (mailSetting == null)
+                return RedirectToAction("Index");
+            updateMailSettingViewModel updateMailSettingViewModel = new() { MailSetting = mailSetting };
+            return View(updateMailSettingViewModel);
+        }
+
+        [Route("admin/mail-gonderim-ayarlari-guncelle")]
+        [HttpPost]
+        public async Task<IActionResult> Edit(UpdateMailSettingViewDTO updateMailSettingViewDTO)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(new { errorMessage = "Lütfen bilgileri doğru girdiğinizden emin olun" });
+            var mailSetting = await unitOfWork.mailSettingRepository.GetAsync(x => x.ID == updateMailSettingViewDTO.ID);
+            if (mailSetting == null)
+                return NotFound(new { errorMessage = "Bu kayıta ait bilgi bulunmamaktadır" });
+            bool mailSettingExist = await unitOfWork.mailSettingRepository.AnyAsync(x => x.senderMail.ToLower() == updateMailSettingViewDTO.senderMail.ToLower() && x.ID != updateMailSettingViewDTO.ID);
+            if (mailSettingExist)
+                return BadRequest(new { errorMessage = "Bu isimde bir kayıt zaten bulunmaktadır" });
+            mailSetting.senderMail = updateMailSettingViewDTO.senderMail;
+            mailSetting.serverMail= updateMailSettingViewDTO.serverMail;
+            mailSetting.senderMailPassword= updateMailSettingViewDTO.senderMailPassword;
+            mailSetting.serverPort= updateMailSettingViewDTO.serverPort;
+            mailSetting.LastDate= DateTime.Now;
+            mailSetting.BCC= updateMailSettingViewDTO.BCC;
+            mailSetting.To= updateMailSettingViewDTO.To;
+            mailSetting.CC= updateMailSettingViewDTO.CC;
+            mailSetting.ID= updateMailSettingViewDTO.ID;
+            await unitOfWork.mailSettingRepository.UpdateAsync(mailSetting);
+            await unitOfWork.SaveAsync();
+            return Ok();
+        }
+
 
         [Route("admin/mail-gonderim-ayarlari-sil/{id}")]
         [HttpPost]

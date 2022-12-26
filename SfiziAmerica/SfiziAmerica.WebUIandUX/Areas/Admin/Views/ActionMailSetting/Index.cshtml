@@ -1,0 +1,61 @@
+﻿@model IEnumerable<SfiziAmerica.EntityLayer.Model.MailSetting>
+@{
+    ViewData["Title"] = "Mail Setting List";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+@section scripts{
+    <script src="/PageJs/mailsetting.js"></script>
+}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="mt-0 header-title">Mail Setting List</h4>
+
+                <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap">
+                    <thead>
+                        <tr>
+                            <th>Sender Mail</th>
+                            <th>Mail Password</th>
+                            <th>Server Mail</th>
+                            <th>Server Port</th>
+                            <th>Create Date</th>
+                            <th>Update Date</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.senderMail</td>
+                                <td>@item.senderMailPassword</td>
+                                <td>@item.serverMail</td>
+                                <td>@item.serverPort</td>
+                                <td>@item.CreateDate.ToShortDateString()</td>
+                                <td>@item.LastDate.ToShortDateString()</td>
+                                @if (item.IsActive)
+                                {
+                                    <td>Active</td>
+                                }
+                                else
+                                {
+                                    <td>Passive</td>
+                                }
+                                <td>
+                                    <a href="/admin/mail-gonderim-ayarlari-guncelle/@item.ID" class="btn btn-sm btn-primary"><i class='fa fa-edit'></i></a>
+                                    <button data-id="@item.ID" class="btn btn-danger btn-sm btnDelete"><i class='fa fa-trash'></i></button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- end row -->

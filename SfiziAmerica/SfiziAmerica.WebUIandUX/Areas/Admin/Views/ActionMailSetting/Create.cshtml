@@ -1,0 +1,69 @@
+﻿@{
+    ViewData["Title"] = "Add New Mail Setting";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+@section scripts{
+    <script src="/PageJs/addMailSetting.js"></script>
+}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="header-title">Add New Mail Setting</h4>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form id="form-submit">
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Sender Mail</label>
+                                <input type="email" class="form-control" name="senderMail" maxlength="100" placeholder="Not a Required Field.Please Enter Sender Mail Trial : info@sfizi.com" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Server Mail</label>
+                                <input type="text" class="form-control" name="serverMail" maxlength="100" placeholder="Not a Required Field.Please Enter Server Mail Trial : mail.sfizi.com" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">To</label>
+                                <input type="email" class="form-control" name="To" maxlength="100" placeholder="Not a Required Field.Please Enter To Mail Trial : johndell@sfizi.com" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">CC</label>
+                                <input type="email" class="form-control" name="CC" maxlength="100" placeholder="Not a Required Field.Please Enter CC Mail Trial : johndell@sfizi.com" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">BCC</label>
+                                <input type="email" class="form-control" name="BCC" maxlength="100" placeholder="Not a Required Field.Please Enter BCC Mail Trial : johndell@sfizi.com" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Server Port</label>
+                                <input type="tel" class="form-control" name="serverPort" maxlength="3" placeholder="Not a Required Field.Please Enter Server Port Trial : 587" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Sender Mail Password</label>
+                                <div class="input-group input-group-merge">
+                                    <input type="password" id="Password" name="senderMailPassword" class="form-control" placeholder="Please Enter Your Sender Mail Password">
+                                    <div class="input-group-text" data-password="false">
+                                        <span class="password-eye"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Status</label>
+                                <select required name="IsActive" class="form-select">
+                                    <option value="1">Active</option>
+                                    <option value="0">Passive</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <button type="submit" class="btn btn-outline-success d-inline-block"><i class="fa fa-check"></i> Add New Mail Setting</button>
+                                <a href="/admin/mail-gonderim-ayarlari-listele" class="btn btn-outline-dark"><i class="fa fa-reply-all"></i> Back To List</a>
+                            </div>
+                        </form>
+                    </div> <!-- end col -->
+                </div>
+                <!-- end row-->
+
+            </div> <!-- end card-body -->
+        </div> <!-- end card -->
+    </div><!-- end col -->
+</div>
+<!-- end row -->
