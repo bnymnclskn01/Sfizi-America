@@ -38,13 +38,46 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.Controllers
         {
             if (!ModelState.IsValid)
                 return BadRequest(new { errorMessage = "Lütfen bilgileri doğru girdiğinizden emin olun" });
-            bool aboutExist = await unitOfWork.socialMediaRepository.AnyAsync(x => x.Title.ToLower() == socialMedia.Title.ToLower());
-            if (aboutExist)
+            bool socialMediaExist = await unitOfWork.socialMediaRepository.AnyAsync(x => x.Title.ToLower() == socialMedia.Title.ToLower());
+            if (socialMediaExist)
                 return BadRequest(new { errorMessage = "Bu isimde bir kayıt zaten bulunmaktadır" });
             await unitOfWork.socialMediaRepository.AddAsync(socialMedia);
             await unitOfWork.SaveAsync();
             return Ok();
         }
+        [Route("admin/sosyal-medya-guncelle/{id}")]
+        [HttpGet]
+        public async Task<IActionResult> Edit(Guid id)
+        {
+            var socialMedia = await unitOfWork.socialMediaRepository.GetAsync(x => x.ID == id);
+            if (socialMedia == null)
+                return RedirectToAction("Index");
+            return View(socialMedia);
+        }
+
+        [Route("admin/sosyal-medya-guncelle")]
+        [HttpPost]
+        public async Task<IActionResult> Edit(SocialMedia socialMediaModel)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(new { errorMessage = "Lütfen bilgileri doğru girdiğinizden emin olun" });
+            var socialMedia = await unitOfWork.socialMediaRepository.GetAsync(x => x.ID == socialMediaModel.ID);
+
+            if (socialMedia == null)
+                return NotFound(new { errorMessage = "Bu kayıta ait bilgi bulunmamaktadır" });
+            bool socialMediaExist = await unitOfWork.socialMediaRepository.AnyAsync(x => x.Title.ToLower() == socialMedia.Title.ToLower() && x.ID != socialMedia.ID);
+            if (socialMediaExist)
+                return BadRequest(new { errorMessage = "Bu isimde bir kayıt zaten bulunmaktadır" });
+            socialMedia.Title = socialMediaModel.Title;
+            socialMedia.Icon = socialMediaModel.Icon;
+            socialMedia.Url = socialMediaModel.Url;
+            socialMedia.IsActive = socialMediaModel.IsActive;
+            socialMedia.LastDate = DateTime.Now;
+            await unitOfWork.socialMediaRepository.UpdateAsync(socialMedia);
+            await unitOfWork.SaveAsync();
+            return Ok();
+        }
+
 
         [Route("admin/sosyal-medya-sil/{id}")]
         [HttpPost]
