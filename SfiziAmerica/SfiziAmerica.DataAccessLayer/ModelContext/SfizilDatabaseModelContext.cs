@@ -29,7 +29,7 @@ namespace SfiziAmerica.DataAccessLayer.ModelContext
         public virtual DbSet<MenuCategory> MenuCategories { get; set; }
         public virtual DbSet<MenuSeo> MenuSeo { get; set; }
         public virtual DbSet<Mision> Misions { get; set; } // BİTTİ
-        public virtual DbSet<Rezervation> Rezervations { get; set; }
+        public virtual DbSet<Rezervation> Rezervations { get; set; } // BİTTİ
         public virtual DbSet<Slider> Sliders { get; set; } // BİTTİ
         public virtual DbSet<SocialMedia> SocialMedias { get; set; } //BİTTİ
         public virtual DbSet<UserMember> UserMembers { get; set; } // BİTTİ

@@ -24,7 +24,7 @@ function deleteRequest(id) {
             Swal.fire({
                 title: 'Successfully Deleted!',
                 icon: 'success',
-                confirmButtonText: 'OK'
+                confirmButtonText: 'Ok'
             }).then((result) => {
                 if (result.isConfirmed) {
                     window.location.href = "/admin/rezervasyon-listele"
@@ -35,7 +35,7 @@ function deleteRequest(id) {
             Swal.fire({
                 title: 'An error occurred while deleting!',
                 icon: 'error',
-                confirmButtonText: 'OK'
+                confirmButtonText: 'Ok'
             })
         }
     })

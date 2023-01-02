@@ -9,7 +9,6 @@
     fdata.append('Phone', $('input[name=Phone]').val())
     fdata.append('Email', $('input[name=Email]').val())
     fdata.append('Person', $('select[name="Person"]').val())
-    console.log("Person:"+$('select[name=Person]').val())
     fdata.append('Date', $('input[name=Date]').val())
     fdata.append('Time', $('select[name=Time]').val())
     fdata.append('Message', $('textarea[name=Message').val())
@@ -20,7 +19,6 @@
 })
 
 function addRequest(payload) {
-    console.log(payload.get("Person"));
     $.ajax({
         url: '/admin/rezervasyon-ekle',
         processData: false,
