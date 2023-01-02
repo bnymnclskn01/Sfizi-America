@@ -20,9 +20,9 @@ function addRequest(fdata) {
         data: fdata,
         success: (response) => {
             Swal.fire({
-                title: 'Başarıyla Eklendi!',
+                title: 'Added Successfully!',
                 icon: 'success',
-                confirmButtonText: 'Tamam'
+                confirmButtonText: 'Ok'
             }).then((result) => {
                 if (result.isConfirmed) {
                     window.location.href = "/admin/kullanici-rol-listele"
@@ -31,10 +31,10 @@ function addRequest(fdata) {
         },
         error: (response) => {
             Swal.fire({
-                title: 'Hata!',
+                title: 'Error!',
                 text: response.responseJSON.errorMessage,
                 icon: 'error',
-                confirmButtonText: 'Tamam'
+                confirmButtonText: 'Ok'
             })
         }
     })

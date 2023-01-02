@@ -2,7 +2,7 @@
     e.preventDefault();
     const ckData = CKEDITOR.instances.Description.getData();
     if (ckData.length < 1) {
-        alert('Açıklama kısmı boş bırakılamaz')
+        alert('Description cannot be left blank.')
         return
     }
     const activeValue = Number($('select[name=IsActive]').val())
@@ -29,7 +29,7 @@ function addRequest(fdata) {
         data: fdata,
         success: (response) => {
             Swal.fire({
-                title: 'Başarıyla Güncellendi!',
+                title: 'Successfully Updated!',
                 icon: 'success',
                 confirmButtonText: 'Tamam'
             }).then((result) => {
@@ -40,10 +40,10 @@ function addRequest(fdata) {
         },
         error: (response) => {
             Swal.fire({
-                title: 'Hata!',
+                title: 'Error!',
                 text: response.responseJSON.errorMessage,
                 icon: 'error',
-                confirmButtonText: 'Tamam'
+                confirmButtonText: 'Ok'
             })
         }
     })

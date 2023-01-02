@@ -42,10 +42,10 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.Controllers
         public async Task<IActionResult> Create(AddMissionDTO addMissionDTO)
         {
             if (!ModelState.IsValid)
-                return BadRequest(new { errorMessage = "Lütfen bilgileri doğru girdiğinizden emin olun" });
+                return BadRequest(new { errorMessage = "Please make sure you have entered the information correctly" });
             bool missionExist = await unitOfWork.missionRepository.AnyAsync(x => x.Title.ToLower() == addMissionDTO.Title.ToLower());
             if (missionExist)
-                return BadRequest(new { errorMessage = "Bu isimde bir kayıt zaten bulunmaktadır" });
+                return BadRequest(new { errorMessage = "A record with this name already exists." });
             Mision mission = addMissionDTO.Adapt<Mision>();
             if (addMissionDTO.ImageUrl != null)
             {
@@ -76,13 +76,13 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.Controllers
         public async Task<IActionResult> Edit(UpdateMissionDTO updateMissionDTO)
         {
             if (!ModelState.IsValid)
-                return BadRequest(new { errorMessage = "Lütfen bilgileri doğru girdiğinizden emin olun" });
+                return BadRequest(new { errorMessage = "Please make sure you have entered the information correctly" });
             var mission = await unitOfWork.missionRepository.GetAsync(x => x.ID == updateMissionDTO.ID);
             if (mission == null)
-                return NotFound(new { errorMessage = "Bu kayıta ait bilgi bulunmamaktadır" });
+                return NotFound(new { errorMessage = "There is no information for this record." });
             bool missionExist = await unitOfWork.missionRepository.AnyAsync(x => x.Title.ToLower() == updateMissionDTO.Title.ToLower() && x.ID != updateMissionDTO.ID);
             if (missionExist)
-                return BadRequest(new { errorMessage = "Bu isimde bir kayıt zaten bulunmaktadır" });
+                return BadRequest(new { errorMessage = "A record with this name already exists." });
             if (updateMissionDTO.ImageUrl != null)
             {
                 if (System.IO.File.Exists("wwwroot/Image/Mission/" + mission.ImageUrl))

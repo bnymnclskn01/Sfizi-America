@@ -41,10 +41,10 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.Controllers
         public async Task<IActionResult> Create(AddUserRoleDTO addUserRoleDTO)
         {
             if (!ModelState.IsValid)
-                return BadRequest(new { errorMessage = "Lütfen bilgileri doğru girdiğinizden emin olun" });
+                return BadRequest(new { errorMessage = "Please make sure you have entered the information correctly." });
             bool userRoleExist = await unitOfWork.userRoleRepository.AnyAsync(x => x.RoleName.ToLower() == addUserRoleDTO.RoleName.ToLower() || x.RoleCode.ToLower() == addUserRoleDTO.RoleCode.ToLower());
             if (userRoleExist)
-                return BadRequest(new { errorMessage = "Bu isimde bir kayıt zaten bulunmaktadır" });
+                return BadRequest(new { errorMessage = "A record with this name already exists." });
             UserRole userRole = addUserRoleDTO.Adapt<UserRole>();
             await unitOfWork.userRoleRepository.AddAsync(userRole);
             await unitOfWork.SaveAsync();
@@ -67,13 +67,13 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.Controllers
         public async Task<IActionResult> Edit(UpdateUserRoleDTO updateUserRoleDTO)
         {
             if (!ModelState.IsValid)
-                return BadRequest(new { errorMessage = "Lütfen bilgileri doğru girdiğinizden emin olun" });
+                return BadRequest(new { errorMessage = "Please make sure you have entered the information correctly." });
             var userRole = await unitOfWork.userRoleRepository.GetAsync(x => x.ID == updateUserRoleDTO.ID);
             if (userRole == null)
-                return NotFound(new { errorMessage = "Bu kayıta ait bilgi bulunmamaktadır" });
+                return NotFound(new { errorMessage = "There is no information about this record." });
             bool userRoleExist = await unitOfWork.userRoleRepository.AnyAsync(x => x.RoleName.ToLower() == updateUserRoleDTO.RoleName.ToLower() && x.ID != updateUserRoleDTO.ID);
             if (userRoleExist)
-                return BadRequest(new { errorMessage = "Bu isimde bir kayıt zaten bulunmaktadır" });
+                return BadRequest(new { errorMessage = "A record with this name already exists." });
             userRole.RoleName = updateUserRoleDTO.RoleName;
             userRole.IsActive = updateUserRoleDTO.IsActive;
             userRole.ID = updateUserRoleDTO.ID;

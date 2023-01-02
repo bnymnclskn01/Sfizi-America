@@ -42,10 +42,10 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.Controllers
         public async Task<IActionResult> Create(AddVisionDTO addVisionDTO)
         {
             if (!ModelState.IsValid)
-                return BadRequest(new { errorMessage = "Lütfen bilgileri doğru girdiğinizden emin olun" });
+                return BadRequest(new { errorMessage = "Please make sure you have entered the information correctly." });
             bool visionnExist = await unitOfWork.visionRepository.AnyAsync(x => x.Title.ToLower() == addVisionDTO.Title.ToLower());
             if (visionnExist)
-                return BadRequest(new { errorMessage = "Bu isimde bir kayıt zaten bulunmaktadır" });
+                return BadRequest(new { errorMessage = "A record with this name already exists." });
             Vision vision = addVisionDTO.Adapt<Vision>();
             if (addVisionDTO.ImageUrl != null)
             {
@@ -76,13 +76,13 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.Controllers
         public async Task<IActionResult> Edit(UpdateVisionDTO updateVisionDTO)
         {
             if (!ModelState.IsValid)
-                return BadRequest(new { errorMessage = "Lütfen bilgileri doğru girdiğinizden emin olun" });
+                return BadRequest(new { errorMessage = "Please make sure you have entered the information correctly." });
             var vision = await unitOfWork.visionRepository.GetAsync(x => x.ID == updateVisionDTO.ID);
             if (vision == null)
-                return NotFound(new { errorMessage = "Bu kayıta ait bilgi bulunmamaktadır" });
+                return NotFound(new { errorMessage = "There is no information about this record." });
             bool visionExist = await unitOfWork.visionRepository.AnyAsync(x => x.Title.ToLower() == updateVisionDTO.Title.ToLower() && x.ID != updateVisionDTO.ID);
             if (visionExist)
-                return BadRequest(new { errorMessage = "Bu isimde bir kayıt zaten bulunmaktadır" });
+                return BadRequest(new { errorMessage = "A record with this name already exists." });
             if (updateVisionDTO.ImageUrl != null)
             {
                 if (System.IO.File.Exists("wwwroot/Image/Vision/" + vision.ImageUrl))

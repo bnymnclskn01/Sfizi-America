@@ -18,16 +18,16 @@
 
 function deleteRequest(id) {
     $.ajax({
-        url: '/admin/kullanici-sil/' + id,
+        url: '/admin/rezervasyon-sil/' + id,
         type: 'POST',
         success: (res) => {
             Swal.fire({
                 title: 'Successfully Deleted!',
                 icon: 'success',
-                confirmButtonText: 'Ok'
+                confirmButtonText: 'OK'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    window.location.href = "/admin/kullanici-listele"
+                    window.location.href = "/admin/rezervasyon-listele"
                 }
             })
         },
@@ -35,7 +35,7 @@ function deleteRequest(id) {
             Swal.fire({
                 title: 'An error occurred while deleting!',
                 icon: 'error',
-                confirmButtonText: 'Ok'
+                confirmButtonText: 'OK'
             })
         }
     })

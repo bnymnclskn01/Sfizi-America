@@ -20,9 +20,9 @@ function updateRequest(payload) {
         data: payload,
         success: () => {
             Swal.fire({
-                title: 'Başarıyla Güncellendi!',
+                title: 'Successfully Updated!',
                 icon: 'success',
-                confirmButtonText: 'Tamam'
+                confirmButtonText: 'Ok'
             }).then((result) => {
                 if (result.isConfirmed) {
                     window.location.href = "/admin/kullanici-listele"
@@ -31,10 +31,10 @@ function updateRequest(payload) {
         },
         error: (response) => {
             Swal.fire({
-                title: 'Hata!',
+                title: 'Error!',
                 text: response.responseJSON.errorMessage,
                 icon: 'error',
-                confirmButtonText: 'Tamam'
+                confirmButtonText: 'Ok'
             })
         }
     })

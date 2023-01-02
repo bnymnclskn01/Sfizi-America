@@ -40,12 +40,12 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.Controllers
         public async Task<IActionResult> Create(AddSliderDTO addSliderDTO)
         {
             if (!ModelState.IsValid)
-                return BadRequest(new { errorMessage = "Lütfen bilgileri doğru girdiğinizden emin olun" });
+                return BadRequest(new { errorMessage = "Please make sure you have entered the information correctly." });
 
             bool sliderExist = await unitOfWork.sliderRepository.AnyAsync(x => x.Title.ToLower() == addSliderDTO.Title.ToLower());
 
             if (sliderExist)
-                return BadRequest(new { errorMessage = "Bu isimde bir kayıt zaten bulunmaktadır" });
+                return BadRequest(new { errorMessage = "A record with this name already exists." });
             Slider slider = addSliderDTO.Adapt<Slider>();
             if (addSliderDTO.ImageVideoUrl != null)
             {
@@ -76,18 +76,18 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.Controllers
         public async Task<IActionResult> Edit(UpdateSliderDTO updateSliderDTO)
         {
             if (!ModelState.IsValid)
-                return BadRequest(new { errorMessage = "Lütfen bilgileri doğru girdiğinizden emin olun" });
+                return BadRequest(new { errorMessage = "Please make sure you have entered the information correctly" });
 
             var slider = await unitOfWork.sliderRepository.GetAsync(x => x.ID == updateSliderDTO.ID);
 
             if (slider == null)
-                return NotFound(new { errorMessage = "Bu kayıta ait bilgi bulunmamaktadır" });
+                return NotFound(new { errorMessage = "There is no information about this record." });
 
             bool aboutExist = await unitOfWork.sliderRepository
                 .AnyAsync(x => x.Title.ToLower() == updateSliderDTO.Title.ToLower() && x.ID != updateSliderDTO.ID);
 
             if (aboutExist)
-                return BadRequest(new { errorMessage = "Bu isimde bir kayıt zaten bulunmaktadır" });
+                return BadRequest(new { errorMessage = "A record with this name already exists." });
             if (updateSliderDTO.ImageVideoUrl != null)
             {
                 if (System.IO.File.Exists("wwwroot/Image/Slider/" + slider.ImageVideoUrl))

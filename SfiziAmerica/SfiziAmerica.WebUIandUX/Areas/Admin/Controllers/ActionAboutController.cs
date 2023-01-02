@@ -41,10 +41,10 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.Controllers
         public async Task<IActionResult> Create(AddAboutDTO addAboutDTO)
         {
             if (!ModelState.IsValid)
-                return BadRequest(new { errorMessage = "Lütfen bilgileri doğru girdiğinizden emin olun" });
+                return BadRequest(new { errorMessage = "Please make sure you have entered the information correctly." });
             bool aboutExist = await unitOfWork.aboutRepository.AnyAsync(x => x.Title.ToLower() == addAboutDTO.Title.ToLower());
             if (aboutExist)
-                return BadRequest(new { errorMessage = "Bu isimde bir kayıt zaten bulunmaktadır" });
+                return BadRequest(new { errorMessage = "A record with this name already exists." });
             About about = addAboutDTO.Adapt<About>();
             if (addAboutDTO.ImageUrl != null)
             {
@@ -75,13 +75,13 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.Controllers
         public async Task<IActionResult> Edit(UpdateAboutDTO updateAboutDTO)
         {
             if (!ModelState.IsValid)
-                return BadRequest(new { errorMessage = "Lütfen bilgileri doğru girdiğinizden emin olun" });
+                return BadRequest(new { errorMessage = "Please make sure you have entered the information correctly." });
             var about = await unitOfWork.aboutRepository.GetAsync(x => x.ID == updateAboutDTO.ID);
             if (about == null)
-                return NotFound(new { errorMessage = "Bu kayıta ait bilgi bulunmamaktadır" });
+                return BadRequest(new { errorMessage = "A record with this name already exists." });
             bool aboutExist = await unitOfWork.aboutRepository.AnyAsync(x => x.Title.ToLower() == updateAboutDTO.Title.ToLower() && x.ID != updateAboutDTO.ID);
             if (aboutExist)
-                return BadRequest(new { errorMessage = "Bu isimde bir kayıt zaten bulunmaktadır" });
+                return BadRequest(new { errorMessage = "A record with this name already exists." });
             if (updateAboutDTO.ImageUrl != null)
             {
                 if (System.IO.File.Exists("wwwroot/Image/About/" + about.ImageUrl))

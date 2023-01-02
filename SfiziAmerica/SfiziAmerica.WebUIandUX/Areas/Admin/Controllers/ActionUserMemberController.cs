@@ -40,12 +40,12 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.Controllers
         public async Task<IActionResult> Create(AddUserMemberViewDTO addUserMemberViewDTO)
         {
             if (!ModelState.IsValid)
-                return BadRequest(new { errorMessage = "Lütfen bilgileri doğru girdiğinizden emin olun" });
+                return BadRequest(new { errorMessage = "Please make sure you have entered the information correctly." });
 
             bool userMemberExist = await unitOfWork.userMemberRepository.AnyAsync(x => x.Email.ToLower() == addUserMemberViewDTO.Email.ToLower());
 
             if (userMemberExist)
-                return BadRequest(new { errorMessage = "Bu isimde bir kayıt zaten bulunmaktadır" });
+                return BadRequest(new { errorMessage = "A record with this name already exists." });
             UserMember userMember=addUserMemberViewDTO.Adapt<UserMember>();
             await unitOfWork.userMemberRepository.AddAsync(userMember);
             await unitOfWork.SaveAsync();
@@ -70,18 +70,18 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.Controllers
         public async Task<IActionResult> Edit(UpdateUserMemberDTO updateUserMemberDTO)
         {
             if (!ModelState.IsValid)
-                return BadRequest(new { errorMessage = "Lütfen bilgileri doğru girdiğinizden emin olun" });
+                return BadRequest(new { errorMessage = "Please make sure you have entered the information correctly." });
 
             var userMember = await unitOfWork.userMemberRepository.GetAsync(x => x.ID == updateUserMemberDTO.ID);
 
             if (userMember == null)
-                return NotFound(new { errorMessage = "Bu kayıta ait bilgi bulunmamaktadır" });
+                return NotFound(new { errorMessage = "There is no information about this record." });
 
             bool userMemberExist = await unitOfWork.userMemberRepository
                 .AnyAsync(x => x.Email.ToLower() == updateUserMemberDTO.Email.ToLower() && x.ID != updateUserMemberDTO.ID);
 
             if (userMemberExist)
-                return BadRequest(new { errorMessage = "Bu isimde bir kayıt zaten bulunmaktadır" });
+                return BadRequest(new { errorMessage = "A record with this name already exists." });
             userMember.Email= updateUserMemberDTO.Email;
             userMember.ID= updateUserMemberDTO.ID;
             userMember.UserRoleID= updateUserMemberDTO.UserRoleID;

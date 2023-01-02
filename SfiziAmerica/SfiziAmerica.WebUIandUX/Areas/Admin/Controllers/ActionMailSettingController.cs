@@ -41,10 +41,10 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.Controllers
         public async Task<IActionResult> Create(AddMailSettingViewDTO addMailSettingViewDTO)
         {
             if (!ModelState.IsValid)
-                return BadRequest(new { errorMessage = "Lütfen bilgileri doğru girdiğinizden emin olun" });
+                return BadRequest(new { errorMessage = "Please make sure you have entered the information correctly" });
             int countMailSetting = await unitOfWork.mailSettingRepository.CountAsync(x => x.IsActive == true);
             if (countMailSetting > 1)
-                return BadRequest(new { errorMessage = "En fazla bir adet mail ayarı eklenebilir." });
+                return BadRequest(new { errorMessage = "A maximum of one mail setting can be added." });
             MailSetting mailSetting = addMailSettingViewDTO.Adapt<MailSetting>();
             await unitOfWork.mailSettingRepository.AddAsync(mailSetting);
             await unitOfWork.SaveAsync();
@@ -67,13 +67,13 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.Controllers
         public async Task<IActionResult> Edit(UpdateMailSettingViewDTO updateMailSettingViewDTO)
         {
             if (!ModelState.IsValid)
-                return BadRequest(new { errorMessage = "Lütfen bilgileri doğru girdiğinizden emin olun" });
+                return BadRequest(new { errorMessage = "Please make sure you have entered the information correctly" });
             var mailSetting = await unitOfWork.mailSettingRepository.GetAsync(x => x.ID == updateMailSettingViewDTO.ID);
             if (mailSetting == null)
-                return NotFound(new { errorMessage = "Bu kayıta ait bilgi bulunmamaktadır" });
+                return NotFound(new { errorMessage = "There is no information for this record." });
             bool mailSettingExist = await unitOfWork.mailSettingRepository.AnyAsync(x => x.senderMail.ToLower() == updateMailSettingViewDTO.senderMail.ToLower() && x.ID != updateMailSettingViewDTO.ID);
             if (mailSettingExist)
-                return BadRequest(new { errorMessage = "Bu isimde bir kayıt zaten bulunmaktadır" });
+                return BadRequest(new { errorMessage = "A record with this name already exists" });
             mailSetting.senderMail = updateMailSettingViewDTO.senderMail;
             mailSetting.serverMail= updateMailSettingViewDTO.serverMail;
             mailSetting.senderMailPassword= updateMailSettingViewDTO.senderMailPassword;

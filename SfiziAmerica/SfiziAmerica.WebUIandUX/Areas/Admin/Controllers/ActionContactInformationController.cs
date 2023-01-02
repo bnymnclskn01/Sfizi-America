@@ -39,10 +39,10 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.Controllers
         public async Task<IActionResult> Create(AddContactInformationViewDTO addContactInformationViewDTO)
         {
             if (!ModelState.IsValid)
-                return BadRequest(new { errorMessage = "Lütfen bilgileri doğru girdiğinizden emin olun" });
+                return BadRequest(new { errorMessage = "Please make sure you have entered the information correctly." });
             bool ciExist = await unitOfWork.contactInformationRepository.AnyAsync(x => x.Address.ToLower() == addContactInformationViewDTO.Address.ToLower() && x.Phone == addContactInformationViewDTO.Phone);
             if (ciExist)
-                return BadRequest(new { errorMessage = "Bu isimde bir kayıt zaten bulunmaktadır" });
+                return BadRequest(new { errorMessage = "Since there is a reservation for this record, we cannot add it again." });
             ContactInformation contactInformation = addContactInformationViewDTO.Adapt<ContactInformation>();
             await unitOfWork.contactInformationRepository.AddAsync(contactInformation);
             await unitOfWork.SaveAsync();
@@ -62,13 +62,13 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.Controllers
         public async Task<IActionResult> Edit(UpdateContactInformationViewDTO updateContactInformationViewDTO)
         {
             if (!ModelState.IsValid)
-                return BadRequest(new { errorMessage = "Lütfen bilgileri doğru girdiğinizden emin olun" });
+                return BadRequest(new { errorMessage = "Please make sure you have entered the information correctly." });
             var cid = await unitOfWork.contactInformationRepository.GetAsync(x => x.ID == updateContactInformationViewDTO.ID);
             if (cid == null)
-                return NotFound(new { errorMessage = "Bu kayıta ait bilgi bulunmamaktadır" });
+                return NotFound(new { errorMessage = "There is no information for this record" });
             bool cidExist = await unitOfWork.contactInformationRepository.AnyAsync(x => x.Address.ToLower() == updateContactInformationViewDTO.Address.ToLower() && x.Phone == updateContactInformationViewDTO.Phone && x.ID != updateContactInformationViewDTO.ID);
             if (cidExist)
-                return BadRequest(new { errorMessage = "Bu isimde bir kayıt zaten bulunmaktadır" });
+                return BadRequest(new { errorMessage = "Since there is a reservation for this record, we cannot add it again." });
             cid.WhatsApp = updateContactInformationViewDTO.WhatsApp;
             cid.Address = updateContactInformationViewDTO.Address;
             cid.Address2 = updateContactInformationViewDTO.Address2;

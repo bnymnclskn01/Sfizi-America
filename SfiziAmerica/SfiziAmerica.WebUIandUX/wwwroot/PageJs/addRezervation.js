@@ -1,32 +1,32 @@
-﻿CKEDITOR.replace('Description');
-$('#form-submit').submit(function (e) {
+﻿$('#form-submit').submit(function (e) {
+    console.log("form-submit triggered.");
     e.preventDefault();
-    const ckData = CKEDITOR.instances.Description.getData();
-    if (ckData.length < 1) {
-        alert('Description cannot be left blank.')
-        return
-    }
+
     const activeValue = Number($('select[name=IsActive]').val())
     const fdata = new FormData();
-    const fileInput1 = $('input[name=ImageUrl]')[0];
-    const file1 = fileInput1.files[0];
 
-    fdata.append("ImageUrl", file1);
-    fdata.append('Title', $('input[name=Title]').val())
-    fdata.append('ShortDescription', $('textarea[name=ShortDescription').val())
-    fdata.append('Description', ckData)
+    fdata.append('NameSurname', $('input[name=NameSurname]').val())
+    fdata.append('Phone', $('input[name=Phone]').val())
+    fdata.append('Email', $('input[name=Email]').val())
+    fdata.append('Person', $('select[name="Person"]').val())
+    console.log("Person:"+$('select[name=Person]').val())
+    fdata.append('Date', $('input[name=Date]').val())
+    fdata.append('Time', $('select[name=Time]').val())
+    fdata.append('Message', $('textarea[name=Message').val())
+    fdata.append('TableType', $('select[name=TableType]').val())
     fdata.append('IsActive', activeValue === 1 ? true : false)
 
     addRequest(fdata)
 })
 
-function addRequest(fdata) {
+function addRequest(payload) {
+    console.log(payload.get("Person"));
     $.ajax({
-        url: '/admin/misyon-ekle',
+        url: '/admin/rezervasyon-ekle',
         processData: false,
         contentType: false,
         type: 'POST',
-        data: fdata,
+        data: payload,
         success: (response) => {
             Swal.fire({
                 title: 'Added Successfully!',
@@ -34,7 +34,7 @@ function addRequest(fdata) {
                 confirmButtonText: 'Ok'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    window.location.href = "/admin/misyon-listele"
+                    window.location.href = "/admin/rezervasyon-listele"
                 }
             })
         },

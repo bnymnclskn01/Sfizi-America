@@ -37,10 +37,10 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.Controllers
         public async Task<IActionResult> Create(SocialMedia socialMedia)
         {
             if (!ModelState.IsValid)
-                return BadRequest(new { errorMessage = "Lütfen bilgileri doğru girdiğinizden emin olun" });
+                return BadRequest(new { errorMessage = "Please make sure you have entered the information correctly." });
             bool socialMediaExist = await unitOfWork.socialMediaRepository.AnyAsync(x => x.Title.ToLower() == socialMedia.Title.ToLower());
             if (socialMediaExist)
-                return BadRequest(new { errorMessage = "Bu isimde bir kayıt zaten bulunmaktadır" });
+                return BadRequest(new { errorMessage = "A record with this name already exists." });
             await unitOfWork.socialMediaRepository.AddAsync(socialMedia);
             await unitOfWork.SaveAsync();
             return Ok();
@@ -60,14 +60,14 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.Controllers
         public async Task<IActionResult> Edit(SocialMedia socialMediaModel)
         {
             if (!ModelState.IsValid)
-                return BadRequest(new { errorMessage = "Lütfen bilgileri doğru girdiğinizden emin olun" });
+                return BadRequest(new { errorMessage = "Please make sure you have entered the information correctly." });
             var socialMedia = await unitOfWork.socialMediaRepository.GetAsync(x => x.ID == socialMediaModel.ID);
 
             if (socialMedia == null)
-                return NotFound(new { errorMessage = "Bu kayıta ait bilgi bulunmamaktadır" });
+                return NotFound(new { errorMessage = "There is no information about this record." });
             bool socialMediaExist = await unitOfWork.socialMediaRepository.AnyAsync(x => x.Title.ToLower() == socialMedia.Title.ToLower() && x.ID != socialMedia.ID);
             if (socialMediaExist)
-                return BadRequest(new { errorMessage = "Bu isimde bir kayıt zaten bulunmaktadır" });
+                return BadRequest(new { errorMessage = "A record with this name already exists." });
             socialMedia.Title = socialMediaModel.Title;
             socialMedia.Icon = socialMediaModel.Icon;
             socialMedia.Url = socialMediaModel.Url;

@@ -2,13 +2,13 @@
     e.preventDefault()
     const id = $(this).data('id')
     Swal.fire({
-        title: 'Silmek istediğinize emin misiniz?',
+        title: 'Are you sure you want to delete?',
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Evet!',
-        cancelButtonText: 'Hayır'
+        confirmButtonText: 'Yes!',
+        cancelButtonText: 'No'
     }).then((result) => {
         if (result.isConfirmed) {
             deleteRequest(id)
@@ -22,9 +22,9 @@ function deleteRequest(id) {
         type: 'POST',
         success: (res) => {
             Swal.fire({
-                title: 'Başarıyla Silindi!',
+                title: 'Successfully Deleted!',
                 icon: 'success',
-                confirmButtonText: 'Tamam'
+                confirmButtonText: 'Ok'
             }).then((result) => {
                 if (result.isConfirmed) {
                     window.location.href = "/admin/sosyal-medya-listele"
@@ -33,9 +33,9 @@ function deleteRequest(id) {
         },
         error: (res) => {
             Swal.fire({
-                title: 'Silme işlemi sırasında bir hata oluştu!',
+                title: 'An error occurred while deleting!',
                 icon: 'error',
-                confirmButtonText: 'Tamam'
+                confirmButtonText: 'Ok'
             })
         }
     })
