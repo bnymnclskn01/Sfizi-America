@@ -1,0 +1,57 @@
+﻿@model SfiziAmerica.WebUIandUX.Areas.Admin.ViewModel.updateBookCommentViewModel
+@{
+    ViewData["Title"] = "Customer Comment Details";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="header-title">Customer Comment Details</h4>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form id="form-submit">
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Picture</label>
+                                <img src="/Image/BookComment/@Model.BookComment.ImageUrl" width="50" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Name Surname</label>
+                                <hr /><label for="simpleinput" class="form-label">@Model.BookComment.NameSurname</label>
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Phone</label>
+                                <hr /><label for="simpleinput" class="form-label">@Model.BookComment.Phone</label>
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Email</label>
+                                <hr /><label for="simpleinput" class="form-label">@Model.BookComment.Email</label>
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Short Description</label>
+                                <hr /><label for="simpleinput" class="form-label">@Model.BookComment.Message</label>
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Status</label><hr />
+                                @if (Model.BookComment.IsActive == true)
+                                {
+                                    <label for="simpleinput" class="form-label">Active</label>
+                                }
+                                else
+                                {
+                                   <label for="simpleinput" class="form-label">Passive</label>
+                                }
+                            </div>
+                            <div class="mb-3">
+                                <a href="/admin/musteri-yorumlari-listele" class="btn btn-outline-dark"><i class="fa fa-reply-all"></i> Back To List</a>
+                            </div>
+                        </form>
+                    </div> <!-- end col -->
+                </div>
+                <!-- end row-->
+
+            </div> <!-- end card-body -->
+        </div> <!-- end card -->
+    </div><!-- end col -->
+</div>
+<!-- end row -->

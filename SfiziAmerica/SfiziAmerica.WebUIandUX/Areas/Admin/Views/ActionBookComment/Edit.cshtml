@@ -1,0 +1,66 @@
+﻿@model SfiziAmerica.WebUIandUX.Areas.Admin.ViewModel.updateBookCommentViewModel
+@{
+    ViewData["Title"] = "Update New Customer Comment";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+@section scripts{
+  <script src="/PageJs/updateBookComment.js"></script>
+}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="header-title">Update New Customer Comment</h4>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form id="form-submit">
+                            <input hidden name="ID" value="@Model.BookComment.ID" />
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Picture</label>
+                                <img src="/Image/BookComment/@Model.BookComment.ImageUrl" width="50" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Name Surname</label>
+                                <input readonly value="@Model.BookComment.NameSurname" class="form-control" name="Title" type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Phone</label>
+                                <input readonly value="@Model.BookComment.Phone" class="form-control" name="Phone" type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Email</label>
+                                <input readonly value="@Model.BookComment.Email" class="form-control" name="Email" type="text">
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Short Description</label>
+                                <textarea class="form-control" name="ShortDescription">@Model.BookComment.Message</textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Status</label>
+                                <select required name="IsActive" class="form-select">
+                                    @if (Model.BookComment.IsActive == true)
+                                    {
+                                        <option selected value="1">Aktif</option>
+                                        <option value="0">Pasif</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="1">Aktif</option>
+                                        <option selected value="0">Pasif</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <button type="submit" class="btn btn-outline-primary d-inline-block"><i class="fa fa-edit"></i> Update New Customer Comment</button>
+                                <a href="/admin/musteri-yorumlari-listele" class="btn btn-outline-dark"><i class="fa fa-reply-all"></i> Back To List</a>
+                            </div>
+                        </form>
+                    </div> <!-- end col -->
+                </div>
+                <!-- end row-->
+
+            </div> <!-- end card-body -->
+        </div> <!-- end card -->
+    </div><!-- end col -->
+</div>
+<!-- end row -->

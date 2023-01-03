@@ -16,7 +16,7 @@ namespace SfiziAmerica.DataAccessLayer.ModelContext
         }
         public virtual DbSet<About> Abouts { get; set; } // BİTTİ
         public virtual DbSet<ApplicationForm> ApplicationForms { get; set; } //BİTTİ
-        public virtual DbSet<BookComment> BookComments { get; set; }
+        public virtual DbSet<BookComment> BookComments { get; set; } //BİTTİ
         public virtual DbSet<CategoryMenu> CategoryMenus { get; set; }
         public virtual DbSet<Catering> Caterings { get; set; }
         public virtual DbSet<CateringMenu> CateringMenus { get; set; }
