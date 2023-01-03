@@ -15,7 +15,7 @@
 
 function updateRequest(payload) {
     $.ajax({
-        url: '/admin/kullanici-guncelle',
+        url: '/admin/kullanici-guncelle/',
         type: 'POST',
         data: payload,
         success: () => {

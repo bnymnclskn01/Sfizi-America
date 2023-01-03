@@ -55,8 +55,16 @@
                             <div class="mb-3">
                                 <label for="simpleinput" class="form-label">Status</label>
                                 <select required name="IsActive" class="form-select">
-                                    <option value="1">Active</option>
-                                    <option value="0">Passive</option>
+                                    @if (Model.UserMember.IsActive == true)
+                                    {
+                                        <option selected value="1">Aktif</option>
+                                        <option value="0">Pasif</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="1">Aktif</option>
+                                        <option selected value="0">Pasif</option>
+                                    }
                                 </select>
                             </div>
                             <div class="mb-3">
