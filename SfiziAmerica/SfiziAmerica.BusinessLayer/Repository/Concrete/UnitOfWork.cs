@@ -20,6 +20,7 @@ namespace SfiziAmerica.BusinessLayer.Repository.Concrete
         public EntityRepositoryBase<ContactForm> contactFormRepository { get; set; }
         public EntityRepositoryBase<ContactInformation> contactInformationRepository { get; set; }
         public EntityRepositoryBase<CustomerSigin> customerSiginRepository { get; set; }
+        public EntityRepositoryBase<Event> eventRepository { get; set; }
         public EntityRepositoryBase<HR> hrRepository { get; set; }
         public EntityRepositoryBase<MailSetting> mailSettingRepository { get; set; }
         public EntityRepositoryBase<Menu> menuRepository { get; set; }
@@ -45,6 +46,7 @@ namespace SfiziAmerica.BusinessLayer.Repository.Concrete
             contactFormRepository = new(context);
             contactInformationRepository = new(context);
             customerSiginRepository = new(context);
+            eventRepository = new(context);
             hrRepository = new(context);
             mailSettingRepository = new(context);
             menuRepository = new(context);
