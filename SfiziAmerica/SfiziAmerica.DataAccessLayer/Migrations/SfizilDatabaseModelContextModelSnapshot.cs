@@ -178,6 +178,9 @@ namespace SfiziAmerica.DataAccessLayer.Migrations
                     b.Property<Guid?>("ParentCategoryID")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<int>("Rank")
+                        .HasColumnType("int");
+
                     b.Property<string>("ShortDescription")
                         .HasColumnType("nvarchar(max)");
 
@@ -676,6 +679,9 @@ namespace SfiziAmerica.DataAccessLayer.Migrations
 
                     b.Property<Guid?>("MenuCategoryID")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Rank")
+                        .HasColumnType("int");
 
                     b.Property<string>("ShortDescription")
                         .HasColumnType("nvarchar(max)");

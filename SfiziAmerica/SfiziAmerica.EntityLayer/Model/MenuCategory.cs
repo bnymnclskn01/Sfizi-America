@@ -16,6 +16,7 @@ namespace SfiziAmerica.EntityLayer.Model
             MenuCategories = new HashSet<MenuCategory>();
             CategoryMenus = new HashSet<CategoryMenu>();
         }
+        public int Rank { get; set; }
         public string Title { get; set; }
         public string ShortDescription { get; set; }
         public string Description { get; set; }

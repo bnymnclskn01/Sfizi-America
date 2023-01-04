@@ -9,6 +9,8 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.ViewDTO
     public class AddCateringViewDTO : SeoViewDTO
     {
         [Required]
+        public int Rank { get; set; }
+        [Required]
         public string Title { get; set; }
         [Required]
         public string ShortDescription { get; set; }
