@@ -39712,12 +39712,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\ckeditor\_source\themes\default\theme.js))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\Catering\2e9eeae4-12ab-4e34-92a6-fe4beb60acc5tarim-artis.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\Catering\3aa293ef-6da1-48b9-a440-effabd340ccfslider-2-1-400x171.png))">
       <SourceType>Package</SourceType>
       <SourceId>SfiziAmerica.WebUIandUX</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/SfiziAmerica.WebUIandUX</BasePath>
-      <RelativePath>Image\Catering\2e9eeae4-12ab-4e34-92a6-fe4beb60acc5tarim-artis.jpg</RelativePath>
+      <RelativePath>Image\Catering\3aa293ef-6da1-48b9-a440-effabd340ccfslider-2-1-400x171.png</RelativePath>
       <AssetKind></AssetKind>
       <AssetMode></AssetMode>
       <AssetRole></AssetRole>
@@ -39726,7 +39726,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\Catering\2e9eeae4-12ab-4e34-92a6-fe4beb60acc5tarim-artis.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Image\Catering\3aa293ef-6da1-48b9-a440-effabd340ccfslider-2-1-400x171.png))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\PageJs\about.js))">
       <SourceType>Package</SourceType>

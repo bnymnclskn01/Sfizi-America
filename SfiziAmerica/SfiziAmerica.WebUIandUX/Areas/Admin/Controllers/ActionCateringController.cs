@@ -80,8 +80,56 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.Controllers
         [Route("admin/catering-guncelle")]
         [HttpPost]
         public async Task<IActionResult> Edit(UpdateCateringViewDTO updateCateringViewDTO)
-        {
+            {
+            if (!ModelState.IsValid)
+                return BadRequest(new { errorMessage = "Please make sure you have entered the information correctly" });
 
+            bool cateringExist = await unitOfWork.cateringRepository.AnyAsync(x => x.Title.ToLower() == updateCateringViewDTO.Title.ToLower() && x.ID != updateCateringViewDTO.ID);
+            var catering = await unitOfWork.cateringRepository.GetAsync(x => x.ID == updateCateringViewDTO.ID);
+            if (catering == null)
+                return NotFound(new { errorMessage = "There is no information about this record." });
+            if (cateringExist)
+                return BadRequest(new { errorMessage = "A record with this name already exists." });
+            if (updateCateringViewDTO.ImageUrl != null)
+            {
+                if (System.IO.File.Exists("wwwroot/Image/Catering/" + catering.ImageUrl))
+                    System.IO.File.Delete("wwwroot/Image/Catering/" + catering.ImageUrl);
+                string imgPath = ImageHelper.CreateImage(updateCateringViewDTO.ImageUrl, "Catering");
+                if (imgPath == string.Empty)
+                    return BadRequest(new { errorMessage = "Lütfen bilgileri doğru girdiğinizden emin olun" });
+                catering.ImageUrl = imgPath;
+            }
+            catering.Rank = updateCateringViewDTO.Rank;
+            catering.Title = updateCateringViewDTO.Title;
+            catering.ShortDescription = updateCateringViewDTO.ShortDescription;
+            catering.Description = updateCateringViewDTO.Description;
+            catering.parentCateringID = updateCateringViewDTO.parentCateringID;
+
+            catering.IsActive = updateCateringViewDTO.IsActive;
+            catering.LastDate = DateTime.Now;
+
+            #region seo
+            catering.seoDescription = updateCateringViewDTO.seoDescription;
+            catering.seoFacebookDescription = updateCateringViewDTO.seoFacebookDescription;
+            catering.seoFacebookKeywrods = updateCateringViewDTO.seoFacebookKeywrods;
+            catering.seoFacebookTitle = updateCateringViewDTO.seoFacebookTitle;
+            catering.seoFacebookUrl = updateCateringViewDTO.seoFacebookUrl;
+            catering.seoReply = updateCateringViewDTO.seoReply;
+            catering.seoTitle = updateCateringViewDTO.seoTitle;
+            catering.seoKeywords = updateCateringViewDTO.seoKeywords;
+            catering.seoTwitterDescription = updateCateringViewDTO.seoTwitterDescription;
+            catering.seoTwitterKeywords = updateCateringViewDTO.seoTwitterKeywords;
+            catering.seoTwitterTitle = updateCateringViewDTO.seoTwitterTitle;
+            catering.seoTwitterUrl = updateCateringViewDTO.seoTwitterUrl;
+            catering.seoDesign = "ImproBioTech and Infromation Technology";
+            catering.seoCopyright = "Copyright © 2022 SFIZI Tüm Hakları Saklıdır. Design By ImproBioTech";
+            catering.seoAuthor = "ImproBioTech and Information Technology";
+            catering.seoSubject = "Restaurant";
+            catering.Slug = StringHelper.StringReplacer(updateCateringViewDTO.Title).ToLower();
+            #endregion
+
+            await unitOfWork.cateringRepository.UpdateAsync(catering);
+            await unitOfWork.SaveAsync();
             return Ok();
         }
 

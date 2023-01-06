@@ -7,8 +7,8 @@
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Evet!',
-        cancelButtonText: 'Hayır'
+        confirmButtonText: 'Yes!',
+        cancelButtonText: 'No'
     }).then((result) => {
         if (result.isConfirmed) {
             deleteRequest(id)
