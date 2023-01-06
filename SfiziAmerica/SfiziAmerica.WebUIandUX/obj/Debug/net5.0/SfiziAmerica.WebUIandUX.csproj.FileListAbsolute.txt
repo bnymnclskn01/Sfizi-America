@@ -204,3 +204,4 @@ C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.
 C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Debug\net5.0\Razor\Areas\Admin\Views\ActionCatering\Index.cshtml.g.cs
 C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Debug\net5.0\Razor\Areas\Admin\Views\ActionCatering\Edit.cshtml.g.cs
 C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Debug\net5.0\Razor\Areas\Admin\Views\ActionCateringMenu\Index.cshtml.g.cs
+C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Debug\net5.0\Razor\Areas\Admin\Views\ActionCateringMenu\Create.cshtml.g.cs

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace SfiziAmerica.EntityLayer.Model
 {
     [Table("CateringMenu", Schema = "dbo")]
-    public class CateringMenu : BasicEntity, IEntity
+    public class CateringMenu : SeoEntity, IEntity
     {
         public string Title { get; set; }
         public string ShortDescription { get; set; }
