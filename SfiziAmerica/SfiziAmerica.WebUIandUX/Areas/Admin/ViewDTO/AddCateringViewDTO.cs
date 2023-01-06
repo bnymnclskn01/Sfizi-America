@@ -18,8 +18,8 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.ViewDTO
         public string Description { get; set; }
         [Required]
         public IFormFile ImageUrl { get; set; }
-        public Guid parentCateringID { get; set; }
-        [Required]
+        public Guid? parentCateringID { get; set; }
+
         public string Slug { get; set; }
 
         [Required]

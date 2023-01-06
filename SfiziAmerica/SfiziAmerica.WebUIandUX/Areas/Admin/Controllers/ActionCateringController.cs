@@ -80,7 +80,7 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.Controllers
         [Route("admin/catering-guncelle")]
         [HttpPost]
         public async Task<IActionResult> Edit(UpdateCateringViewDTO updateCateringViewDTO)
-            {
+        {
             if (!ModelState.IsValid)
                 return BadRequest(new { errorMessage = "Please make sure you have entered the information correctly" });
 
@@ -138,11 +138,27 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.Controllers
         public async Task<IActionResult> Delete(Guid id)
         {
             var fle = await unitOfWork.cateringRepository.GetAsync(x => x.ID == id);
+            var model = await unitOfWork.cateringMenuRepository.GetAllAsync(x => x.CateringID == fle.ID);
             if (fle == null)
                 return NotFound();
             if (System.IO.File.Exists("wwwroot/Image/Catering/" + fle.ImageUrl))
                 System.IO.File.Delete("wwwroot/Image/Catering/" + fle.ImageUrl);
             await unitOfWork.cateringRepository.DeleteAsync(fle);
+            foreach (var item in model)
+            {
+                #region Image
+                if (System.IO.File.Exists("wwwroot/Image/Catering/" + item.ImageUrl1))
+                    System.IO.File.Delete("wwwroot/Image/Catering/" + item.ImageUrl1);
+                if (System.IO.File.Exists("wwwroot/Image/Catering/" + item.ImageUrl2))
+                    System.IO.File.Delete("wwwroot/Image/Catering/" + item.ImageUrl2);
+                if (System.IO.File.Exists("wwwroot/Image/Catering/" + item.ImageUrl3))
+                    System.IO.File.Delete("wwwroot/Image/Catering/" + item.ImageUrl3);
+                if (System.IO.File.Exists("wwwroot/Image/Catering/" + item.ImageUrl4))
+                    System.IO.File.Delete("wwwroot/Image/Catering/" + item.ImageUrl4);
+                #endregion
+                await unitOfWork.cateringMenuRepository.DeleteAsync(item);
+                await unitOfWork.SaveAsync();
+            }
             await unitOfWork.SaveAsync();
             return Ok();
         }
