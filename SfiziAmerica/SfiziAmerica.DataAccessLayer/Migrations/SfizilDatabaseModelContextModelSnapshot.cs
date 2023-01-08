@@ -139,10 +139,10 @@ namespace SfiziAmerica.DataAccessLayer.Migrations
                     b.Property<DateTime>("LastDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("MenuCategoryID")
+                    b.Property<Guid?>("MenuCategoryID")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("MenuID")
+                    b.Property<Guid?>("MenuID")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("ID");
@@ -1099,15 +1099,11 @@ namespace SfiziAmerica.DataAccessLayer.Migrations
                 {
                     b.HasOne("SfiziAmerica.EntityLayer.Model.MenuCategory", "MenuCategory")
                         .WithMany("CategoryMenus")
-                        .HasForeignKey("MenuCategoryID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("MenuCategoryID");
 
                     b.HasOne("SfiziAmerica.EntityLayer.Model.Menu", "Menu")
                         .WithMany("CategoryMenus")
-                        .HasForeignKey("MenuID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("MenuID");
 
                     b.Navigation("Menu");
 

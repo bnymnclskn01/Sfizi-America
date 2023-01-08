@@ -11,9 +11,9 @@ namespace SfiziAmerica.EntityLayer.Model
     [Table("CategoryMenu", Schema = "dbo")]
     public class CategoryMenu : BasicEntity, IEntity
     {
-        public Guid MenuCategoryID { get; set; }
+        public Guid? MenuCategoryID { get; set; }
         public MenuCategory MenuCategory { get; set; }
-        public Guid MenuID { get; set; }
+        public Guid? MenuID { get; set; }
         public Menu Menu { get; set; }
     }
 }
