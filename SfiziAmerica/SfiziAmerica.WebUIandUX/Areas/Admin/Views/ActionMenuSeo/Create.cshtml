@@ -1,0 +1,107 @@
+﻿
+@{
+    ViewData["Title"] = "Add New Menu Seo Manager";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+@section scripts{
+    <script src="/PageJs/addMenuSeo.js"></script>
+}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="header-title">Add New Menu Seo Manager</h4>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <form id="form-submit">
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Page Name</label>
+                                <select required name="PageName" class="form-select">
+                                    <optgroup label="Please Select Menu Seo">
+                                        <option value="Home">Home</option>
+                                        <option value="About">About</option>
+                                        <option value="Mission">Mission</option>
+                                        <option value="Vision">Vision</option>
+                                        <option value="Event">Event</option>
+                                        <option value="Menu Category">Menu Category</option>
+                                        <option value="Catering">Catering</option>
+                                        <option value="Rezervation">Rezervation</option>
+                                        <option value="Human Resources">Human Resources</option>
+                                        <option value="Application Form">Application Form</option>
+                                        <option value="Customer Comment">Customer Comment</option>
+                                        <option value="Contact">Contact</option>
+
+                                    </optgroup>
+
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Status</label>
+                                <select required name="IsActive" class="form-select">
+                                    <option value="1">Active</option>
+                                    <option value="0">Passive</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Seo Title</label>
+                                <input type="text" class="form-control" name="seoTitle" required maxlength="110" placeholder="Please Enter Seo Title" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="col-md-2 col-form-label">Seo Keywords</label>
+                                <input type="text" class="form-control" name="seoKeywords" required maxlength="110" placeholder="Please Enter Seo Keywords" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="col-md-2 col-form-label">Seo Description</label>
+                                <input type="text" class="form-control" name="seoDescription" required maxlength="170" placeholder="Please Enter Seo Description" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="col-md-2 col-form-label">Seo Reply</label>
+                                <input type="email" class="form-control" name="seoReply" required maxlength="70" placeholder="Please Enter Seo Reply Trial: info@sfizi.com" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Seo Twitter Title</label>
+                                <input type="text" class="form-control" name="seoTwitterTitle" required maxlength="110" placeholder="Please Enter Seo Twitter Title" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="col-md-2 col-form-label">Seo Twitter Keywords</label>
+                                <input type="text" class="form-control" name="seoTwitterKeywords" required maxlength="110" placeholder="Please Enter Seo Twitter Keywords" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="col-md-2 col-form-label">Seo Twitter Description</label>
+                                <input type="text" class="form-control" name="seoTwitterDescription" required maxlength="170" placeholder="Please Enter Seo Twitter Description" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="col-md-2 col-form-label">Seo Twitter Url</label>
+                                <input type="url" class="form-control" name="seoTwitterUrl" required maxlength="100" placeholder="Please Enter Seo Twitter Url" />
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Seo Facebook Title</label>
+                                <input type="text" class="form-control" name="seoFacebookTitle" required maxlength="110" placeholder="Please Enter Seo Facebook Title" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="col-md-2 col-form-label">Seo Facebook Keywords</label>
+                                <input type="text" class="form-control" name="seoFacebookKeywrods" required maxlength="110" placeholder="Please Enter Seo Facebook Keywords" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="col-md-2 col-form-label">Seo Facebook Description</label>
+                                <input type="text" class="form-control" name="seoFacebookDescription" required maxlength="170" placeholder="Please Enter Seo Facebook Description" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="simpleinput" class="col-md-2 col-form-label">Seo Facebook Url</label>
+                                <input type="url" class="form-control" name="seoFacebookUrl" required maxlength="100" placeholder="Please Enter Seo Facebook Url" />
+                            </div>
+                            <div class="mb-3">
+                                <button type="submit" class="btn btn-outline-success d-inline-block"><i class="fa fa-check"></i> Add New Menu Seo Manager</button>
+                                <a href="/admin/seo-yonetimi-listele" class="btn btn-outline-dark"><i class="fa fa-reply-all"></i> Back To List</a>
+                            </div>
+                        </form>
+                    </div> <!-- end col -->
+                </div>
+                <!-- end row-->
+
+            </div> <!-- end card-body -->
+        </div> <!-- end card -->
+    </div><!-- end col -->
+</div>
+<!-- end row -->

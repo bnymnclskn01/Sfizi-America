@@ -1,0 +1,55 @@
+﻿@model IEnumerable<SfiziAmerica.EntityLayer.Model.MenuSeo>
+@{
+    ViewData["Title"] = "Menu Seo Manager List";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+@section scripts{
+    <script src="/PageJs/menuSeo.js"></script>
+}
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="mt-0 header-title">Menu Seo Manager List</h4>
+
+                <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap">
+                    <thead>
+                        <tr>
+                            <th>Page Name</th>
+                            <th>Seo Title</th>
+                            <th>Site Subject</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.PageName</td>
+                                <td>@item.seoTitle</td>
+                                <td>@item.seoSubject</td>
+                                @if (item.IsActive)
+                                {
+                                    <td>Active</td>
+                                }
+                                else
+                                {
+                                    <td>Passive</td>
+                                }
+                                <td>
+                                    <a href="/admin/seo-yonetimi-guncelle/@item.ID" class="btn btn-sm btn-primary"><i class='fa fa-edit'></i></a>
+                                    <button data-id="@item.ID" class="btn btn-danger btn-sm btnDelete"><i class='fa fa-trash'></i></button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- end row -->

@@ -17,7 +17,7 @@ namespace SfiziAmerica.DataAccessLayer.ModelContext
         public virtual DbSet<About> Abouts { get; set; } // BİTTİ
         public virtual DbSet<ApplicationForm> ApplicationForms { get; set; } //BİTTİ
         public virtual DbSet<BookComment> BookComments { get; set; } //BİTTİ
-        public virtual DbSet<CategoryMenu> CategoryMenus { get; set; }
+        public virtual DbSet<CategoryMenu> CategoryMenus { get; set; } //BİTTİ
         public virtual DbSet<Catering> Caterings { get; set; } //BİTTİ
         public virtual DbSet<CateringMenu> CateringMenus { get; set; } //BİTTİ
         public virtual DbSet<ContactForm> ContactForms { get; set; } //BİTTİ
@@ -26,7 +26,7 @@ namespace SfiziAmerica.DataAccessLayer.ModelContext
         public virtual DbSet<Event> Events { get; set; } // BİTTİ
         public virtual DbSet<HR> HR { get; set; } //BİTTİ
         public virtual DbSet<MailSetting> MailSettings { get; set; } // BİTTİ
-        public virtual DbSet<Menu> Menus { get; set; }
+        public virtual DbSet<Menu> Menus { get; set; } //BİTTİ
         public virtual DbSet<MenuCategory> MenuCategories { get; set; } // BİTTİ
         public virtual DbSet<MenuSeo> MenuSeo { get; set; } //BİTTİ
         public virtual DbSet<Mision> Misions { get; set; } // BİTTİ
