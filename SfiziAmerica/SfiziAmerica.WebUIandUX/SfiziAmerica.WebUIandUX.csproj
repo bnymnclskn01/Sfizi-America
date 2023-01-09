@@ -39,6 +39,20 @@
 
   <ItemGroup>
     <None Include="wwwroot\PageJs\updateCatering.js" />
+    <None Include="wwwroot\Site\fonts\fa-brands-400.svg" />
+    <None Include="wwwroot\Site\fonts\fa-brands-400.woff2" />
+    <None Include="wwwroot\Site\fonts\fa-light-300.svg" />
+    <None Include="wwwroot\Site\fonts\fa-light-300.woff2" />
+    <None Include="wwwroot\Site\fonts\fa-regular-400.svg" />
+    <None Include="wwwroot\Site\fonts\fa-regular-400.woff2" />
+    <None Include="wwwroot\Site\fonts\fa-solid-900.svg" />
+    <None Include="wwwroot\Site\fonts\fa-solid-900.woff2" />
+    <None Include="wwwroot\Site\fonts\lgd641.svg" />
+    <None Include="wwwroot\Site\js\cs-scripts.js" />
+    <None Include="wwwroot\Site\js\jquery.min.js" />
+    <None Include="wwwroot\Site\js\map.js" />
+    <None Include="wwwroot\Site\js\plugins.js" />
+    <None Include="wwwroot\Site\js\scripts.js" />
   </ItemGroup>
 
 </Project>

@@ -26,7 +26,6 @@ $('#form-submit').submit(function (e) {
     fdata.append('Title', $('input[name=Title]').val())
     fdata.append('Price', $('input[name=Price]').val())
     fdata.append('Discount', $('input[name=Discount]').val())
-    fdata.append('Type', $('input[name=Type]').val())
     fdata.append('ShortDescription', $('textarea[name=ShortDescription]').val())
     fdata.append('Description', ckData1)
     fdata.append('IsActive', activeValue === 1 ? true : false)
@@ -34,8 +33,6 @@ $('#form-submit').submit(function (e) {
     for (var i = 0; i < categories.length; i++) {
         fdata.append('MenuCategoryID[]', categories[i]);
     }
-    
-    console.log(fdata)
     //Seo
     $('[name^="seo"]').each(function (x, y) {
         fdata.append($(y).attr("name"), $(y).val());
