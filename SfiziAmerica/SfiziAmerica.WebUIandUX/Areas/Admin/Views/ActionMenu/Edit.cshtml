@@ -25,7 +25,7 @@
                                     <optgroup label="Please Multi Select Category Menu">
                                         @foreach (var item in Model.MenuCategories.OrderBy(x => x.Rank))
                                         {
-                                            if (Model.Menu.CategoryMenus.Where(x=>x.MenuID==Model.Menu.ID).FirstOrDefault().MenuCategoryID == item.MenuCategoryID)
+                                            if (Model.Menu.CategoryMenus.Any(s => s.MenuCategoryID == item.ID))
                                             {
                                                 <option value="@item.ID" selected>@item.Title</option>
                                             }
@@ -72,7 +72,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="simpleinput" class="form-label">Discount</label>
-                                <input required class="form-control" value="@Model.Menu.Discount" name="Discount" type="number" placeholder="Please Enter Catering Discont Trial:18">
+                                <input required class="form-control" value="@Model.Menu.Discount" name="Discount" type="text" placeholder="Please Enter Catering Discont Trial:18">
                             </div>
                             <div class="mb-3">
                                 <label for="simpleinput" class="form-label">Status</label>

@@ -209,6 +209,13 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.Controllers
             #endregion
             await unitOfWork.menuRepository.UpdateAsync(menu);
             await unitOfWork.SaveAsync();
+            var model = await unitOfWork.categoryMenuRepository.GetAllAsync(s => s.MenuID == menu.ID);
+            
+            foreach (var item in model)
+            {
+                await unitOfWork.categoryMenuRepository.DeleteAsync(item);
+            }
+            await unitOfWork.SaveAsync();
             foreach (Guid item in MenuCategoryID)
             {
                 CategoryMenu menuCategory = new CategoryMenu();
@@ -216,7 +223,7 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.Controllers
                 menuCategory.MenuID = menu.ID;
                 menuCategory.LastDate = DateTime.Now;
                 menuCategory.IsActive = menu.IsActive;
-                await unitOfWork.categoryMenuRepository.UpdateAsync(menuCategory);
+                await unitOfWork.categoryMenuRepository.AddAsync(menuCategory);
                 await unitOfWork.SaveAsync();
             }
             return Ok();
