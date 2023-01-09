@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace SfiziAmerica.EntityLayer.Model
 {
     [Table("Menu", Schema = "dbo")]
-    public class Menu : BasicEntity, IEntity
+    public class Menu : SeoEntity, IEntity
     {
         public Menu()
         {
@@ -25,6 +25,7 @@ namespace SfiziAmerica.EntityLayer.Model
         public decimal Price { get; set; }
         public decimal Discount { get; set; }
         public decimal DiscountPrice { get; set; }
+        public string Slug { get; set; }
 
         public virtual ICollection<CategoryMenu> CategoryMenus { get; set; }
     }

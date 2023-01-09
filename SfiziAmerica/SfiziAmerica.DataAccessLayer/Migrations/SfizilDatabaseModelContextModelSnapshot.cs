@@ -693,7 +693,58 @@ namespace SfiziAmerica.DataAccessLayer.Migrations
                     b.Property<string>("ShortDescription")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Slug")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("seoAuthor")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("seoCopyright")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("seoDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("seoDesign")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("seoFacebookDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("seoFacebookKeywrods")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("seoFacebookTitle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("seoFacebookUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("seoKeywords")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("seoReply")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("seoSubject")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("seoTitle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("seoTwitterDescription")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("seoTwitterKeywords")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("seoTwitterTitle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("seoTwitterUrl")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
