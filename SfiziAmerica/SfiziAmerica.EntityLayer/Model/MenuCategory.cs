@@ -24,6 +24,7 @@ namespace SfiziAmerica.EntityLayer.Model
         public string ImageUrl2 { get; set; }
         public Guid? MenuCategoryID { get; set; }
         public MenuCategory ParentMenuCategory { get; set; }
+        public string Slug { get; set; }
         public virtual ICollection<MenuCategory> MenuCategories { get; set; }
         public virtual ICollection<CategoryMenu> CategoryMenus { get; set; }
     }
