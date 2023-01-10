@@ -35,13 +35,6 @@ namespace SfiziAmerica.WebUIandUX
             {
                 x.MultipartBodyLengthLimit = 209715200;
             });
-            services.Configure<CookiePolicyOptions>(options =>
-            {
-                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-                options.CheckConsentNeeded = context => true;
-                options.MinimumSameSitePolicy = SameSiteMode.None;
-            });
-            services.Configure<ForwardedHeadersOptions>(options => options.ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
