@@ -27,8 +27,8 @@ namespace SfiziAmerica.WebUIandUX.Controllers
             var events=await sfizilDatabase.Events.Where(x=>x.IsActive==true).OrderByDescending(x=>x.ID).ToListAsync();
             var socialMedia = await unitOfWork.socialMediaRepository.GetAllAsync(x => x.IsActive == true);
             var menuCategory = await sfizilDatabase.MenuCategories.Where(x => x.IsActive == true).OrderBy(x => x.Rank).Include(x => x.CategoryMenus).ThenInclude(x => x.Menu).ToListAsync();
-            var caterings = await sfizilDatabase.Caterings.Where(x => x.IsActive == true).OrderBy(x => x.Rank).ToListAsync();
-            var customerComment = await sfizilDatabase.BookComments.Where(x => x.IsActive == true).OrderByDescending(x => x.ID).ToListAsync();
+            var caterings = await sfizilDatabase.Caterings.Where(x => x.IsActive == true && x.IsMainActive==true).Include(x=>x.ParentCategory).OrderBy(x => x.Rank).ToListAsync();
+            var customerComment = await sfizilDatabase.BookComments.Where(x => x.IsActive == true).OrderByDescending(x => x.ID).Take(10).ToListAsync();
             AnasayfaViewModel anasayfaViewModel = new() { About = about, Sliders = sliders, ContactInformation = contactInformation, Events = events, MenuCategories = menuCategory, SocialMedias = socialMedia, Caterings = caterings, BookComments = customerComment };
             return View(anasayfaViewModel);
         }
