@@ -26,6 +26,7 @@ namespace SfiziAmerica.EntityLayer.Model
         public decimal Discount { get; set; }
         public decimal DiscountPrice { get; set; }
         public string Slug { get; set; }
+        public bool IsMainActive { get; set; }
 
         public virtual ICollection<CategoryMenu> CategoryMenus { get; set; }
     }

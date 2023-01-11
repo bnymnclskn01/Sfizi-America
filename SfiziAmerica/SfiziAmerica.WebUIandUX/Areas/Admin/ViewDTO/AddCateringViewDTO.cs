@@ -24,5 +24,8 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.ViewDTO
 
         [Required]
         public bool IsActive { get; set; }
+
+        [Required]
+        public bool IsMainActive { get; set; }
     }
 }

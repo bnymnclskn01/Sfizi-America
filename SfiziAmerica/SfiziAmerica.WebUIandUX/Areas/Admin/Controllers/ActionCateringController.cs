@@ -46,6 +46,9 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.Controllers
             bool cateringExist = await unitOfWork.cateringRepository.AnyAsync(x => x.Title.ToLower() == addCateringViewDTO.Title.ToLower());
             if (cateringExist)
                 return BadRequest(new { errorMessage = "A record with this name already exists." });
+            int cateringCount = await unitOfWork.cateringRepository.CountAsync(x => x.IsMainActive == true);
+            if (cateringCount > 3)
+                return BadRequest(new { errorMessage = "The maximum number of catering that will appear on the main page should be 3." });
             Catering catering = addCateringViewDTO.Adapt<Catering>();
             if (addCateringViewDTO.ImageUrl != null)
             {
@@ -90,6 +93,9 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.Controllers
                 return NotFound(new { errorMessage = "There is no information about this record." });
             if (cateringExist)
                 return BadRequest(new { errorMessage = "A record with this name already exists." });
+            int cateringCount = await unitOfWork.cateringRepository.CountAsync(x => x.IsMainActive == true);
+            if (cateringCount > 3)
+                return BadRequest(new { errorMessage = "The maximum number of catering that will appear on the main page should be 3." });
             if (updateCateringViewDTO.ImageUrl != null)
             {
                 if (System.IO.File.Exists("wwwroot/Image/Catering/" + catering.ImageUrl))
@@ -106,6 +112,7 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.Controllers
             catering.parentCateringID = updateCateringViewDTO.parentCateringID;
 
             catering.IsActive = updateCateringViewDTO.IsActive;
+            catering.IsMainActive = updateCateringViewDTO.IsMainActive;
             catering.LastDate = DateTime.Now;
 
             #region seo

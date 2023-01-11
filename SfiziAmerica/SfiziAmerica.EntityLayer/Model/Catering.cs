@@ -24,6 +24,7 @@ namespace SfiziAmerica.EntityLayer.Model
         public Guid? parentCateringID { get; set; }
         public Catering ParentCategory { get; set; }
         public string Slug { get; set; }
+        public bool IsMainActive { get; set; }
         public virtual ICollection<Catering> Caterings { get; set; }
         public virtual ICollection<CateringMenu> CateringMenus { get; set; }
     }

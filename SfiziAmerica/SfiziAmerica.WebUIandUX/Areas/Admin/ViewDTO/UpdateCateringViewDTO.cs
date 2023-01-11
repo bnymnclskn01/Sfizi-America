@@ -21,5 +21,7 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.ViewDTO
         public string Slug { get; set; }
         [Required]
         public bool IsActive { get; set; }
+        [Required]
+        public bool IsMainActive { get; set; }
     }
 }

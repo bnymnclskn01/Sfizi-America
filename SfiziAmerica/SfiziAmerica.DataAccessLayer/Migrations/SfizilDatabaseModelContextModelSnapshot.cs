@@ -172,6 +172,9 @@ namespace SfiziAmerica.DataAccessLayer.Migrations
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
+                    b.Property<bool>("IsMainActive")
+                        .HasColumnType("bit");
+
                     b.Property<DateTime>("LastDate")
                         .HasColumnType("datetime2");
 
@@ -682,6 +685,9 @@ namespace SfiziAmerica.DataAccessLayer.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsMainActive")
                         .HasColumnType("bit");
 
                     b.Property<DateTime>("LastDate")

@@ -7,6 +7,7 @@ $('#form-submit').submit(function (e) {
         return
     }
     const activeValue = Number($('select[name=IsActive]').val())
+    const activeMainValue = Number($('select[name=IsMainActive]').val())
     const rankValue = Number($('input[name=Rank]').val())
 
     const fdata = new FormData();
@@ -20,6 +21,7 @@ $('#form-submit').submit(function (e) {
     fdata.append('ShortDescription', $('textarea[name=ShortDescription]').val())
     fdata.append('Description', ckData1)
     fdata.append('IsActive', activeValue === 1 ? true : false)
+    fdata.append('IsMainActive', activeMainValue === 1 ? true : false)
     fdata.append('parentCateringID', $('select[name=parentCateringID]').val())
 
     //Seo

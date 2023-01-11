@@ -1,124 +1,198 @@
-﻿@{
+﻿@model SfiziAmerica.WebUIandUX.Models.ViewModel.AnasayfaViewModel
+@{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <!-- hero-wrap-->
 <div class="hero-wrap fl-wrap full-height">
-    <!--fs-slider-wrap -->
-    <div class="fs-slider-wrap fs-slider-det full-height fl-wrap hero_fsw dark-bg">
-        <div class="fs-slider full-height fl-wrap">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <!-- swiper-slide-->
-                    <div class="swiper-slide">
-                        <div class="fs-slider-item fl-wrap">
-                            <div class="bg" data-bg="/Site/images/bg/1.jpg" data-swiper-parallax="40%"></div>
-                            <div class="overlay"></div>
-                            <div class="grid-carousel-title">
-                                <h3>Welcome To Our Restaurant </h3>
-                                <div class="clearfix"></div>
-                                <h4>Quis autem vel eum iure reprehenderit qui in ea voluptate</h4>
-                                <div class="bold-separator"><span></span></div>
-                                <a href="#sec2" class="hero_btn custom-scroll-link">Scroll down to Discover<i class="fal fa-long-arrow-down"></i></a>
+    @if (Model.Sliders.Count() > 0)
+    {
+        <!--fs-slider-wrap -->
+        <div class="fs-slider-wrap fs-slider-det full-height fl-wrap hero_fsw dark-bg">
+            <div class="fs-slider full-height fl-wrap">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        @foreach (var item in Model.Sliders)
+                        {
+                            <!-- swiper-slide-->
+                            <div class="swiper-slide">
+                                <div class="fs-slider-item fl-wrap">
+                                    <div class="bg" data-bg="/Image/Slider/@item.ImageVideoUrl" data-swiper-parallax="40%"></div>
+                                    <div class="overlay"></div>
+                                    <div class="grid-carousel-title">
+                                        <h3>@item.Title </h3>
+                                        <div class="clearfix"></div>
+                                        <h4>@Html.Raw(item.Description)</h4>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                            <!-- swiper-slide-->
+                        }
                     </div>
-                    <!-- swiper-slide-->
-                    <!-- swiper-slide-->
-                    <div class="swiper-slide">
-                        <div class="fs-slider-item fl-wrap">
-                            <div class="bg" data-bg="/Site/images/bg/10.jpg" data-swiper-parallax="40%"></div>
-                            <div class="overlay"></div>
-                            <div class="grid-carousel-title">
-                                <h3>Explore Our Menu</h3>
-                                <div class="clearfix"></div>
-                                <h4>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</h4>
-                                <div class="bold-separator"><span></span></div>
-                                <a href="menu.html" class="hero_btn">Click to Discover<i class="fal fa-long-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- swiper-slide-->
-                    <!-- swiper-slide-->
-                    <div class="swiper-slide">
-                        <div class="fs-slider-item fl-wrap">
-                            <div class="bg" data-bg="/Site/images/bg/17.jpg" data-swiper-parallax="40%"></div>
-                            <div class="overlay"></div>
-                            <div class="grid-carousel-title">
-                                <h3>Our Awesome Story</h3>
-                                <div class="clearfix"></div>
-                                <h4>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</h4>
-                                <div class="bold-separator"><span></span></div>
-                                <a href="about.html" class="hero_btn">Click to Discover<i class="fal fa-long-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- swiper-slide-->
-                    <!-- swiper-slide-->
-                    <div class="swiper-slide">
-                        <div class="fs-slider-item fl-wrap">
-                            <div class="bg" data-bg="/Site/images/bg/19.jpg" data-swiper-parallax="40%"></div>
-                            <div class="overlay"></div>
-                            <div class="grid-carousel-title">
-                                <h3>Visit Our Online Store</h3>
-                                <div class="clearfix"></div>
-                                <h4>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</h4>
-                                <div class="bold-separator"><span></span></div>
-                                <a href="shop.html" class="hero_btn">Buy Online<i class="fal fa-long-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- swiper-slide-->
                 </div>
             </div>
+            <div class="hero-slider_btn hero-slider_btn_next fs-slider-button-next"><i class="fas fa-caret-right"></i></div>
+            <div class="hero-slider_btn hero-slider_btn_prev fs-slider-button-prev"><i class="fas fa-caret-left"></i></div>
+            <div class="hero-slider-wrap_pagination"></div>
         </div>
-        <div class="hero-slider_btn hero-slider_btn_next fs-slider-button-next"><i class="fas fa-caret-right"></i></div>
-        <div class="hero-slider_btn hero-slider_btn_prev fs-slider-button-prev"><i class="fas fa-caret-left"></i></div>
-        <div class="hero-slider-wrap_pagination"></div>
-    </div>
-    <!--fs-slider-wrap end -->
-    <div class="hero-dec_top"></div>
-    <div class="hero-dec_bottom"></div>
-    <div class="hero-dec_top_right"></div>
-    <div class="hero-dec_bottom_right"></div>
-    <div class="brush-dec"></div>
+        <!--fs-slider-wrap end -->
+        <div class="hero-dec_top"></div>
+        <div class="hero-dec_bottom"></div>
+        <div class="hero-dec_top_right"></div>
+        <div class="hero-dec_bottom_right"></div>
+        <div class="brush-dec"></div>
+    }
+    else
+    {
+        <!--fs-slider-wrap -->
+        <div class="fs-slider-wrap fs-slider-det full-height fl-wrap hero_fsw dark-bg">
+            <div class="fs-slider full-height fl-wrap">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <!-- swiper-slide-->
+                        <div class="swiper-slide">
+                            <div class="fs-slider-item fl-wrap">
+                                <div class="bg" data-bg="/Site/images/bg/1.jpg" data-swiper-parallax="40%"></div>
+                                <div class="overlay"></div>
+                                <div class="grid-carousel-title">
+                                    <h3>Welcome To Our Restaurant </h3>
+                                    <div class="clearfix"></div>
+                                    <h4>Quis autem vel eum iure reprehenderit qui in ea voluptate</h4>
+                                    <div class="bold-separator"><span></span></div>
+                                    <a href="#sec2" class="hero_btn custom-scroll-link">Scroll down to Discover<i class="fal fa-long-arrow-down"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- swiper-slide-->
+                        <!-- swiper-slide-->
+                        <div class="swiper-slide">
+                            <div class="fs-slider-item fl-wrap">
+                                <div class="bg" data-bg="/Site/images/bg/10.jpg" data-swiper-parallax="40%"></div>
+                                <div class="overlay"></div>
+                                <div class="grid-carousel-title">
+                                    <h3>Explore Our Menu</h3>
+                                    <div class="clearfix"></div>
+                                    <h4>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</h4>
+                                    <div class="bold-separator"><span></span></div>
+                                    <a href="menu.html" class="hero_btn">Click to Discover<i class="fal fa-long-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- swiper-slide-->
+                        <!-- swiper-slide-->
+                        <div class="swiper-slide">
+                            <div class="fs-slider-item fl-wrap">
+                                <div class="bg" data-bg="/Site/images/bg/17.jpg" data-swiper-parallax="40%"></div>
+                                <div class="overlay"></div>
+                                <div class="grid-carousel-title">
+                                    <h3>Our Awesome Story</h3>
+                                    <div class="clearfix"></div>
+                                    <h4>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</h4>
+                                    <div class="bold-separator"><span></span></div>
+                                    <a href="about.html" class="hero_btn">Click to Discover<i class="fal fa-long-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- swiper-slide-->
+                        <!-- swiper-slide-->
+                        <div class="swiper-slide">
+                            <div class="fs-slider-item fl-wrap">
+                                <div class="bg" data-bg="/Site/images/bg/19.jpg" data-swiper-parallax="40%"></div>
+                                <div class="overlay"></div>
+                                <div class="grid-carousel-title">
+                                    <h3>Visit Our Online Store</h3>
+                                    <div class="clearfix"></div>
+                                    <h4>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</h4>
+                                    <div class="bold-separator"><span></span></div>
+                                    <a href="shop.html" class="hero_btn">Buy Online<i class="fal fa-long-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- swiper-slide-->
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slider_btn hero-slider_btn_next fs-slider-button-next"><i class="fas fa-caret-right"></i></div>
+            <div class="hero-slider_btn hero-slider_btn_prev fs-slider-button-prev"><i class="fas fa-caret-left"></i></div>
+            <div class="hero-slider-wrap_pagination"></div>
+        </div>
+        <!--fs-slider-wrap end -->
+        <div class="hero-dec_top"></div>
+        <div class="hero-dec_bottom"></div>
+        <div class="hero-dec_top_right"></div>
+        <div class="hero-dec_bottom_right"></div>
+        <div class="brush-dec"></div>
+    }
 </div>
 <!-- hero-wrap  end -->
 <!-- content  -->
 <div class="content">
-    <section class="hidden-section big-padding" data-scrollax-parent="true" id="sec2">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="section-title text-align_left">
-                        <h4>Our story</h4>
-                        <h2>Few words about us</h2>
-                        <div class="dots-separator fl-wrap"><span></span></div>
-                    </div>
-                    <div class="text-block ">
-                        <p>
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam aperiam. Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.
-                            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.
-                        </p>
-                        <p> Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.</p>
-                        <a href="menu.html" class="btn fl-btn">Explore Our Menu<i class="fal fa-long-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="image-collge-wrap fl-wrap">
-                        <div class="main-iamge">
-                            <img src="/Site/images/all/3.jpg" alt="">
+    @if (Model.About != null)
+    {
+        <section class="hidden-section big-padding" data-scrollax-parent="true" id="sec2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="section-title text-align_left">
+                            <h4>About us</h4>
+                            <h2>@Model.About.Title</h2>
+                            <div class="dots-separator fl-wrap"><span></span></div>
                         </div>
-                        <div class="images-collage-item" style="width:65%" data-position-left="68" data-position-top="-15" data-zindex="2" data-opacity="1.0"><img src="/Site/images/all/8.jpg" alt=""></div>
-                        <div class="images-collage-item col_par" style="width:120px" data-position-left="-23" data-position-top="-17" data-zindex="9" data-scrollax="properties: { translateY: '150px' }"><img src="/Site/images/cube.png" alt=""></div>
+                        <div class="text-block ">
+                            <p>@Html.Raw(Model.About.ShortDescription)</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="image-collge-wrap fl-wrap">
+                            <div class="main-iamge">
+                                <img src="/Image/About/@Model.About.ImageUrl" alt="@Model.About.Title">
+                            </div>
+                            <div class="images-collage-item" style="width:65%" data-position-left="68" data-position-top="-15" data-zindex="2" data-opacity="1.0"><img src="/Site//images/background.png" alt="Sfizi"></div>
+                            <div class="images-collage-item col_par" style="width:120px" data-position-left="-23" data-position-top="-17" data-zindex="9" data-scrollax="properties: { translateY: '150px' }"><img src="/Site/images/cube.png" alt="Sfizi"></div>
+                        </div>
                     </div>
                 </div>
+                <div class="section-dec sec-dec_top"></div>
+                <div class="wave-bg" data-scrollax="properties: { translateY: '-150px' }"></div>
             </div>
-            <div class="section-dec sec-dec_top"></div>
-            <div class="wave-bg" data-scrollax="properties: { translateY: '-150px' }"></div>
-        </div>
-    </section>
-    <!--  section end  -->
+        </section>
+        <!--  section end  -->
+    }
+    else
+    {
+        <section class="hidden-section big-padding" data-scrollax-parent="true" id="sec2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="section-title text-align_left">
+                            <h4>Our story</h4>
+                            <h2>Few words about us</h2>
+                            <div class="dots-separator fl-wrap"><span></span></div>
+                        </div>
+                        <div class="text-block ">
+                            <p>
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam aperiam. Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.
+                                Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.
+                            </p>
+                            <p> Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="image-collge-wrap fl-wrap">
+                            <div class="main-iamge">
+                                <img src="/Site/images/all/3.jpg" alt="">
+                            </div>
+                            <div class="images-collage-item" style="width:65%" data-position-left="68" data-position-top="-15" data-zindex="2" data-opacity="1.0"><img src="/Site//images/background.png" alt="Sfizi"></div>
+                            <div class="images-collage-item col_par" style="width:120px" data-position-left="-23" data-position-top="-17" data-zindex="9" data-scrollax="properties: { translateY: '150px' }"><img src="/Site/images/cube.png" alt="Sfizi"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-dec sec-dec_top"></div>
+                <div class="wave-bg" data-scrollax="properties: { translateY: '-150px' }"></div>
+            </div>
+        </section>
+        <!--  section end  -->
+    }
     <!-- section   -->
     <section class="column-section no-padding hidden-section" data-scrollax-parent="true" id="sec4">
         <div class="column-wrap-bg left-wrap">
@@ -567,7 +641,6 @@
     </section>
     <!--  section  end-->
     <!-- section   -->
-
     <!-- section   -->
     <section>
         <div class="brush-dec2 brush-dec_bottom"></div>
@@ -644,7 +717,7 @@
         </div>
     </section>
     <!-- section end  -->
-        <section class="column-section no-padding hidden-section" data-scrollax-parent="true">
+    <section class="column-section no-padding hidden-section" data-scrollax-parent="true">
         <div class="column-wrap-bg right-wrap">
             <div class="bg par-elem " data-bg="/Site/images/bg/10.jpg" data-scrollax="properties: { translateY: '30%' }"></div>
             <div class="overlay"></div>

@@ -6,6 +6,7 @@
         return
     }
     const activeValue = Number($('select[name=IsActive]').val())
+    const activeMainValue = Number($('select[name=IsMainActive]').val())
 
     const fdata = new FormData();
 
@@ -29,6 +30,7 @@
     fdata.append('ShortDescription', $('textarea[name=ShortDescription]').val())
     fdata.append('Description', ckData1)
     fdata.append('IsActive', activeValue === 1 ? true : false)
+    fdata.append('IsMainActive', activeMainValue === 1 ? true : false)
     var categories = $('select[name=MenuCategoryID]').val();
     for (var i = 0; i < categories.length; i++) {
         fdata.append('MenuCategoryID[]', categories[i]);
