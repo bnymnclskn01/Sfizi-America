@@ -1,12 +1,26 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using SfiziAmerica.BusinessLayer.Repository.Concrete;
+using SfiziAmerica.DataAccessLayer.ModelContext;
+using System.Threading.Tasks;
 
 namespace SfiziAmerica.WebUIandUX.Controllers
 {
     public class MisyonController : Controller
     {
-        public IActionResult Index()
+        private DbContext context = new SfizilDatabaseModelContext();
+        private UnitOfWork unitOfWork;
+        private SfizilDatabaseModelContext sfizilDatabase = new SfizilDatabaseModelContext();
+        public MisyonController()
         {
-            return View();
+            unitOfWork = new(context);
+        }
+
+        [Route("mission")]
+        public async Task<IActionResult> Index()
+        {
+            var mission = await unitOfWork.missionRepository.GetAsync(x => x.IsActive == true);
+            return View(mission);
         }
     }
 }

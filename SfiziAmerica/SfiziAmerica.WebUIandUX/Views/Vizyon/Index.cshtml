@@ -1,0 +1,112 @@
+﻿@model SfiziAmerica.EntityLayer.Model.Vision
+@{
+    ViewData["Title"] = "Vision";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="content">
+    <!--  section  -->
+    <section class="parallax-section hero-section hidden-section" data-scrollax-parent="true">
+        <div class="bg par-elem " data-bg="/Site/images/bg/10.jpg" data-scrollax="properties: { translateY: '30%' }"></div>
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="section-title">
+                <h4>Enjoy your time in our restaurant with pleasure.</h4>
+                <h2>About our Restaurant</h2>
+                <div class="dots-separator fl-wrap"><span></span></div>
+            </div>
+        </div>
+        <div class="hero-section-scroll">
+            <div class="mousey">
+                <div class="scroller"></div>
+            </div>
+        </div>
+        <div class="brush-dec"></div>
+    </section>
+    <!--  section  end-->
+    @if (Model != null)
+    {
+        <!--  section  -->
+        <section class="hidden-section big-padding" data-scrollax-parent="true">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="section-title text-align_left">
+                            <h2>@Model.Title</h2>
+                            <div class="dots-separator fl-wrap"><span></span></div>
+                        </div>
+                        <div class="text-block ">
+                            @Html.Raw(Model.Description)
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="image-collge-wrap fl-wrap">
+                            <div class="single-slider-wrap">
+                                <div class="single-slider fl-wrap">
+                                    <div class="swiper-container">
+                                        <div class="swiper-wrapper lightgallery">
+                                            <div class="swiper-slide hov_zoom"><img src="/Site/images/all/4.jpg" alt=""><a href="/Image/About/@Model.ImageUrl" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a></div>
+                                        </div>
+                                        <div class="ss-slider-pagination"></div>
+                                        <div class="ss-slider-cont ss-slider-cont-prev"><i class="fas fa-caret-left"></i></div>
+                                        <div class="ss-slider-cont ss-slider-cont-next"><i class="fas fa-caret-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="images-collage-item col_par" style="width:120px" data-position-left="-23" data-position-top="-17" data-zindex="9" data-scrollax="properties: { translateY: '150px' }"><img src="images/cube.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-dec sec-dec_top"></div>
+                <div class="wave-bg" data-scrollax="properties: { translateY: '-150px' }"></div>
+            </div>
+        </section>
+        <!--  section  end-->
+    }
+    else
+    {
+        <!--  section  -->
+        <section class="hidden-section big-padding" data-scrollax-parent="true">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="section-title text-align_left">
+                            <h4>Our story</h4>
+                            <h2>Few words about us</h2>
+                            <div class="dots-separator fl-wrap"><span></span></div>
+                        </div>
+                        <div class="text-block ">
+                            <p>
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam aperiam. Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt.
+                                Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.
+                            </p>
+                            <p> Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.</p>
+                            <a href="about.html" class="btn fl-btn">Explore Our Menu<i class="fal fa-long-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="image-collge-wrap fl-wrap">
+                            <div class="single-slider-wrap">
+                                <div class="single-slider fl-wrap">
+                                    <div class="swiper-container">
+                                        <div class="swiper-wrapper lightgallery">
+                                            <div class="swiper-slide hov_zoom"><img src="/Site/images/all/4.jpg" alt=""><a href="images/all/4.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a></div>
+                                            <div class="swiper-slide hov_zoom"><img src="/Site/images/all/1.jpg" alt=""><a href="images/all/1.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a></div>
+                                            <div class="swiper-slide hov_zoom"><img src="/Site/images/all/2.jpg" alt=""><a href="images/all/2.jpg" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a></div>
+                                        </div>
+                                        <div class="ss-slider-pagination"></div>
+                                        <div class="ss-slider-cont ss-slider-cont-prev"><i class="fas fa-caret-left"></i></div>
+                                        <div class="ss-slider-cont ss-slider-cont-next"><i class="fas fa-caret-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="images-collage-item col_par" style="width:120px" data-position-left="-23" data-position-top="-17" data-zindex="9" data-scrollax="properties: { translateY: '150px' }"><img src="images/cube.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-dec sec-dec_top"></div>
+                <div class="wave-bg" data-scrollax="properties: { translateY: '-150px' }"></div>
+            </div>
+        </section>
+        <!--  section  end-->
+    }
+</div>
