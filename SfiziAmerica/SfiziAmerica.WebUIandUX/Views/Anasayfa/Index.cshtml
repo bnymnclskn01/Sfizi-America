@@ -420,7 +420,7 @@
                         <div class="col-md-3">
                             <div class="hero-menu_header fl-wrap">
                                 <ul class="tabs-menu no-list-style change_bg">
-                                    @foreach (var item in Model.MenuCategories)
+                                    @foreach (var item in Model.MenuCategories.Take(5))
                                     {
                                         <li @(Model.MenuCategories.IndexOf(item)==0?"class='current'":"")><a href="#@item.Slug" data-bgtab="/Image/Menu/@item.ImageUrl1">@item.Title</a></li>
                                     }
@@ -432,25 +432,25 @@
                         <div class="col-md-9">
                             <div class="hero-menu_content fl-wrap">
                                 <div class="tabs-container">
-                                    @foreach (var item2 in Model.MenuCategories)
+                                    @foreach (var item2 in Model.MenuCategories.Take(5))
                                     {
                                         <div class="tab">
                                             <!--tab -->
                                             <div id="@item2.Slug" class="tab-content @(Model.MenuCategories.IndexOf(item2)==0?"first-tab":"")">
-                                                @foreach (var item3 in item2.CategoryMenus.ToList())
+                                                @foreach (var item3 in item2.CategoryMenus.Where(x => x.MenuCategoryID == item2.ID).Select(x => x.Menu).Take(20).ToList())
                                                 {
                                                     <!-- header-menu-item-->
                                                     <div class="hero-menu-item">
                                                         <div class="hero-menu-item-title fl-wrap">
-                                                            <h6>@item3.Menu.Title</h6>
+                                                            <h6>@item3.Title</h6>
                                                             <div class="hmi-dec"></div>
-                                                            @if (item3.Menu.Discount > 0)
+                                                            @if (item3.Discount > 0)
                                                             {
-                                                                <span class="hero-menu-item-price">$@item3.Menu.DiscountPrice</span>
+                                                                <span class="hero-menu-item-price">$@item3.DiscountPrice</span>
                                                             }
                                                             else
                                                             {
-                                                                <span class="hero-menu-item-price">$@item3.Menu.Price</span>
+                                                                <span class="hero-menu-item-price">$@item3.Price</span>
                                                             }
                                                         </div>
                                                     </div>
