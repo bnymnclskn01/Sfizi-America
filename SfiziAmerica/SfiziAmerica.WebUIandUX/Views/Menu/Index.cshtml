@@ -1,0 +1,84 @@
+﻿@model IEnumerable<SfiziAmerica.EntityLayer.Model.MenuCategory>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- content  -->
+<div class="content">
+    <!--  section  -->
+    <section class="parallax-section hero-section hidden-section" data-scrollax-parent="true">
+        <div class="bg par-elem " data-bg="/Site/images/bg/11.jpg" data-scrollax="properties: { translateY: '30%' }"></div>
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="section-title">
+                <h4>Enjoy your time in our restaurant with pleasure.</h4>
+                <h2>Discover Our Menu</h2>
+                <div class="dots-separator fl-wrap"><span></span></div>
+            </div>
+        </div>
+        <div class="hero-section-scroll">
+            <div class="mousey">
+                <div class="scroller"></div>
+            </div>
+        </div>
+        <div class="brush-dec"></div>
+    </section>
+    <!--  section  end-->
+    <!--  section  -->
+    <section class="hidden-section" data-scrollax-parent="true" id="sec2">
+        <div class="container">
+            <div class="gallery_filter-button btn">Show Filters <i class="fal fa-long-arrow-down"></i></div>
+            <!-- gallery-filters -->
+            <div class="gallery-filters gth">
+                <a href="#" class="gallery-filter gallery-filter-active" data-filter="*">All Dishes</a>
+                @foreach (var item in Model)
+                {
+                    <a href="#" class="gallery-filter " data-filter=".@item.Slug">@item.Title</a>
+                }
+            </div>
+            <!-- gallery-filters end-->
+            <!-- gallery start -->
+            <div class="gallery-items grid-big-pad  lightgallery three-column fl-wrap" style="margin-bottom:50px;">
+                @foreach (var item in Model)
+                {
+                    foreach (var item2 in item.CategoryMenus.Where(x => x.MenuCategoryID == item.ID).Select(x => x.Menu).Where(x => x.IsActive == true).ToList())
+                    {
+                        <!-- gallery-item-->
+                        <div class="gallery-item @item.Slug">
+                            <div class="grid-item-holder hov_zoom">
+                                <a href="/Image/Menu/@item2.ImageUrl1" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
+                                <img src="/@item2.ImageUrl1" alt="@item2.Title">
+                            </div>
+                            <div class="grid-item-details">
+                                <h3 title="@item2.Title">@item2.Title @if (item2.Discount > 0) { <span> %</span> @item2.Discount}</h3>
+                                <p>@item2.ShortDescription</p>
+                                <div class="grid-item_price">
+                                    @if (item2.Discount > 0)
+                                    {
+                                        <span>$@item2.DiscountPrice</span>
+                                    }
+                                    else
+                                    {
+                                        <span>$@item2.Price</span>
+                                    }
+                                    <a class="add_cart" href="/menu/@item.Slug">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- gallery-item end-->
+                    }
+                }
+            </div>
+            <!-- gallery end -->
+            <div class="clearfix"></div>
+            <div class="bold-separator bold-separator_dark"><span></span></div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="section-bg">
+            <div class="bg" data-bg="/Site/images/bg/dec/section-bg.png"></div>
+        </div>
+    </section>
+    <!--  section end  -->
+    <div class="brush-dec2 brush-dec_bottom"></div>
+</div>
+<!-- content end  -->
