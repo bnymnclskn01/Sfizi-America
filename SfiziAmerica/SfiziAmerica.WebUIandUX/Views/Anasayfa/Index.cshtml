@@ -437,7 +437,7 @@
                                         <div class="tab">
                                             <!--tab -->
                                             <div id="@item2.Slug" class="tab-content @(Model.MenuCategories.IndexOf(item2)==0?"first-tab":"")">
-                                                @foreach (var item3 in item2.CategoryMenus.Where(x => x.MenuCategoryID == item2.ID).Select(x => x.Menu).Take(20).ToList())
+                                                @foreach (var item3 in item2.CategoryMenus.Where(x => x.MenuCategoryID == item2.ID).Select(x => x.Menu).Take(20).OrderByDescending(x=>x.Price).ToList())
                                                 {
                                                     <!-- header-menu-item-->
                                                     <div class="hero-menu-item">

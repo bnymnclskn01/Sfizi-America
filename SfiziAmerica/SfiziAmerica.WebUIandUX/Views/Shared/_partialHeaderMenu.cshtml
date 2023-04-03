@@ -35,7 +35,14 @@
                                 </ul>
                                 <!--second level end-->
                             </li>
-                            <li><a href="/menu">Menu</a></li>
+                            <li>
+                                <a href="#">Menu <i class="fas fa-caret-down"></i></a>
+                                <!--second level -->
+                                <ul>
+                                    @await Component.InvokeAsync("HeaderMenuComponentList")
+                                </ul>
+                                <!--second level end-->
+                            </li>
                             <li><a href="/catering">Catering</a></li>
                             <li><a href="/event">Event</a></li>
                             <li>

@@ -26,8 +26,22 @@ using SfiziAmerica.WebUIandUX.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\Views\_ViewImports.cshtml"
+using SfiziAmerica.EntityLayer.Entity;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\Views\_ViewImports.cshtml"
+using SfiziAmerica.EntityLayer.Model;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"efd16536b117740f6a843f27a41676edaf2187b3", @"/Views/BasvuruForm/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e41bc163958188bb831efe5abf8fcff05182ff26", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e1fbf1d821c8df4866958a0c8a611f0bc84813b3", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_BasvuruForm_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<SfiziAmerica.WebUIandUX.Models.ViewModel.ApplicationViewModel>
     #nullable disable
@@ -144,7 +158,7 @@ using SfiziAmerica.WebUIandUX.Models;
                     <div class=""contactform-wrap"">
                         <div id=""message""></div>
                         ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "efd16536b117740f6a843f27a41676edaf2187b37962", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "efd16536b117740f6a843f27a41676edaf2187b38435", async() => {
                 WriteLiteral(@"
                             <fieldset>
                                 <div id=""message2""></div>

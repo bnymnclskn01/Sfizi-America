@@ -39,15 +39,15 @@
             <!-- gallery-filters end-->
             <!-- gallery start -->
             <div class="gallery-items grid-big-pad  lightgallery three-column fl-wrap" style="margin-bottom:50px;">
-                @foreach (var item in Model)
+                @foreach (var item in Model.Where(x=>x.ID==x.ID).ToList().OrderBy(x=>x.Rank))
                 {
-                    foreach (var item2 in item.CategoryMenus.Where(x => x.MenuCategoryID == item.ID).Select(x => x.Menu).Where(x => x.IsActive == true).ToList())
+                    foreach (var item2 in item.CategoryMenus.Where(x => x.MenuCategoryID == item.ID).Select(x => x.Menu).Where(x => x.IsActive == true).OrderByDescending(x=>x.Price).ToList())
                     {
                         <!-- gallery-item-->
                         <div class="gallery-item @item.Slug">
                             <div class="grid-item-holder hov_zoom">
                                 <a href="/Image/Menu/@item2.ImageUrl1" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a>
-                                <img src="/@item2.ImageUrl1" alt="@item2.Title">
+                                <img src="/Image/Menu/@item2.ImageUrl1" alt="@item2.Title">
                             </div>
                             <div class="grid-item-details">
                                 <h3 title="@item2.Title">@item2.Title @if (item2.Discount > 0) { <span> %</span> @item2.Discount}</h3>

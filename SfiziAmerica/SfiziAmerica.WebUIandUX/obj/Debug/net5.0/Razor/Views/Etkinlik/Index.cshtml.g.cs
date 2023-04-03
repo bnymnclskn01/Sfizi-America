@@ -26,8 +26,22 @@ using SfiziAmerica.WebUIandUX.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\Views\_ViewImports.cshtml"
+using SfiziAmerica.EntityLayer.Entity;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\Views\_ViewImports.cshtml"
+using SfiziAmerica.EntityLayer.Model;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f1f87c513ad3d0e422e0fb5d81255c4fe7f9669e", @"/Views/Etkinlik/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e41bc163958188bb831efe5abf8fcff05182ff26", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e1fbf1d821c8df4866958a0c8a611f0bc84813b3", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Etkinlik_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<SfiziAmerica.EntityLayer.Model.Event>>
     #nullable disable

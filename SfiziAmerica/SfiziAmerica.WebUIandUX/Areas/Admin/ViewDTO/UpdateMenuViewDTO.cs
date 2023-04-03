@@ -26,5 +26,7 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.ViewDTO
         public Guid? MenuID { get; set; }
         [Required]
         public bool IsActive { get; set; }
+        [Required]
+        public bool IsMainActive { get; set; }
     }
 }

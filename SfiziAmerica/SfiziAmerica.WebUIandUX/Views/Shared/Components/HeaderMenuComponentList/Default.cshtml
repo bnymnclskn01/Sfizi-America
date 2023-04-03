@@ -1,0 +1,5 @@
+﻿@model IEnumerable<MenuCategory>
+@foreach(var item in Model.Where(x=>x.IsActive==true && x.MenuCategoryID ==null ).OrderBy(x=>x.Rank))
+{
+    <li><a href="/menu/@item.Slug">@item.Title</a></li>
+}

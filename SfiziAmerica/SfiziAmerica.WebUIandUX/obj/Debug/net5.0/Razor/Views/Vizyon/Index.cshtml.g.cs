@@ -26,8 +26,22 @@ using SfiziAmerica.WebUIandUX.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\Views\_ViewImports.cshtml"
+using SfiziAmerica.EntityLayer.Entity;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\Views\_ViewImports.cshtml"
+using SfiziAmerica.EntityLayer.Model;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d1ca3a113bbcea15c77ebb65e95bb5ba1650c064", @"/Views/Vizyon/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e41bc163958188bb831efe5abf8fcff05182ff26", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e1fbf1d821c8df4866958a0c8a611f0bc84813b3", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Vizyon_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<SfiziAmerica.EntityLayer.Model.Vision>
     #nullable disable

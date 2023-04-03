@@ -26,8 +26,22 @@ using SfiziAmerica.WebUIandUX.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\Views\_ViewImports.cshtml"
+using SfiziAmerica.EntityLayer.Entity;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\Views\_ViewImports.cshtml"
+using SfiziAmerica.EntityLayer.Model;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"45a699866e49b7cde68998fe61bb3b7c1dd085bd", @"/Views/Shared/_Layout.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e41bc163958188bb831efe5abf8fcff05182ff26", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e1fbf1d821c8df4866958a0c8a611f0bc84813b3", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Shared__Layout : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     #nullable disable
@@ -66,7 +80,7 @@ using SfiziAmerica.WebUIandUX.Models;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("<!DOCTYPE html>\r\n<html lang=\"en\">\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "45a699866e49b7cde68998fe61bb3b7c1dd085bd5469", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "45a699866e49b7cde68998fe61bb3b7c1dd085bd5942", async() => {
                 WriteLiteral("\r\n    <meta charset=\"utf-8\" />\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\r\n    <title>");
 #nullable restore
 #line 6 "C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\Views\Shared\_Layout.cshtml"
@@ -82,7 +96,7 @@ using SfiziAmerica.WebUIandUX.Models;
                 BeginWriteAttribute("content", " content=\"", 324, "\"", 334, 0);
                 EndWriteAttribute();
                 WriteLiteral(" />\r\n    ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "45a699866e49b7cde68998fe61bb3b7c1dd085bd6593", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "45a699866e49b7cde68998fe61bb3b7c1dd085bd7066", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();
@@ -109,7 +123,7 @@ using SfiziAmerica.WebUIandUX.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "45a699866e49b7cde68998fe61bb3b7c1dd085bd8477", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "45a699866e49b7cde68998fe61bb3b7c1dd085bd8950", async() => {
                 WriteLiteral(@"
     <!-- lodaer  -->
     <div class=""loader-wrap"">
@@ -123,7 +137,7 @@ using SfiziAmerica.WebUIandUX.Models;
     <!-- loader end  -->
     <div id=""main"">
         ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "45a699866e49b7cde68998fe61bb3b7c1dd085bd9090", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "45a699866e49b7cde68998fe61bb3b7c1dd085bd9563", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();
@@ -203,7 +217,7 @@ using SfiziAmerica.WebUIandUX.Models;
                                         <div class=""subcribe-form fl-wrap"">
                                             <p>Want to be notified when we launch a new template or an udpate. Just sign up and we'll send you a notification by email.</p>
                                             ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "45a699866e49b7cde68998fe61bb3b7c1dd085bd14636", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "45a699866e49b7cde68998fe61bb3b7c1dd085bd15109", async() => {
                     WriteLiteral(@"
                                                 <input class=""enteremail"" name=""email"" id=""subscribe-email"" placeholder=""Your Email"" spellcheck=""false"" type=""text"">
                                                 <button type=""submit"" id=""subscribe-button"" class=""subscribe-button color-bg"">Send </button>
@@ -248,7 +262,7 @@ using SfiziAmerica.WebUIandUX.Models;
         <!-- cursor end-->
     </div>
     ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "45a699866e49b7cde68998fe61bb3b7c1dd085bd17495", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("partial", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "45a699866e49b7cde68998fe61bb3b7c1dd085bd17968", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_PartialTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.PartialTagHelper>();

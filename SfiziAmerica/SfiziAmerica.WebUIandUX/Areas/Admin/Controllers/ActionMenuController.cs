@@ -48,9 +48,6 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.Controllers
             bool menuExist = await unitOfWork.menuRepository.AnyAsync(x => x.Title.ToLower() == addMenuViewDTO.Title.ToLower());
             if (menuExist)
                 return BadRequest(new { errorMessage = "A record with this name already exists." });
-            int menuCount = await unitOfWork.menuRepository.CountAsync(x => x.IsMainActive == true);
-            if (menuCount > 3)
-                return BadRequest(new { errorMessage = "The maximum number of menu that will appear on the main page should be 3." });
             Menu menu = addMenuViewDTO.Adapt<Menu>();
             #region Image
             if (addMenuViewDTO.ImageUrl1 != null)
@@ -137,8 +134,6 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.Controllers
             if (menu == null)
                 return NotFound(new { errorMessage = "There is no information about this record." });
             int menuCount = await unitOfWork.menuRepository.CountAsync(x => x.IsMainActive == true);
-            if (menuCount > 3)
-                return BadRequest(new { errorMessage = "The maximum number of menu that will appear on the main page should be 3." });
             #region Image
             if (updateMenuViewDTO.ImageUrl1 != null)
             {
@@ -192,6 +187,7 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.Controllers
                 menu.DiscountPrice = menu.Price - (menu.Price / menu.Discount);
             }
             menu.IsActive = updateMenuViewDTO.IsActive;
+            menu.IsMainActive = updateMenuViewDTO.IsMainActive;
             menu.LastDate = DateTime.Now;
             #endregion
             #region seo

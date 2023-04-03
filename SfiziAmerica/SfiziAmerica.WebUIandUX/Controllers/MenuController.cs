@@ -20,7 +20,7 @@ namespace SfiziAmerica.WebUIandUX.Controllers
         [Route("menu")]
         public async Task<IActionResult> Index()
         {
-            var menuCategory = await sfizilDatabase.MenuCategories.Where(x => x.IsActive == true).OrderBy(x => x.Rank).Include(x => x.CategoryMenus).ThenInclude(x => x.Menu).ToListAsync();
+            var menuCategory = await sfizilDatabase.MenuCategories.Where(x => x.IsActive == true && x.MenuCategoryID == null).OrderBy(x => x.Rank).Include(x => x.CategoryMenus).ThenInclude(x => x.Menu).ToListAsync();
             return View(menuCategory);
         }
     }
