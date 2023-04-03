@@ -12,9 +12,9 @@ C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.
 C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.BusinessLayer\obj\Debug\net5.0\SfiziAmerica.BusinessLayer.csproj.CoreCompileInputs.cache
 C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.BusinessLayer\obj\Debug\net5.0\SfiziAmerica.BusinessLayer.csproj.CopyComplete
 C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.BusinessLayer\obj\Debug\net5.0\SfiziAmerica.BusinessLayer.dll
-C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.BusinessLayer\obj\Debug\net5.0\refint\SfiziAmerica.BusinessLayer.dll
 C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.BusinessLayer\obj\Debug\net5.0\SfiziAmerica.BusinessLayer.pdb
 C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.BusinessLayer\obj\Debug\net5.0\SfiziAmerica.BusinessLayer.genruntimeconfig.cache
 C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.BusinessLayer\obj\Debug\net5.0\ref\SfiziAmerica.BusinessLayer.dll
 C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.BusinessLayer\bin\Debug\net5.0\SfiziAmerica.DataAccessLayer.dll
 C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.BusinessLayer\bin\Debug\net5.0\SfiziAmerica.DataAccessLayer.pdb
+C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.BusinessLayer\bin\Debug\net5.0\ref\SfiziAmerica.BusinessLayer.dll

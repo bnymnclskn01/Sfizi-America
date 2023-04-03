@@ -12,7 +12,7 @@ C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.
 C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.DataAccessLayer\obj\Debug\net5.0\SfiziAmerica.DataAccessLayer.csproj.CoreCompileInputs.cache
 C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.DataAccessLayer\obj\Debug\net5.0\SfiziAmerica.DataAccessLayer.csproj.CopyComplete
 C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.DataAccessLayer\obj\Debug\net5.0\SfiziAmerica.DataAccessLayer.dll
-C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.DataAccessLayer\obj\Debug\net5.0\refint\SfiziAmerica.DataAccessLayer.dll
 C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.DataAccessLayer\obj\Debug\net5.0\SfiziAmerica.DataAccessLayer.pdb
 C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.DataAccessLayer\obj\Debug\net5.0\SfiziAmerica.DataAccessLayer.genruntimeconfig.cache
 C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.DataAccessLayer\obj\Debug\net5.0\ref\SfiziAmerica.DataAccessLayer.dll
+C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.DataAccessLayer\bin\Debug\net5.0\ref\SfiziAmerica.DataAccessLayer.dll

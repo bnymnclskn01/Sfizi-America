@@ -9,7 +9,7 @@ C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.
 C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.EntityLayer\obj\Debug\net5.0\SfiziAmerica.EntityLayer.AssemblyInfo.cs
 C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.EntityLayer\obj\Debug\net5.0\SfiziAmerica.EntityLayer.csproj.CoreCompileInputs.cache
 C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.EntityLayer\obj\Debug\net5.0\SfiziAmerica.EntityLayer.dll
-C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.EntityLayer\obj\Debug\net5.0\refint\SfiziAmerica.EntityLayer.dll
 C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.EntityLayer\obj\Debug\net5.0\SfiziAmerica.EntityLayer.pdb
 C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.EntityLayer\obj\Debug\net5.0\SfiziAmerica.EntityLayer.genruntimeconfig.cache
 C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.EntityLayer\obj\Debug\net5.0\ref\SfiziAmerica.EntityLayer.dll
+C:\Users\ever_\OneDrive\Belgeler\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.EntityLayer\bin\Debug\net5.0\ref\SfiziAmerica.EntityLayer.dll

@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using SfiziAmerica.BusinessLayer.Repository.Concrete;
 using SfiziAmerica.DataAccessLayer.ModelContext;
+using SfiziAmerica.WebUIandUX.Models.ViewModel;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -17,11 +18,26 @@ namespace SfiziAmerica.WebUIandUX.Controllers
             unitOfWork = new(context);
         }
 
-        [Route("menu")]
-        public async Task<IActionResult> Index()
+        [Route("menu/{Slug}")]
+        public async Task<IActionResult> Index(string Slug)
         {
-            var menuCategory = await sfizilDatabase.MenuCategories.Where(x => x.IsActive == true && x.MenuCategoryID == null).OrderBy(x => x.Rank).Include(x => x.CategoryMenus).ThenInclude(x => x.Menu).ToListAsync();
-            return View(menuCategory);
+            var menuFirst = await sfizilDatabase
+                .MenuCategories
+                .Where(x => x.Slug == Slug)
+                .FirstOrDefaultAsync();
+            var menuList = await sfizilDatabase
+                .MenuCategories
+                .Include(x => x.ParentMenuCategory)
+                .Include(x => x.CategoryMenus)
+                .ThenInclude(x => x.Menu)
+                .ToListAsync();
+            PageMenuModel pageMenuModel = new()
+            {
+                MenuCategory = menuFirst,
+                MenuCategories = menuList
+
+            };
+            return View(pageMenuModel);
         }
     }
 }
