@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.WebUIandUX\\SfiziAmerica.WebUIandUX.csproj": {}
+    "C:\\Users\\fnsss\\Documents\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.WebUIandUX\\SfiziAmerica.WebUIandUX.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.BusinessLayer\\SfiziAmerica.BusinessLayer.csproj": {
+    "C:\\Users\\fnsss\\Documents\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.BusinessLayer\\SfiziAmerica.BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.BusinessLayer\\SfiziAmerica.BusinessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\fnsss\\Documents\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.BusinessLayer\\SfiziAmerica.BusinessLayer.csproj",
         "projectName": "SfiziAmerica.BusinessLayer",
-        "projectPath": "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.BusinessLayer\\SfiziAmerica.BusinessLayer.csproj",
-        "packagesPath": "C:\\Users\\ever_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.BusinessLayer\\obj\\",
+        "projectPath": "C:\\Users\\fnsss\\Documents\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.BusinessLayer\\SfiziAmerica.BusinessLayer.csproj",
+        "packagesPath": "C:\\Users\\fnsss\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fnsss\\Documents\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ever_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\fnsss\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -35,11 +33,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.DataAccessLayer\\SfiziAmerica.DataAccessLayer.csproj": {
-                "projectPath": "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.DataAccessLayer\\SfiziAmerica.DataAccessLayer.csproj"
+              "C:\\Users\\fnsss\\Documents\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.DataAccessLayer\\SfiziAmerica.DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\fnsss\\Documents\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.DataAccessLayer\\SfiziAmerica.DataAccessLayer.csproj"
               },
-              "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.EntityLayer\\SfiziAmerica.EntityLayer.csproj": {
-                "projectPath": "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.EntityLayer\\SfiziAmerica.EntityLayer.csproj"
+              "C:\\Users\\fnsss\\Documents\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.EntityLayer\\SfiziAmerica.EntityLayer.csproj": {
+                "projectPath": "C:\\Users\\fnsss\\Documents\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.EntityLayer\\SfiziAmerica.EntityLayer.csproj"
               }
             }
           }
@@ -81,7 +79,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -90,28 +89,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.DataAccessLayer\\SfiziAmerica.DataAccessLayer.csproj": {
+    "C:\\Users\\fnsss\\Documents\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.DataAccessLayer\\SfiziAmerica.DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.DataAccessLayer\\SfiziAmerica.DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\fnsss\\Documents\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.DataAccessLayer\\SfiziAmerica.DataAccessLayer.csproj",
         "projectName": "SfiziAmerica.DataAccessLayer",
-        "projectPath": "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.DataAccessLayer\\SfiziAmerica.DataAccessLayer.csproj",
-        "packagesPath": "C:\\Users\\ever_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.DataAccessLayer\\obj\\",
+        "projectPath": "C:\\Users\\fnsss\\Documents\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.DataAccessLayer\\SfiziAmerica.DataAccessLayer.csproj",
+        "packagesPath": "C:\\Users\\fnsss\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fnsss\\Documents\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ever_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\fnsss\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -125,8 +122,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.EntityLayer\\SfiziAmerica.EntityLayer.csproj": {
-                "projectPath": "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.EntityLayer\\SfiziAmerica.EntityLayer.csproj"
+              "C:\\Users\\fnsss\\Documents\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.EntityLayer\\SfiziAmerica.EntityLayer.csproj": {
+                "projectPath": "C:\\Users\\fnsss\\Documents\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.EntityLayer\\SfiziAmerica.EntityLayer.csproj"
               }
             }
           }
@@ -168,7 +165,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -177,28 +175,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.EntityLayer\\SfiziAmerica.EntityLayer.csproj": {
+    "C:\\Users\\fnsss\\Documents\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.EntityLayer\\SfiziAmerica.EntityLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.EntityLayer\\SfiziAmerica.EntityLayer.csproj",
+        "projectUniqueName": "C:\\Users\\fnsss\\Documents\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.EntityLayer\\SfiziAmerica.EntityLayer.csproj",
         "projectName": "SfiziAmerica.EntityLayer",
-        "projectPath": "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.EntityLayer\\SfiziAmerica.EntityLayer.csproj",
-        "packagesPath": "C:\\Users\\ever_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.EntityLayer\\obj\\",
+        "projectPath": "C:\\Users\\fnsss\\Documents\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.EntityLayer\\SfiziAmerica.EntityLayer.csproj",
+        "packagesPath": "C:\\Users\\fnsss\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fnsss\\Documents\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.EntityLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ever_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\fnsss\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -251,7 +247,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -260,28 +257,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.WebUIandUX\\SfiziAmerica.WebUIandUX.csproj": {
+    "C:\\Users\\fnsss\\Documents\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.WebUIandUX\\SfiziAmerica.WebUIandUX.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.WebUIandUX\\SfiziAmerica.WebUIandUX.csproj",
+        "projectUniqueName": "C:\\Users\\fnsss\\Documents\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.WebUIandUX\\SfiziAmerica.WebUIandUX.csproj",
         "projectName": "SfiziAmerica.WebUIandUX",
-        "projectPath": "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.WebUIandUX\\SfiziAmerica.WebUIandUX.csproj",
-        "packagesPath": "C:\\Users\\ever_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.WebUIandUX\\obj\\",
+        "projectPath": "C:\\Users\\fnsss\\Documents\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.WebUIandUX\\SfiziAmerica.WebUIandUX.csproj",
+        "packagesPath": "C:\\Users\\fnsss\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fnsss\\Documents\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.WebUIandUX\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ever_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\fnsss\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -295,14 +290,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.BusinessLayer\\SfiziAmerica.BusinessLayer.csproj": {
-                "projectPath": "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.BusinessLayer\\SfiziAmerica.BusinessLayer.csproj"
+              "C:\\Users\\fnsss\\Documents\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.BusinessLayer\\SfiziAmerica.BusinessLayer.csproj": {
+                "projectPath": "C:\\Users\\fnsss\\Documents\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.BusinessLayer\\SfiziAmerica.BusinessLayer.csproj"
               },
-              "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.DataAccessLayer\\SfiziAmerica.DataAccessLayer.csproj": {
-                "projectPath": "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.DataAccessLayer\\SfiziAmerica.DataAccessLayer.csproj"
+              "C:\\Users\\fnsss\\Documents\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.DataAccessLayer\\SfiziAmerica.DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\fnsss\\Documents\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.DataAccessLayer\\SfiziAmerica.DataAccessLayer.csproj"
               },
-              "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.EntityLayer\\SfiziAmerica.EntityLayer.csproj": {
-                "projectPath": "C:\\Users\\ever_\\OneDrive\\Belgeler\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.EntityLayer\\SfiziAmerica.EntityLayer.csproj"
+              "C:\\Users\\fnsss\\Documents\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.EntityLayer\\SfiziAmerica.EntityLayer.csproj": {
+                "projectPath": "C:\\Users\\fnsss\\Documents\\GitHub\\Sfizi-America\\SfiziAmerica\\SfiziAmerica.EntityLayer\\SfiziAmerica.EntityLayer.csproj"
               }
             }
           }
@@ -352,7 +347,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -364,7 +360,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.416\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

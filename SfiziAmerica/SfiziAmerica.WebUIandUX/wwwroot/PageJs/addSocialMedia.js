@@ -12,11 +12,11 @@
     addRequest(fdata)
 })
 
-function addRequest(payload) {
+function addRequest(fdata) {
     $.ajax({
         url: '/admin/sosyal-medya-ekle',
         type: 'POST',
-        data: payload,
+        data: fdata,
         success: () => {
             Swal.fire({
                 title: 'Added Successfully!',
