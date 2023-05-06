@@ -420,7 +420,7 @@
                         <div class="col-md-3">
                             <div class="hero-menu_header fl-wrap">
                                 <ul class="tabs-menu no-list-style change_bg">
-                                    @foreach (var item in Model.MenuCategories.Take(10))
+                                    @foreach (var item in Model.MenuCategories.Where(x => x.MenuCategoryID == null).Take(10))
                                     {
                                         <li @(Model.MenuCategories.IndexOf(item) == 0 ? "class='current'" : "")><a href="#@item.Slug" data-bgtab="/Image/Menu/@item.ImageUrl1">@item.Title</a></li>
                                     }
@@ -432,16 +432,16 @@
                         <div class="col-md-9">
                             <div class="hero-menu_content fl-wrap">
                                 <div class="tabs-container">
-                                    @foreach (var item2 in Model.MenuCategories)
+                                    @foreach (var item2 in Model.MenuCategories.Where(x=>x.MenuCategoryID==null).Take(10))
                                     {
                                         <div class="tab">
                                             <!--tab -->
                                             <div id="@item2.Slug" class="tab-content @(Model.MenuCategories.IndexOf(item2)==0?"first-tab":"")">
-                                                @foreach (var item3 in item2.CategoryMenus.Where(x => x.MenuCategoryID == item2.ID).Select(x => x.Menu).Take(10).OrderByDescending(x => Guid.NewGuid()).ToList())
+                                                @foreach (var subMenu in Model.MenuCategories.Where(x=>x.MenuCategoryID == item2.ID).Take(10))
                                                 {
-                                                    <!-- header-menu-item-->
-                                                    if (item2.MenuCategoryID == item2.ID)
+                                                    @foreach (var item3 in subMenu.CategoryMenus.Select(x=>x.Menu).Take(10).OrderBy(x=>Guid.NewGuid()))
                                                     {
+                                                        <!-- header-menu-item-->
                                                         <div class="hero-menu-item">
                                                             <div class="hero-menu-item-title fl-wrap">
                                                                 <h6>@item3.Title</h6>
@@ -456,25 +456,8 @@
                                                                 }
                                                             </div>
                                                         </div>
+                                                        <!-- header-menu-item end-->
                                                     }
-                                                    else
-                                                    {
-                                                        <div class="hero-menu-item">
-                                                            <div class="hero-menu-item-title fl-wrap">
-                                                                <h6>@item3.Title</h6>
-                                                                <div class="hmi-dec"></div>
-                                                                @if (item3.Discount > 0)
-                                                                {
-                                                                    <span class="hero-menu-item-price">$@item3.DiscountPrice</span>
-                                                                }
-                                                                else
-                                                                {
-                                                                    <span class="hero-menu-item-price">$@item3.Price</span>
-                                                                }
-                                                            </div>
-                                                        </div>
-                                                    }
-                                                    <!-- header-menu-item end-->
                                                 }
                                             </div>
                                             <!--tab end -->

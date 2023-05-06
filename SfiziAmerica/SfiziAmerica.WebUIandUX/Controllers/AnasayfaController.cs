@@ -43,9 +43,10 @@ namespace SfiziAmerica.WebUIandUX.Controllers
                 .Include(x=>x.ParentMenuCategory)
                 .Include(x => x.CategoryMenus)
                 .ThenInclude(x => x.Menu)
-                .Where(x => x.IsActive == true && x.MenuCategoryID == null)
+                .Where(x => x.IsActive == true)
                 .OrderBy(x => x.Rank)
                 .ToListAsync();
+
             var caterings = await sfizilDatabase
                 .Caterings
                 .Where(x => x.IsActive == true && x.IsMainActive==true)
