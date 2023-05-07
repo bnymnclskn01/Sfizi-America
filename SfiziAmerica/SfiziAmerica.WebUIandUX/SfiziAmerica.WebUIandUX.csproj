@@ -56,4 +56,11 @@
     <None Include="wwwroot\Site\js\scripts.js" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="wwwroot\Site\sfizi-logo.png">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

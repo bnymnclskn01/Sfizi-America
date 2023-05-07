@@ -1,0 +1,160 @@
+﻿@model SfiziAmerica.WebUIandUX.Models.ViewModel.EventDetail
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="content">
+    <!--  section  -->
+    <section class="parallax-section hero-section hidden-section" data-scrollax-parent="true">
+        <div class="bg par-elem " data-bg="/Site/images/bg/10.jpg" data-scrollax="properties: { translateY: '30%' }"></div>
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="section-title">
+                <h4>Events</h4>
+                <h2>@Model.Event.Title</h2>
+                <div class="dots-separator fl-wrap"><span></span></div>
+            </div>
+        </div>
+        <div class="hero-section-scroll">
+            <div class="mousey">
+                <div class="scroller"></div>
+            </div>
+        </div>
+        <div class="brush-dec"></div>
+    </section>
+    <!--  section  end-->
+    <!--  section  -->
+    <section class="hidden-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="fl-wrap post-container">
+                        <!-- post -->
+                        <div class="post fl-wrap fw-post">
+                            <h2>@Model.Event.Title</h2>
+                            <ul class="blog-title-opt">
+                                <li><a href="#">@Model.Event.CreateDate.ToShortDateString()</a></li>
+                                <li> - </li>
+                                <li><a href="/event">Event </a></li>
+                                <li><a href="/event/@Model.Event.Slug">@Model.Event.Title</a></li>
+                            </ul>
+                            <!-- blog media -->
+                            <div class="blog-media fl-wrap">
+                                <div class="single-slider-wrap">
+                                    <div class="single-slider fl-wrap">
+                                        <div class="swiper-container">
+                                            <div class="swiper-wrapper lightgallery">
+                                                <div class="swiper-slide hov_zoom"><img src="/Image/Event/@Model.Event.ImageUrl" class="box-media-zoom   popup-image"><i class="fal fa-search"></i></a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- blog media end -->
+                            <div class="blog-text fl-wrap">
+                                <div class="pr-tags fl-wrap">
+                                    <span>Events : </span>
+                                    <ul>
+                                        @foreach (var item in Model.Events.Take(3))
+                                        {
+                                            <li title="@item.Title"><a href="/event/@item.Slug" title="@item.Title">@item.Title </a></li>
+                                        }
+                                    </ul>
+                                </div>
+                                @Html.Raw(Model.Event.Description)
+                            </div>
+                        </div>
+                        <!-- post end-->
+                        <!--post-related-->
+                        <div class="post-related fl-wrap">
+                            <h6 class="comments-title">You Might Also Like</h6>
+                            <!-- post-related -->
+                            <div class=" row">
+                                @foreach (var item in Model.Events.OrderBy(x=>Guid.NewGuid()))
+                                {
+                                    <!-- 1  -->
+                                    <div class="item-related col-md-4">
+                                        <a href="#"><img src="/Imag/Event/@item.ImageUrl" alt="@item.Title"></a>
+                                        <h3><a href="/event/@item.Slug" title="@item.Title">@item.Title</a></h3>
+                                        <span class="post-date">@item.CreateDate.ToShortDateString()</span>
+                                    </div>
+                                    <!-- 1 end-->
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  sidebar  -->
+                <div class="col-md-4">
+                    <!-- main-sidebar -->
+                    <div class="main-sidebar fixed-bar fl-wrap">
+                        <!-- main-sidebar-widget-->
+                        <div class="main-sidebar-widget fl-wrap">
+                            <h3>@Model.About.Title</h3>
+                            <div class="about-widget">
+                                <img src="/Image/About/@Model.About.ImageUrl" alt="@Model.About.Title">
+                                <h4 title="@Model.About.Title">@Model.About.Title</h4>
+                                <p>@Html.Raw(Model.About.ShortDescription)</p>
+                            </div>
+                        </div>
+                        <!-- main-sidebar-widget end-->
+                        <!-- main-sidebar-widget-->
+                        <div class="main-sidebar-widget fl-wrap">
+                            <h3>Recent Events</h3>
+                            <div class="recent-post-widget">
+                                <ul>
+                                    @foreach (var item in Model.Events.Take(3))
+                                    {
+                                        <li>
+                                            <div class="recent-post-img"><a href="/event/@item.Slug"><img src="images/all/14.jpg" alt="@item.Title"></a></div>
+                                            <div class="recent-post-content">
+                                                <h4 title="@item.Title"><a href="/event/@item.Slug" title="@item.Title">@item.Title</a></h4>
+                                                <div class="recent-post-opt">
+                                                    <span class="post-date">@item.CreateDate.ToShortDateString()</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- main-sidebar-widget end-->
+                        <!-- main-sidebar-widget-->
+                        <div class="main-sidebar-widget fl-wrap">
+                            <h3>Resent Event </h3>
+                            <div class="tags-widget">
+                                <div class="tagcloud">
+                                     @foreach (var item in Model.Events.OrderByDescending(x=>x.CreateDate).Take(8))
+                                    {
+                                        <a href="/event/@item.Slug" title="@item.Title">@item.Title</a>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <!-- main-sidebar-widget-->
+                        <div class="main-sidebar-widget fl-wrap">
+                            <h3>Social Widget</h3>
+                            <div class="social-widget">
+                                <ul>
+                                    @foreach (var item in Model.SocialMedias)
+                                    {
+                                        <li title="@item.Title"><a href="@item.Url" target="_blank" title="@item.Title"><i class="@item.Icon"></i></a></li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- main-sidebar-widget end-->
+                    </div>
+                    <!-- main-sidebar end-->
+                </div>
+                <!--  sidebar end-->
+            </div>
+            <div class="fl-wrap limit-box"></div>
+        </div>
+        <div class="section-bg">
+            <div class="bg" data-bg="/Site/images/bg/dec/section-bg.png"></div>
+        </div>
+    </section>
+    <!--  section end  -->
+    <div class="brush-dec2 brush-dec_bottom"></div>
+</div>
