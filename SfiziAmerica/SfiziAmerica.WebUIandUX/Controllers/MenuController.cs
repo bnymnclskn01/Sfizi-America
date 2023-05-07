@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Mapster;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SfiziAmerica.BusinessLayer.Repository.Concrete;
 using SfiziAmerica.DataAccessLayer.ModelContext;
@@ -35,7 +36,6 @@ namespace SfiziAmerica.WebUIandUX.Controllers
             {
                 MenuCategory = menuFirst,
                 MenuCategories = menuList
-
             };
             return View(pageMenuModel);
         }

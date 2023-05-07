@@ -288,7 +288,8 @@ blockquote p {
 }
 .logo-holder img {
 	width:auto;
-	height:25px;
+	margin-top:-20px;
+	height:65px;
 }
 .header-inner {
 	top:50px;
@@ -799,7 +800,8 @@ footer.fixed-footer:before {
 	top:4px;
 }
 .footer-logo img {
-	height:25px;
+	height:65px;
+	margin-top:-20px;
 	width:auto;
 }
 .footer-top .lang-wrap {
@@ -4771,4 +4773,7 @@ section {
 		-webkit-background-size: cover;
 		background-position: center;
 	}
+}
+h5 p{
+	color:white;
 }

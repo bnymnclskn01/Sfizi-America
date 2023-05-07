@@ -21,7 +21,12 @@ namespace SfiziAmerica.WebUIandUX.Controllers
         [Route("catering")]
         public async Task<IActionResult> Index()
         {
-            var model = await sfizilDatabase.Caterings.Where(x => x.IsActive == true).Include(x=>x.ParentCategory).Include(x=>x.CateringMenus).OrderBy(x=>x.Rank).ToListAsync();
+            var model = await sfizilDatabase
+                .Caterings.Where(x => x.IsActive == true)
+                .Include(x=>x.ParentCategory)
+                .Include(x=>x.CateringMenus)
+                .OrderBy(x=>x.Rank)
+                .ToListAsync();
             return View(model);
         }
     }
