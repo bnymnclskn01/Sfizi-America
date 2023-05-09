@@ -456,3 +456,4 @@ C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIand
 C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Debug\net5.0\SfiziAmerica.WebUIandUX.genruntimeconfig.cache
 C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Debug\net5.0\ref\SfiziAmerica.WebUIandUX.dll
 C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Debug\net5.0\Razor\Views\EtkinlikDetay\Index.cshtml.g.cs
+C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Debug\net5.0\Razor\Views\Rezervasyon\Index.cshtml.g.cs
