@@ -25,6 +25,7 @@ namespace SfiziAmerica.DataAccessLayer.ModelContext
         public virtual DbSet<CustomerSigin> CustomerSigin { get; set; }//BİTTİ
         public virtual DbSet<Event> Events { get; set; } // BİTTİ
         public virtual DbSet<HR> HR { get; set; } //BİTTİ
+        public virtual DbSet<Logo> Logos { get; set; }
         public virtual DbSet<MailSetting> MailSettings { get; set; } // BİTTİ
         public virtual DbSet<Menu> Menus { get; set; } //BİTTİ
         public virtual DbSet<MenuCategory> MenuCategories { get; set; } // BİTTİ

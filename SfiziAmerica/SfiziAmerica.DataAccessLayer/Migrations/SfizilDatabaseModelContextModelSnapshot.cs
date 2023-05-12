@@ -613,6 +613,35 @@ namespace SfiziAmerica.DataAccessLayer.Migrations
                     b.ToTable("HR", "dbo");
                 });
 
+            modelBuilder.Entity("SfiziAmerica.EntityLayer.Model.Logo", b =>
+                {
+                    b.Property<Guid>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ImageAltTag")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("LastDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("LogoUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Logos");
+                });
+
             modelBuilder.Entity("SfiziAmerica.EntityLayer.Model.MailSetting", b =>
                 {
                     b.Property<Guid>("ID")
