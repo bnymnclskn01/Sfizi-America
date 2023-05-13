@@ -1,0 +1,9 @@
+﻿@model SfiziAmerica.EntityLayer.Model.Logo
+@if(Model!=null)
+{
+    <a href="/" class="footer-logo"><img src="/Image/Logo/@Model.LogoUrl" alt="@Model.ImageAltTag"></a>
+}
+else
+{
+    <a href="/" class="footer-logo"><img src="/Site/sfizi-logo.png" alt="Sfizi Cafe"></a>
+}

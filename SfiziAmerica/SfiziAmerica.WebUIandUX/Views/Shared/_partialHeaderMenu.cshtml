@@ -11,7 +11,7 @@
     <div class="header-inner  fl-wrap">
         <div class="container">
             <div class="header-container fl-wrap">
-                <a href="/" class="logo-holder ajax"><img src="/Site/sfizi-logo.png" alt="Sfizi Cafe"></a>
+                @await Component.InvokeAsync("HeadLogoComponent")
                 <div class="show-share-btn showshare htact"><i class="fal fa-bullhorn"></i> <span class="header-tooltip">Share</span></div>
                 <!-- nav-button-wrap-->
                 <div class="nav-button-wrap">
