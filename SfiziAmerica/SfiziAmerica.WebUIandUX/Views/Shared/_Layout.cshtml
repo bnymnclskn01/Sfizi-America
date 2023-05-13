@@ -3,10 +3,30 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Sfizi Cafe</title>
-    <meta name="robots" content="index, follow" />
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
+    @if (ViewBag.Seo != null)
+    {
+        <title>@ViewBag.Seo.seoTitle</title>
+        <meta name="robots" content="index, follow, archive" />
+        <meta name="keywords" content="@ViewBag.Seo.seoDescription" />
+        <meta name="description" content="@ViewBag.Seo.seoDescription" />
+        <meta property="og:title" content="@ViewBag.Seo.seoTitle" />
+        <meta property="og:keywords" content="@ViewBag.Seo.seoKeywords" />
+        <meta property="og:description" content="@ViewBag.Seo.seoDescription" />
+        <meta property="og:url" content="@Context.Request.Path" />
+        <meta property="twitter:card" content="@ViewBag.Seo.seoTwitterTitle" />
+        <meta name="twitter:title" content="@ViewBag.Seo.seoTwitterTitle" />
+        <meta name="twitter:description" content="@ViewBag.Seo.seoTwitterDescription" />
+        <meta property="twitter:url" content="@ViewBag.Seo.seoTwitterUrl" />
+        <meta name="author" content="@ViewBag.Seo.seoAuthor">
+        <link rel="canonical" href="@Context.Request.Path">
+        <meta http-equiv="content-language" content="tr">
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859">
+        <meta name="publisher" content="Ceday Tarım Teknolojisi" />
+        <meta name="reply-to" content="@ViewBag.Seo.seoReply" />
+        <meta name="revisit-after" content="10 days" />
+        <meta name="abstract" content="Sfizi">
+    }
+    <title>Sfizi</title>
     <partial name="_partialHead" />
 </head>
 <body>

@@ -19,6 +19,7 @@ namespace SfiziAmerica.WebUIandUX.Controllers
         [Route("about")]
         public async Task<IActionResult> Index()
         {
+            ViewBag.Seo = await unitOfWork.menuSeoRepository.GetAsync(x => x.IsActive == true && x.PageName == "About");
             var about = await unitOfWork.aboutRepository.GetAsync(x => x.IsActive == true);
             return View(about);
         }

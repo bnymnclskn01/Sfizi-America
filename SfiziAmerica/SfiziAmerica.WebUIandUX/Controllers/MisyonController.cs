@@ -19,6 +19,8 @@ namespace SfiziAmerica.WebUIandUX.Controllers
         [Route("mission")]
         public async Task<IActionResult> Index()
         {
+            ViewBag.Seo = await unitOfWork.menuSeoRepository
+                .GetAsync(x => x.IsActive == true && x.PageName == "Mission");
             var mission = await unitOfWork.missionRepository.GetAsync(x => x.IsActive == true);
             return View(mission);
         }

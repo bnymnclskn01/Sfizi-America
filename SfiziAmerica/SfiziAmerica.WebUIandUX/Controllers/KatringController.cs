@@ -21,6 +21,8 @@ namespace SfiziAmerica.WebUIandUX.Controllers
         [Route("catering")]
         public async Task<IActionResult> Index()
         {
+            ViewBag.Seo = await unitOfWork.menuSeoRepository
+                .GetAsync(x => x.IsActive == true && x.PageName == "Catering");
             var model = await sfizilDatabase
                 .Caterings.Where(x => x.IsActive == true)
                 .Include(x=>x.ParentCategory)

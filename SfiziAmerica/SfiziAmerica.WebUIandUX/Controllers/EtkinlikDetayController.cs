@@ -21,6 +21,7 @@ namespace SfiziAmerica.WebUIandUX.Controllers
         [Route("event/{SeoLink}")]
         public async Task<IActionResult> Index(string SeoLink)
         {
+            ViewBag.Seo = await unitOfWork.eventRepository.GetAsync(x => x.Slug == SeoLink);
             var model = await unitOfWork.eventRepository.GetAsync(x => x.Slug == SeoLink);
             var list=await sfizilDatabase.Events.Where(x=>x.IsActive==true && x.Slug!=SeoLink).OrderBy(x=>x.CreateDate).ToListAsync();
             var about = await unitOfWork.aboutRepository.GetAsync(x => x.IsActive == true);

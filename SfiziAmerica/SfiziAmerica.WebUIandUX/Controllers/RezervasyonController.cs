@@ -19,6 +19,8 @@ namespace SfiziAmerica.WebUIandUX.Controllers
         [Route("reservation")]
         public async Task<IActionResult> Index()
         {
+            ViewBag.Seo = await unitOfWork.menuSeoRepository
+                .GetAsync(x => x.IsActive == true && x.PageName == "Rezervation");
             var contactInformation = await unitOfWork
                            .contactInformationRepository
                            .GetAllAsync(x => x.IsActive == true);

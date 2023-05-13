@@ -22,6 +22,7 @@ namespace SfiziAmerica.WebUIandUX.Controllers
         [Route("menu/{Slug}")]
         public async Task<IActionResult> Index(string Slug)
         {
+            ViewBag.Seo = await unitOfWork.menuCategoryRepository.GetAsync(x => x.Slug == Slug);
             var menuFirst = await sfizilDatabase
                 .MenuCategories
                 .Where(x => x.Slug == Slug)
