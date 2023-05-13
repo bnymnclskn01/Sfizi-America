@@ -21,6 +21,8 @@ namespace SfiziAmerica.WebUIandUX.Controllers
         [Route("home")]
         public async Task<IActionResult> Index()
         {
+            ViewBag.Seo = await unitOfWork.menuSeoRepository
+                .GetAsync(x => x.IsActive == true && x.PageName == "Home");
             var sliders = await sfizilDatabase
                 .Sliders.Where(x => x.IsActive == true)
                 .OrderBy(x => x.Rank)
