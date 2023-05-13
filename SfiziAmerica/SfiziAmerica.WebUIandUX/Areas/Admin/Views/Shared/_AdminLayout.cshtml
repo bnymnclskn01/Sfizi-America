@@ -159,18 +159,12 @@
                             <h6 class="text-overflow m-0">Welcome !</h6>
                         </div>
 
-                        <!-- item-->
-                        <a href="contacts-profile.html" class="dropdown-item notify-item">
-                            <i class="fe-user"></i>
-                            <span>My Account</span>
-                        </a>
-
                         <div class="dropdown-divider"></div>
 
                         <!-- item-->
                         <a href="/admin/cikis-yap" class="dropdown-item notify-item">
                             <i class="fe-log-out"></i>
-                            <span>Logout</span>
+                            <span>Çıkış Yap</span>
                         </a>
 
                     </div>
@@ -205,7 +199,7 @@
                 </li>
 
                 <li>
-                    <h4 class="page-title-main">Dashboard</h4>
+                    <h4 class="page-title-main">Gösterge Paneli</h4>
                 </li>
 
             </ul>
@@ -226,15 +220,9 @@
                         <div class="dropdown-menu user-pro-dropdown">
 
                             <!-- item-->
-                            <a href="javascript:void(0);" class="dropdown-item notify-item">
-                                <i class="fe-user me-1"></i>
-                                <span>My Account</span>
-                            </a>
-
-                            <!-- item-->
                             <a href="/admin/cikis-yap" class="dropdown-item notify-item">
                                 <i class="fe-log-out me-1"></i>
-                                <span>Logout</span>
+                                <span>Çıkış Yap</span>
                             </a>
 
                         </div>
@@ -243,11 +231,6 @@
                     <p class="text-muted left-user-info">@userRoleName</p>
 
                     <ul class="list-inline">
-                        <li class="list-inline-item">
-                            <a href="#" class="text-muted left-user-info">
-                                <i class="mdi mdi-cog"></i>
-                            </a>
-                        </li>
 
                         <li class="list-inline-item">
                             <a href="/admin/cikis-yap">
@@ -262,19 +245,19 @@
 
                     <ul id="side-menu">
 
-                        <li class="menu-title">Navigation</li>
+                        <li class="menu-title">Navigasyon</li>
 
                         <li>
                             <a href="/admin/gosterge-paneli">
                                 <i class="mdi mdi-view-dashboard-outline"></i>
-                                <span> Dashboard</span>
+                                <span> Gösterge Paneli</span>
                             </a>
                         </li>
-                        <li class="menu-title mt-2">User Setting</li>
+                        <li class="menu-title mt-2">Kullanıcı Ayarları</li>
                         <li>
                             <a href="#sidebarExpages" data-bs-toggle="collapse">
                                 <i class="mdi mdi-account-key-outline"></i>
-                                <span> User General Settings </span>
+                                <span> Kullanıcı Ayarları </span>
                                 <span class="menu-arrow"></span>
                             </a>
                             <div class="collapse" id="sidebarExpages">
@@ -282,25 +265,25 @@
                                     @if (userRoleID != "3FCB6FA3-2184-4CFB-B701-30A91D84DE10" || userRoleID != "C16A8209-E631-43C3-A8A2-50963D13AB61" || userRoleID != "3B6B0FB4-6C55-4764-94ED-86BEED6AD731" || userRoleID != "3B6B0FB4-6C55-4764-94ED-86BEED6AD731")
                                     {
                                         <li>
-                                            <a href="/admin/kullanici-rol-ekle">Add User Role</a>
+                                            <a href="/admin/kullanici-rol-ekle">Kullanıcı Rol Ekle</a>
                                         </li>
                                         <li>
-                                            <a href="/admin/kullanici-rol-listele">User Role List</a>
+                                            <a href="/admin/kullanici-rol-listele">Kullanıcı Rol Listele</a>
                                         </li>
                                         @if (userRoleID != "C16A8209-E631-43C3-A8A2-50963D13AB61" || userRoleID != "3B6B0FB4-6C55-4764-94ED-86BEED6AD731" || userRoleID != "3B6B0FB4-6C55-4764-94ED-86BEED6AD731")
                                         {
                                             <li>
-                                                <a href="/admin/kullanici-ekle">Add User Member</a>
+                                                <a href="/admin/kullanici-ekle">Kullanıcı Ekle</a>
                                             </li>
                                             <li>
-                                                <a href="/admin/kullanici-listele">User Member List</a>
+                                                <a href="/admin/kullanici-listele">Kullanıcı Listele</a>
                                             </li>
 
                                             <li>
-                                                <a href="/admin/musteri-kayit-ekle">Add Customer</a>
+                                                <a href="/admin/musteri-kayit-ekle">Müşteri Ekle</a>
                                             </li>
                                             <li>
-                                                <a href="/admin/musteri-kayit-listele">Customer List</a>
+                                                <a href="/admin/musteri-kayit-listele">Müşteri Listele</a>
                                             </li>
                                         }
                                         else
@@ -316,20 +299,20 @@
                                 </ul>
                             </div>
                         </li>
-                        <li class="menu-title mt-2">Corporate Setting</li>
+                        <li class="menu-title mt-2">Kurumsal Ayarları</li>
                         <li>
                             <a href="#email" data-bs-toggle="collapse">
                                 <i class="mdi mdi-book"></i>
-                                <span> About Setting</span>
+                                <span> Hakkımızda Ayarları</span>
                                 <span class="menu-arrow"></span>
                             </a>
                             <div class="collapse" id="email">
                                 <ul class="nav-second-level">
                                     <li>
-                                        <a href="/admin/hakkimizda-listele">About List</a>
+                                        <a href="/admin/hakkimizda-listele">Hakkımızda Listeke</a>
                                     </li>
                                     <li>
-                                        <a href="/admin/hakkimizda-ekle">Add About</a>
+                                        <a href="/admin/hakkimizda-ekle">Hakkımızda Ekle</a>
                                     </li>
                                 </ul>
                             </div>
@@ -338,16 +321,16 @@
                         <li>
                             <a href="#sidebarTasks" data-bs-toggle="collapse">
                                 <i class="mdi mdi-clipboard-outline"></i>
-                                <span> Mission Setting </span>
+                                <span> Misyon Ayarları </span>
                                 <span class="menu-arrow"></span>
                             </a>
                             <div class="collapse" id="sidebarTasks">
                                 <ul class="nav-second-level">
                                     <li>
-                                        <a href="/admin/misyon-listele">Mission List</a>
+                                        <a href="/admin/misyon-listele">Misyon Listele</a>
                                     </li>
                                     <li>
-                                        <a href="/admin/misyon-ekle">Add Mission</a>
+                                        <a href="/admin/misyon-ekle">Misyon Ekle</a>
                                     </li>
                                 </ul>
                             </div>
@@ -356,159 +339,165 @@
                         <li>
                             <a href="#contacts" data-bs-toggle="collapse">
                                 <i class="mdi mdi-book-open-page-variant-outline"></i>
-                                <span> Vision Setting </span>
+                                <span> Vizyon Ayarları </span>
                                 <span class="menu-arrow"></span>
                             </a>
                             <div class="collapse" id="contacts">
                                 <ul class="nav-second-level">
                                     <li>
-                                        <a href="/admin/vizyon-listele">Vision List</a>
+                                        <a href="/admin/vizyon-listele">Vizyon Listele</a>
                                     </li>
                                     <li>
-                                        <a href="/admin/vizyon-ekle">Add Vision</a>
+                                        <a href="/admin/vizyon-ekle">Vizyon Ekle</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
 
-                        <li class="menu-title mt-2">Custom Setting</li>
+                        <li class="menu-title mt-2">Genel Ayarları</li>
 
                         <li>
                             <a href="#sidebarAuth" data-bs-toggle="collapse">
                                 <i class="mdi mdi-alert-decagram-outline"></i>
-                                <span> General Setting </span>
+                                <span> Genel Ayarları</span>
                                 <span class="menu-arrow"></span>
                             </a>
                             <div class="collapse" id="sidebarAuth">
                                 <ul class="nav-second-level">
                                     <li>
-                                        <a href="/admin/slider-ekle">Add Slider</a>
+                                        <a href="/admin/logo-ekle">Logo Ekle</a>
                                     </li>
                                     <li>
-                                        <a href="/admin/slider-listele">Slider List</a>
+                                        <a href="/admin/logo-listele">Logo Listele</a>
                                     </li>
                                     <li>
-                                        <a href="/admin/sosyal-medya-ekle">Add Social Media</a>
+                                        <a href="/admin/slider-ekle">Slider Ekle</a>
                                     </li>
                                     <li>
-                                        <a href="/admin/sosyal-medya-listele">Social Media List</a>
+                                        <a href="/admin/slider-listele">Slider Listele</a>
                                     </li>
                                     <li>
-                                        <a href="/admin/iletisim-bilgisi-ekle">Add Contact Information</a>
+                                        <a href="/admin/sosyal-medya-ekle">Sosyal Medya Ekle</a>
                                     </li>
                                     <li>
-                                        <a href="/admin/iletisim-bilgileri-listele">Contact Information List</a>
+                                        <a href="/admin/sosyal-medya-listele">Sosyal Medya Listele</a>
                                     </li>
                                     <li>
-                                        <a href="/admin/mail-gonderim-ayarlari-ekle">Add Mail Setting</a>
+                                        <a href="/admin/iletisim-bilgisi-ekle">İletişim Bilgisi Ekle</a>
                                     </li>
                                     <li>
-                                        <a href="/admin/mail-gonderim-ayarlari-listele">Mail Setting List</a>
+                                        <a href="/admin/iletisim-bilgileri-listele">İletişim Bilgisi Listele</a>
                                     </li>
                                     <li>
-                                        <a href="/admin/etkinlik-ekle">Add Event</a>
+                                        <a href="/admin/mail-gonderim-ayarlari-ekle">Mail Ayarları Ekle</a>
                                     </li>
                                     <li>
-                                        <a href="/admin/etkinlik-listele">Event List</a>
+                                        <a href="/admin/mail-gonderim-ayarlari-listele">Mail Ayarları Listele</a>
                                     </li>
                                     <li>
-                                        <a href="/admin/seo-yonetimi-ekle">Add Seo Manager</a>
+                                        <a href="/admin/etkinlik-ekle">Etkinlik Ekle</a>
                                     </li>
                                     <li>
-                                        <a href="/admin/seo-yonetimi-listele">Seo Manager List</a>
+                                        <a href="/admin/etkinlik-listele">Etkinlik Listele</a>
                                     </li>
                                     <li>
-                                        <a href="/admin/musteri-yorumlari-listele">Customer Comment List</a>
+                                        <a href="/admin/seo-yonetimi-ekle">Seo Yönetimi Ekle</a>
+                                    </li>
+                                    <li>
+                                        <a href="/admin/seo-yonetimi-listele">Seo Yönetimi Listlee</a>
+                                    </li>
+                                    <li>
+                                        <a href="/admin/musteri-yorumlari-listele">Müşteri Yorumları</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
-                        <li class="menu-title mt-2">Mail Form Setting</li>
+                        <li class="menu-title mt-2">Form Ayarları</li>
                         <li>
                             <a href="#sidebarLayouts" data-bs-toggle="collapse">
                                 <i class="mdi mdi-card-account-mail-outline"></i>
-                                <span> Mail Form Setting </span>
+                                <span> Form Ayarları </span>
                                 <span class="menu-arrow"></span>
 
                             </a>
                             <div class="collapse" id="sidebarLayouts">
                                 <ul class="nav-second-level">
                                     <li>
-                                        <a href="/admin/iletisim-formu-listele">Contact Form List</a>
+                                        <a href="/admin/iletisim-formu-listele">İlteişim Formu</a>
                                     </li>
                                     <li>
-                                        <a href="/admin/hr-formu-listele">HR Form List</a>
+                                        <a href="/admin/hr-formu-listele">İK Formu</a>
                                     </li>
                                     <li>
-                                        <a href="/admin/basvuru-formu-listele">Application Form List</a>
+                                        <a href="/admin/basvuru-formu-listele">Başvuru Formu</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
 
-                        <li class="menu-title mt-2">Menu Setting</li>
+                        <li class="menu-title mt-2">Menü Ayarları</li>
                         <li>
                             <a href="#sidebarBaseui" data-bs-toggle="collapse">
                                 <i class="mdi mdi-briefcase-outline"></i>
-                                <span> Menu Setting </span>
+                                <span> Menü Ayarları </span>
                                 <span class="menu-arrow"></span>
                             </a>
                             <div class="collapse" id="sidebarBaseui">
                                 <ul class="nav-second-level">
                                     <li>
-                                        <a href="/admin/menu-kategori-ekle">Add Menu Category</a>
+                                        <a href="/admin/menu-kategori-ekle">Menü Kategori Ekle</a>
                                     </li>
                                     <li>
-                                        <a href="/admin/menu-kategori-listele">Menu Category List</a>
+                                        <a href="/admin/menu-kategori-listele">Menü Kategori Listele</a>
                                     </li>
                                     <li>
-                                        <a href="/admin/menu-ekle">Add Menu</a>
+                                        <a href="/admin/menu-ekle">Menü Ekle</a>
                                     </li>
                                     <li>
-                                        <a href="/admin/menu-listele">Menu List</a>
+                                        <a href="/admin/menu-listele">Menü Listele</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
-                        <li class="menu-title mt-2">Catering Setting</li>
+                        <li class="menu-title mt-2">Katring Ayarları</li>
                         <li>
                             <a href="#sidebarExtendedui" data-bs-toggle="collapse">
                                 <i class="mdi mdi-layers-outline"></i>
-                                <span> Catering Setting </span>
+                                <span> Katring Ayarları </span>
                                 <span class="menu-arrow"></span>
                             </a>
                             <div class="collapse" id="sidebarExtendedui">
                                 <ul class="nav-second-level">
                                     <li>
-                                        <a href="/admin/catering-ekle">Add Catering</a>
+                                        <a href="/admin/catering-ekle">Katring Ekle</a>
                                     </li>
                                     <li>
-                                        <a href="/admin/catering-listele">Catering List</a>
+                                        <a href="/admin/catering-listele">Katring Listele</a>
                                     </li>
                                     <li>
-                                        <a href="/admin/catering-menu-ekle">Add Catering Menu</a>
+                                        <a href="/admin/catering-menu-ekle">Katring Menü Ekle</a>
                                     </li>
                                     <li>
-                                        <a href="/admin/catering-menu-Listele">Catering Menu List</a>
+                                        <a href="/admin/catering-menu-Listele">Katring Menü Listele</a>
                                     </li>
                                 </ul>
                             </div>
                         </li>
-                        <li class="menu-title mt-2">Rezervation Setting</li>
+                        <li class="menu-title mt-2">Rezervasyon Ayarları</li>
 
                         <li>
                             <a href="#sidebarIcons" data-bs-toggle="collapse">
                                 <i class="mdi mdi-shield-outline"></i>
-                                <span> Rezervation </span>
+                                <span> Rezervasyon </span>
                                 <span class="menu-arrow"></span>
                             </a>
                             <div class="collapse" id="sidebarIcons">
                                 <ul class="nav-second-level">
                                     <li>
-                                        <a href="/admin/rezervasyon-ekle">Add Rezervation</a>
+                                        <a href="/admin/rezervasyon-ekle">Rezervasyon Ekle</a>
                                     </li>
                                     <li>
-                                        <a href="/admin/rezervasyon-listele">Rezervation List</a>
+                                        <a href="/admin/rezervasyon-listele">Rezervasyon Listele</a>
                                     </li>
                                 </ul>
                             </div>

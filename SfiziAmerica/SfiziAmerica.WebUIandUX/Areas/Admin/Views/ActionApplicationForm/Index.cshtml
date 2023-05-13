@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<SfiziAmerica.EntityLayer.Model.ApplicationForm>
 @{
-    ViewData["Title"] = "Application Form List";
+    ViewData["Title"] = "Başvuru Formu Listele";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 @section scripts{
@@ -10,17 +10,13 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="mt-0 header-title">Application Form List</h4>
+                <h4 class="mt-0 header-title">Başvuru Formu Listele</h4>
 
                 <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap">
                     <thead>
                         <tr>
-                            <th>Name Surname</th>
-                            <th>Email</th>
-                            <th>Phone</th>
-                            <th>Subject</th>
-                            <th>Create Date</th>
-                            <th>Update Date</th>
+                            <th>Adı soyadı</th>
+                            <th>Bilgi</th>
                             <th>Status</th>
                             <th>Read Status</th>
                             <th></th>
@@ -33,26 +29,22 @@
                         {
                             <tr>
                                 <td>@item.NameSurname</td>
-                                <td>@item.Email</td>
-                                <td>@item.Phone</td>
-                                <td>@item.Subject</td>
-                                <td>@item.CreateDate.ToShortDateString()</td>
-                                <td>@item.LastDate.ToShortDateString()</td>
+                                <td>@item.Email<br />@item.Phone</td>
                                 @if (item.IsActive)
                                 {
-                                    <td>Active</td>
+                                    <td>Aktif</td>
                                 }
                                 else
                                 {
-                                    <td>Passive</td>
+                                    <td>Pasif</td>
                                 }
                                 @if (item.IsRead)
                                 {
-                                    <td>Read</td>
+                                    <td>Okundu</td>
                                 }
                                 else
                                 {
-                                    <td>Unread</td>
+                                    <td>Okunmadı</td>
                                 }
                                 <td>
                                     <a href="/admin/basvuru-formu-detayi/@item.ID" class="btn btn-sm btn-warning"><i class='fa fa-eye'></i></a>

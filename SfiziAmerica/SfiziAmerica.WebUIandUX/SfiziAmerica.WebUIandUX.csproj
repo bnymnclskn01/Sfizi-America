@@ -35,7 +35,7 @@
 
   <ItemGroup>
     <Folder Include="Models\ViewDTO\" />
-    <Folder Include="wwwroot\Image\" />
+    <Folder Include="wwwroot\Image\Logo\" />
   </ItemGroup>
 
   <ItemGroup>

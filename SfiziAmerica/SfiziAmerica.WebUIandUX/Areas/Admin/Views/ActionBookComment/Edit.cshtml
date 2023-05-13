@@ -1,6 +1,6 @@
 ﻿@model SfiziAmerica.WebUIandUX.Areas.Admin.ViewModel.updateBookCommentViewModel
 @{
-    ViewData["Title"] = "Update New Customer Comment";
+    ViewData["Title"] = "Yorum Güncelleme";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 @section scripts{
@@ -10,33 +10,29 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="header-title">Update New Customer Comment</h4>
+                <h4 class="header-title">Yorum Güncelleme</h4>
                 <div class="row">
                     <div class="col-lg-12">
                         <form id="form-submit">
                             <input hidden name="ID" value="@Model.BookComment.ID" />
                             <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Picture</label>
-                                <img src="/Image/BookComment/@Model.BookComment.ImageUrl" width="50" />
+                                <label for="simpleinput" class="form-label">Adı Soyadı</label>
+                                <input readonly value="@Model.BookComment.NameSurname"  class="form-control" name="Title" type="text">
                             </div>
                             <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Name Surname</label>
-                                <input readonly value="@Model.BookComment.NameSurname" class="form-control" name="Title" type="text">
-                            </div>
-                            <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Phone</label>
+                                <label for="simpleinput" class="form-label">Telefon</label>
                                 <input readonly value="@Model.BookComment.Phone" class="form-control" name="Phone" type="text">
                             </div>
                             <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Email</label>
+                                <label for="simpleinput" class="form-label">E-posta</label>
                                 <input readonly value="@Model.BookComment.Email" class="form-control" name="Email" type="text">
                             </div>
                             <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Short Description</label>
-                                <textarea class="form-control" name="ShortDescription">@Model.BookComment.Message</textarea>
+                                <label for="simpleinput" class="form-label">Yorum</label>
+                                <textarea class="form-control" readonly name="ShortDescription">@Model.BookComment.Message</textarea>
                             </div>
                             <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Status</label>
+                                <label for="simpleinput" class="form-label">Statü</label>
                                 <select required name="IsActive" class="form-select">
                                     @if (Model.BookComment.IsActive == true)
                                     {

@@ -1,6 +1,6 @@
 ﻿@model SfiziAmerica.WebUIandUX.Areas.Admin.ViewModel.updateAboutViewModel
 @{
-    ViewData["Title"] = "Update New About";
+    ViewData["Title"] = "Yeni Hakkımızda Güncelle";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 @section scripts{
@@ -20,23 +20,23 @@
                         <form id="form-submit">
                             <input hidden name="ID" value="@Model.About.ID" />
                             <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Picture</label>
+                                <label for="simpleinput" class="form-label">Resim</label>
                                 <input type="file" class="form-control" name="ImageUrl" accept="image/*">
                             </div>
                             <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Title</label>
+                                <label for="simpleinput" class="form-label">Başlık</label>
                                 <input required value="@Model.About.Title" class="form-control" name="Title" type="text">
                             </div>
                             <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Short Description</label>
+                                <label for="simpleinput" class="form-label">Kısa Açıklama</label>
                                 <textarea class="form-control" name="ShortDescription">@Model.About.ShortDescription</textarea>
                             </div>
                             <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Description</label>
+                                <label for="simpleinput" class="form-label">Açıklama</label>
                                 <textarea id="Description" class="form-control ckeditor" name="Description" required></textarea>
                             </div>
                             <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Status</label>
+                                <label for="simpleinput" class="form-label">Statü</label>
                                 <select required name="IsActive" class="form-select">
                                     @if (Model.About.IsActive == true)
                                     {
@@ -51,8 +51,8 @@
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <button type="submit" class="btn btn-outline-primary d-inline-block"><i class="fa fa-edit"></i> Update New About</button>
-                                <a href="/admin/hakkimizda-listele" class="btn btn-outline-dark"><i class="fa fa-reply-all"></i> Back To List</a>
+                                <button type="submit" class="btn btn-outline-primary d-inline-block"><i class="fa fa-edit"></i> Yeni Hakkımızda Güncelle</button>
+                                <a href="/admin/hakkimizda-listele" class="btn btn-outline-dark"><i class="fa fa-reply-all"></i> Listeye Geri Dön</a>
                             </div>
                         </form>
                     </div> <!-- end col -->

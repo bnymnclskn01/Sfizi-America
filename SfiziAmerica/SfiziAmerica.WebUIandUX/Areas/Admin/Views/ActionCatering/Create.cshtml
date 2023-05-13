@@ -1,6 +1,6 @@
 ﻿@model IList<SfiziAmerica.EntityLayer.Model.Catering>
 @{
-    ViewData["Title"] = "Add New Catering";
+    ViewData["Title"] = "Yeni Katring Ekle";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 @section scripts{
@@ -10,15 +10,15 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="header-title">Add New Catering</h4>
+                <h4 class="header-title">Yeni Katring Ekle</h4>
                 <div class="row">
                     <div class="col-lg-12">
                         <form id="form-submit">
                             <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Parent Catering</label>
+                                <label for="simpleinput" class="form-label">Alt Ketring</label>
                                 <select required name="parentCateringID" class="form-select">
-                                    <optgroup label="Please Select Catering (Not Required Field. If you do not want to choose a Sub-Catering you must set the selection No Sub-Catering)">
-                                        <option value="">No Sub-Catering</option>
+                                    <optgroup label="Lütfen İkram Seçiniz (Bu Alan Zorunlu Değildir. Alt Katring Seçmek İstemiyorsanız Alt Katring Yok seçeneğini seçmelisiniz)">
+                                        <option value="">Alt Katring Yok</option>
                                         @foreach (var item in Model.OrderBy(x => x.Rank))
                                         {
                                             <option value="@item.ID">@item.Title</option>
@@ -28,53 +28,53 @@
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Rank</label>
+                                <label for="simpleinput" class="form-label">Sıra</label>
                                 <input required class="form-control" name="Rank" type="number" placeholder="Please Enter Rank">
                             </div>
                             <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Picture</label>
+                                <label for="simpleinput" class="form-label">Resim</label>
                                 <input type="file" class="form-control" name="ImageUrl" required accept="image/*">
                             </div>
                             <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Title</label>
+                                <label for="simpleinput" class="form-label">Başlık</label>
                                 <input required class="form-control" name="Title" type="text" placeholder="Please Enter Catering Title">
                             </div>
                             <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Short Description</label>
+                                <label for="simpleinput" class="form-label">Kısa Açıklama</label>
                                 <textarea class="form-control" name="ShortDescription" placeholder="Please Enter Short Description"></textarea>
                             </div>
                             <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Description</label>
+                                <label for="simpleinput" class="form-label">Açıklama</label>
                                 <textarea id="Description" class="form-control ckeditor" name="Description" required placeholder="Please Enter Description"></textarea>
                             </div>
                             <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Status</label>
+                                <label for="simpleinput" class="form-label">Statü</label>
                                 <select required name="IsActive" class="form-select">
-                                    <option value="1">Active</option>
-                                    <option value="0">Passive</option>
+                                    <option value="1">Aktif</option>
+                                    <option value="0">Pasif</option>
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Main Status</label>
+                                <label for="simpleinput" class="form-label">Anasayfa'da Aktif Olsun mu?</label>
                                 <select required name="IsMainActive" class="form-select">
-                                    <option value="1">Show on homepage</option>
-                                    <option value="0">Remove from home page</option>
+                                    <option value="1">Evet</option>
+                                    <option value="0">Hayır</option>
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Seo Title</label>
+                                <label for="simpleinput" class="form-label">Sayfa Başlık</label>
                                 <input type="text" class="form-control" name="seoTitle" required maxlength="110" placeholder="Please Enter Seo Title" />
                             </div>
                             <div class="mb-3">
-                                <label for="simpleinput" class="col-md-2 col-form-label">Seo Keywords</label>
+                                <label for="simpleinput" class="col-md-2 col-form-label">Anahtar Kelime</label>
                                 <input type="text" class="form-control" name="seoKeywords" required maxlength="110" placeholder="Please Enter Seo Keywords" />
                             </div>
                             <div class="mb-3">
-                                <label for="simpleinput" class="col-md-2 col-form-label">Seo Description</label>
+                                <label for="simpleinput" class="col-md-2 col-form-label">Sayfa Açıklaması</label>
                                 <input type="text" class="form-control" name="seoDescription" required maxlength="170" placeholder="Please Enter Seo Description" />
                             </div>
                             <div class="mb-3">
-                                <label for="simpleinput" class="col-md-2 col-form-label">Seo Reply</label>
+                                <label for="simpleinput" class="col-md-2 col-form-label">İletişim Mail</label>
                                 <input type="email" class="form-control" name="seoReply" required maxlength="70" placeholder="Please Enter Seo Reply Trial: info@sfizi.com" />
                             </div>
                             <div class="mb-3">

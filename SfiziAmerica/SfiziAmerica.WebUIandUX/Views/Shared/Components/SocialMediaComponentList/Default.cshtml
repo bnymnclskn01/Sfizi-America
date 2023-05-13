@@ -1,0 +1,5 @@
+﻿@model IEnumerable<SfiziAmerica.EntityLayer.Model.SocialMedia>
+@foreach(var item in Model)
+{
+    <li><a href="@item.Url" target="_blank"><i class="@item.Icon"></i></a></li>
+}

@@ -1,49 +1,45 @@
 ﻿@model SfiziAmerica.WebUIandUX.Areas.Admin.ViewModel.updateBookCommentViewModel
 @{
-    ViewData["Title"] = "Customer Comment Details";
+    ViewData["Title"] = "Müşteri Yorum Detayı";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 <div class="row">
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="header-title">Customer Comment Details</h4>
+                <h4 class="header-title">Müşteri Yorum Detayı</h4>
                 <div class="row">
                     <div class="col-lg-12">
                         <form id="form-submit">
                             <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Picture</label>
-                                <img src="/Image/BookComment/@Model.BookComment.ImageUrl" width="50" />
-                            </div>
-                            <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Name Surname</label>
+                                <label for="simpleinput" class="form-label">Adı Soyadı</label>
                                 <hr /><label for="simpleinput" class="form-label">@Model.BookComment.NameSurname</label>
                             </div>
                             <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Phone</label>
+                                <label for="simpleinput" class="form-label">Telefon</label>
                                 <hr /><label for="simpleinput" class="form-label">@Model.BookComment.Phone</label>
                             </div>
                             <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Email</label>
+                                <label for="simpleinput" class="form-label">E-posta</label>
                                 <hr /><label for="simpleinput" class="form-label">@Model.BookComment.Email</label>
                             </div>
                             <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Short Description</label>
+                                <label for="simpleinput" class="form-label">Yorum</label>
                                 <hr /><label for="simpleinput" class="form-label">@Model.BookComment.Message</label>
                             </div>
                             <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Status</label><hr />
+                                <label for="simpleinput" class="form-label">Statü</label><hr />
                                 @if (Model.BookComment.IsActive == true)
                                 {
-                                    <label for="simpleinput" class="form-label">Active</label>
+                                    <label for="simpleinput" class="form-label">Aktif</label>
                                 }
                                 else
                                 {
-                                   <label for="simpleinput" class="form-label">Passive</label>
+                                   <label for="simpleinput" class="form-label">Pasif</label>
                                 }
                             </div>
                             <div class="mb-3">
-                                <a href="/admin/musteri-yorumlari-listele" class="btn btn-outline-dark"><i class="fa fa-reply-all"></i> Back To List</a>
+                                <a href="/admin/musteri-yorumlari-listele" class="btn btn-outline-dark"><i class="fa fa-reply-all"></i> Listeye Geri Dön</a>
                             </div>
                         </form>
                     </div> <!-- end col -->

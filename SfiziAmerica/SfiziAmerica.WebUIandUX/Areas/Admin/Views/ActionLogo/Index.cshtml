@@ -18,9 +18,9 @@
                             <th>Başlık</th>
                             <th>Logo</th>
                             <th>Alt Etiket</th>
-                            <th>Create Date</th>
-                            <th>Update Date</th>
-                            <th>Status</th>
+                            <th>Ekleme Tarih</th>
+                            <th>Güncelleme Tarih</th>
+                            <th>Statü</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -37,11 +37,11 @@
                                 <td>@item.LastDate.ToShortDateString()</td>
                                 @if (item.IsActive)
                                 {
-                                    <td>Active</td>
+                                    <td>Aktif</td>
                                 }
                                 else
                                 {
-                                    <td>Passive</td>
+                                    <td>Pasif</td>
                                 }
                                 <td>
                                     <a href="/admin/logo-guncelle/@item.ID" class="btn btn-sm btn-primary"><i class='fa fa-edit'></i></a>

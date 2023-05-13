@@ -1,60 +1,60 @@
 ﻿@model SfiziAmerica.EntityLayer.Model.ApplicationForm
 @{
-    ViewData["Title"] = "Application Form Details";
+    ViewData["Title"] = "Başvuru Form Detayı";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 <div class="row">
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="header-title">Application Form Details</h4>
+                <h4 class="header-title">Başvuru Form Detayı</h4>
                 <div class="row">
                     <div class="col-lg-12">
                         <form id="form-submit">
                             <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Name Surname</label><hr />
+                                <label for="simpleinput" class="form-label">Adı Soyadı</label><hr />
                                 <label for="simpleinput" class="form-label">@Model.NameSurname</label>
                             </div>
                             <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Subject</label><hr />
+                                <label for="simpleinput" class="form-label">Konu</label><hr />
                                 <label for="simpleinput" class="form-label">@Model.Subject</label>
                             </div>
                             <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Phone</label><hr />
+                                <label for="simpleinput" class="form-label">Telefon</label><hr />
                                 <label for="simpleinput" class="form-label">@Model.Phone</label>
                             </div>
                             <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Email</label><hr />
+                                <label for="simpleinput" class="form-label">E-posta</label><hr />
                                 <label for="simpleinput" class="form-label">@Model.Email</label>
                             </div>
                             <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Message</label><hr />
+                                <label for="simpleinput" class="form-label">Mesaj</label><hr />
                                 <label for="simpleinput" class="form-label">@Model.Message</label>
                             </div>
                             <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Status</label>
+                                <label for="simpleinput" class="form-label">Statü</label>
                                 @if (Model.IsActive == true)
                                 {
-                                    <label for="simpleinput" class="form-label">Active</label>
+                                    <label for="simpleinput" class="form-label">Akif</label>
                                 }
                                 else
                                 {
-                                    <label for="simpleinput" class="form-label">Passive</label>
+                                    <label for="simpleinput" class="form-label">Pasif</label>
                                 }
                             </div>
                             <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Read</label>
+                                <label for="simpleinput" class="form-label">Okunma Durumu</label>
                                 @if (Model.IsRead == true)
                                 {
-                                    <label for="simpleinput" class="form-label">Read</label>
+                                    <label for="simpleinput" class="form-label">Okundu</label>
                                 }
                                 else
                                 {
-                                    <label for="simpleinput" class="form-label">Unread</label>
+                                    <label for="simpleinput" class="form-label">Okunmadı</label>
                                 }
                             </div>
                             <div class="mb-3">
-                                <a href="/admin/basvuru-formu-listele" class="btn btn-outline-dark"><i class="fa fa-reply-all"></i> Back To List</a>
+                                <a href="/admin/basvuru-formu-listele" class="btn btn-outline-dark"><i class="fa fa-reply-all"></i> Listeye Geri Dön</a>
                             </div>
                         </form>
                     </div> <!-- end col -->

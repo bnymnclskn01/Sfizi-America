@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<SfiziAmerica.EntityLayer.Model.BookComment>
 @{
-    ViewData["Title"] = "Customer Comment List";
+    ViewData["Title"] = "Müşteri Yorum Listesi";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
 @section scripts{
@@ -10,16 +10,15 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="mt-0 header-title">Customer Comment List</h4>
+                <h4 class="mt-0 header-title">Müşteri Yorum Listesi</h4>
 
                 <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap">
                     <thead>
                         <tr>
-                            <th>Status</th>
-                            <th>Image</th>
-                            <th>Name Surname</th>
-                            <th>Phone</th>
-                            <th>Email</th>
+                            <th>Statü</th>
+                            <th>Adı Soyadı</th>
+                            <th>Telefon</th>
+                            <th>E-posta</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -35,9 +34,8 @@
                                 }
                                 else
                                 {
-                                    <td>Passive</td>
+                                    <td>Pasif</td>
                                 }
-                                <td><img src="/Image/BookComment/@item.ImageUrl" width="100" /></td>
                                 <td>@item.NameSurname</td>
                                 <td>@item.Phone</td>
                                 <td>@item.Email</td>

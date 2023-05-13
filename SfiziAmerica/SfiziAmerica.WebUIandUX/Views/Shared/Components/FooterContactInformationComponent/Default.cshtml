@@ -1,0 +1,7 @@
+﻿@model SfiziAmerica.EntityLayer.Model.ContactInformation
+@if(Model != null)
+{
+    <li><span>Call :</span><a href="@Model.Phone">+@Model.Phone</a></li>
+    <li><span>Write  :</span><a href="mailto:@Model.Email">@Model.Email</a></li>
+    <li><span>Find us : </span><a href="">@Model.Address</a></li>
+}

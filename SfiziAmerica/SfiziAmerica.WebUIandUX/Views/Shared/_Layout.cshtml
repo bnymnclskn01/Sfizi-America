@@ -32,10 +32,7 @@
                         <div class="footer-social">
                             <span class="footer-social-title">Follow us :</span>
                             <ul>
-                                <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fab fa-vk"></i></a></li>
+                                @await Component.InvokeAsync("SocialMediaComponentList")
                             </ul>
                         </div>
                     </div>
@@ -46,10 +43,7 @@
                             <div class="col-md-6">
                                 <div class="footer-widget">
                                     <div class="footer-widget-title">About us</div>
-                                    <div class="footer-widget-content">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eaque ipsa quae ab illo inventore veritatis et quasi architecto. </p>
-                                        <a href="about.html" class="footer-widget-content-link">Read more</a>
-                                    </div>
+                                    @await Component.InvokeAsync("FooterAboutCoımponent")
                                 </div>
                             </div>
                             <!-- footer-widget  end-->
@@ -60,12 +54,10 @@
                                     <div class="footer-widget-content">
                                         <div class="footer-contacts footer-box fl-wrap">
                                             <ul>
-                                                <li><span>Call :</span><a href="#">+489756412322</a> , <a href="#">+56897456123</a></li>
-                                                <li><span>Write  :</span><a href="#">yourmail@domain.com</a></li>
-                                                <li><span>Find us : </span><a href="#">USA 27TH Brooklyn NY</a></li>
+                                                @await Component.InvokeAsync("FooterContactInformationComponent")
                                             </ul>
                                         </div>
-                                        <a href="contacts.html" class="footer-widget-content-link">Get in Touch</a>
+                                        <a href="/contact" class="footer-widget-content-link">Get in Touch</a>
                                     </div>
                                 </div>
                             </div>
