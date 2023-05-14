@@ -459,3 +459,12 @@ C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIand
 C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\SfiziAmerica.WebUIandUX.pdb
 C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\SfiziAmerica.WebUIandUX.genruntimeconfig.cache
 C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\ref\SfiziAmerica.WebUIandUX.dll
+C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\Razor\Areas\Admin\Views\ActionLogo\Create.cshtml.g.cs
+C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\Razor\Areas\Admin\Views\ActionLogo\Edit.cshtml.g.cs
+C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\Razor\Areas\Admin\Views\ActionLogo\Index.cshtml.g.cs
+C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\Razor\Views\Shared\Components\FooterAboutCoımponent\Default.cshtml.g.cs
+C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\Razor\Views\Shared\Components\FooterContactInformationComponent\Default.cshtml.g.cs
+C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\Razor\Views\Shared\Components\FooterLogoComponent\Default.cshtml.g.cs
+C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\Razor\Views\Shared\Components\HeaderAboutComponent\Default.cshtml.g.cs
+C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\Razor\Views\Shared\Components\HeadLogoComponent\Default.cshtml.g.cs
+C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\Razor\Views\Shared\Components\SocialMediaComponentList\Default.cshtml.g.cs

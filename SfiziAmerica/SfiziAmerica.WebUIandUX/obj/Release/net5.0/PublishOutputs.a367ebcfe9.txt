@@ -2516,6 +2516,7 @@ C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIand
 C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\PubTmp\Out\wwwroot\PageJs\addContactInformation.js
 C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\PubTmp\Out\wwwroot\PageJs\addCustomerSigin.js
 C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\PubTmp\Out\wwwroot\PageJs\addEvent.js
+C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\PubTmp\Out\wwwroot\PageJs\addLogo.js
 C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\PubTmp\Out\wwwroot\PageJs\addMailSetting.js
 C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\PubTmp\Out\wwwroot\PageJs\addMenu.js
 C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\PubTmp\Out\wwwroot\PageJs\addMenuCategory.js
@@ -2537,6 +2538,7 @@ C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIand
 C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\PubTmp\Out\wwwroot\PageJs\event.js
 C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\PubTmp\Out\wwwroot\PageJs\hrForm.js
 C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\PubTmp\Out\wwwroot\PageJs\login.js
+C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\PubTmp\Out\wwwroot\PageJs\logo.js
 C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\PubTmp\Out\wwwroot\PageJs\mailsetting.js
 C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\PubTmp\Out\wwwroot\PageJs\menu.js
 C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\PubTmp\Out\wwwroot\PageJs\menuCategory.js
@@ -2551,6 +2553,7 @@ C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIand
 C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\PubTmp\Out\wwwroot\PageJs\updateContactInformation.js
 C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\PubTmp\Out\wwwroot\PageJs\updateCustomerSigin.js
 C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\PubTmp\Out\wwwroot\PageJs\updateEvent.js
+C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\PubTmp\Out\wwwroot\PageJs\updateLogo.js
 C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\PubTmp\Out\wwwroot\PageJs\updateMailSetting.js
 C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\PubTmp\Out\wwwroot\PageJs\updateMenu.js
 C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\PubTmp\Out\wwwroot\PageJs\updateMenuCategory.js
