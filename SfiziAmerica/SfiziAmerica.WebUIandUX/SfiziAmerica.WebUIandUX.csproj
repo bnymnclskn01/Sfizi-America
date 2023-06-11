@@ -36,6 +36,7 @@
   <ItemGroup>
     <Folder Include="Models\ViewDTO\" />
     <Folder Include="wwwroot\Image\Logo\" />
+    <Folder Include="wwwroot\Pdf\Resume\" />
   </ItemGroup>
 
   <ItemGroup>

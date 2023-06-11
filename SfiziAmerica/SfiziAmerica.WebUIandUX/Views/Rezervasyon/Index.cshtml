@@ -3,102 +3,184 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<!-- content  -->
 <div class="content">
-    <section class=" no-padding dark-bg hidden-section">
-        <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d326.43197183807376!2d-77.1801572318595!3d38.88826666290216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b4c5ae132f8b%3A0x1ff6ab87d1b1b9c!2sSfizi%20Cafe!5e0!3m2!1str!2str!4v1673493615219!5m2!1str!2str" width="100%" height="500" style="border:0; background-color: black;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <!-- map-view-wrap -->
-        <div class="map-view-wrap">
-            <div class="container">
-                <div class="map-view-wrap_item">
-                    <div class="contact-details">
-                        <h4>Contacts Details</h4>
-                        <ul>
-                            @foreach (var item in Model.ContactInformations)
-                            {
-                                <li><span><i class="fal fa-map-marked-alt"></i> Adress :</span> @item.Address</li>
-                                <li><span><i class="fal fa-phone-rotary"></i> Phone :</span> @item.Phone</li>
-                                <li><span><i class="fal fa-mailbox"></i> Mail :</span> @item.Email</li>
-                            }
-                        </ul>
-                    </div>
-                </div>
+    <!--  section  -->
+    <section class="parallax-section hero-section hidden-section" data-scrollax-parent="true">
+        <div class="bg par-elem " data-bg="/Site/images/bg/10.jpg" data-scrollax="properties: { translateY: '30%' }"></div>
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="section-title">
+                <h4>Enjoy your time in our restaurant with pleasure.</h4>
+                <h2>Contact our Restaurant.</h2>
+                <div class="dots-separator fl-wrap"><span></span></div>
             </div>
         </div>
-        <!--map-view-wrap end -->
+        <div class="hero-section-scroll">
+            <div class="mousey">
+                <div class="scroller"></div>
+            </div>
+        </div>
         <div class="brush-dec"></div>
     </section>
+    <!--  section  end-->
     <!--  section  -->
     <section class="hidden-section big-padding con-sec" data-scrollax-parent="true" id="sec3">
         <div class="container">
             <div class="row">
-                <div class="col-md-7">
+                <div class="col-md-12">
                     <div class="section-title text-align_left">
                         <h2>Get in touch</h2>
                         <div class="dots-separator fl-wrap"><span></span></div>
                     </div>
+                    <div class="text-block ">
+                        <p>
+                            If you want to make a reservation in our restaurant. You can apply for a reservation by filling out the form below.
+                        </p>
+                    </div>
                     <div class="contactform-wrap">
                         <div id="message"></div>
-                        <form class="custom-form">
-                            <fieldset>
-                                <div id="message2"></div>
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <input type="text" name="NameSurname" id="NameSurname" placeholder="Your Name Surname *" />
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input type="email" name="Email" placeholder="Email Address *" value="" />
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input type="tel" name="Phone" placeholder="Phone *" value="" />
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class=" fl-wrap">
-                                            <input type="text" name="Subject" placeholder="Your Subject *" />
+                        <form class="custom-form" action="/application-form" method="post">
+                            <div class="row">
+                                @if (ViewBag.Hata != null)
+                                {
+                                    <div class="col-sm-12" style="background-color:red">
+                                        <div class="alert alert-danger">
+                                            <p class="text-white">@ViewBag.Hata</p>
                                         </div>
                                     </div>
+                                    <hr />
+                                }
+                                @if (ViewBag.Mesaj != null)
+                                {
+                                    <div class="col-sm-12" style="background-color:palegreen">
+                                        <div class="alert alert-success">
+                                            <p class="text-black">@ViewBag.Mesaj</p>
+                                        </div>
+                                    </div>
+                                    <hr />
+                                }
+                               
+                                <div class="col-sm-6">
+                                    <label>Name Surname</label><hr />
+                                    <input type="text" name="NameSurname" placeholder="Your Name *" required />
                                 </div>
-                                <textarea name="Message" cols="40" rows="3" placeholder="Your Message:"></textarea>
-                                <div class="clearfix"></div>
-                                <button class="btn float-btn flat-btn color-bg" id="submit_cnt">Send Message <i class="fal fa-long-arrow-right"></i></button>
-                            </fieldset>
+                                <div class="col-sm-6">
+                                    <label>E-mail</label><hr />
+                                    <input type="email" name="Email" placeholder="Email Address *" required />
+                                </div>
+                                <div class="col-sm-12">
+                                    <label>Number of People</label><hr />
+                                    <div class=" fl-wrap">
+                                        <select name="Person" class="chosen-select no-search-select" required>
+                                            <optgroup label="Please select your subject to apply.">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <label>Select Time</label><hr />
+                                    <div class=" fl-wrap">
+                                        <select name="Time" class="chosen-select no-search-select" required>
+                                            <optgroup label="AM A CLCOK">
+                                                <option value="00:00 am">00:00 am</option>
+                                                <option value="00:30 am">00:30 am</option>
+                                                <option value="01:00 am">01:00 am</option>
+                                                <option value="01:30 am">01:30 am</option>
+                                                <option value="02:00 am">02:00 am</option>
+                                                <option value="02:30 am">02:30 am</option>
+                                                <option value="03:00 am">03:00 am</option>
+                                                <option value="03:30 am">03:30 am</option>
+                                                <option value="04:00 am">04:00 am</option>
+                                                <option value="04:30 am">04:30 am</option>
+                                                <option value="05:00 am">05:00 am</option>
+                                                <option value="05:30 am">05:30 am</option>
+                                                <option value="06:00 am">06:00 am</option>
+                                                <option value="06:30 am">06:30 am</option>
+                                                <option value="07:00 am">07:00 am</option>
+                                                <option value="07:30 am">07:30 am</option>
+                                                <option value="08:00 am">08:00 am</option>
+                                                <option value="08:30 am">08:30 am</option>
+                                                <option value="09:00 am">09:00 am</option>
+                                                <option value="09:30 am">09:30 am</option>
+                                                <option value="10:00 am">10:00 am</option>
+                                                <option value="10:30 am">10:30 am</option>
+                                                <option value="11:30 am">11:00 am</option>
+                                                <option value="11:30 am">11:30 am</option>
+                                            </optgroup>
+                                            <optgroup label="PM A CLOCK">
+                                                <option value="12:00 pm">12:00 pm</option>
+                                                <option value="12:30 pm">12:30 pm</option>
+                                                <option value="01:00 pm">01:00 pm</option>
+                                                <option value="01:30 pm">01:30 pm</option>
+                                                <option value="02:00 pm">02:00 pm</option>
+                                                <option value="02:30 pm">02:30 pm</option>
+                                                <option value="03:00 pm">03:00 pm</option>
+                                                <option value="03:30 pm">03:30 pm</option>
+                                                <option value="04:00 pm">04:00 pm</option>
+                                                <option value="04:30 pm">04:30 pm</option>
+                                                <option value="05:00 pm">05:00 pm</option>
+                                                <option value="05:30 pm">05:30 pm</option>
+                                                <option value="06:00 pm">06:00 pm</option>
+                                                <option value="06:30 pm">06:30 pm</option>
+                                                <option value="07:00 pm">07:00 pm</option>
+                                                <option value="07:30 pm">07:30 pm</option>
+                                                <option value="08:00 pm">08:00 pm</option>
+                                                <option value="08:30 pm">08:30 pm</option>
+                                                <option value="09:00 pm">09:00 pm</option>
+                                                <option value="09:30 pm">09:30 pm</option>
+                                                <option value="10:00 pm">10:00 pm</option>
+                                                <option value="10:30 pm">10:30 pm</option>
+                                                <option value="11:30 pm">11:00 pm</option>
+                                                <option value="11:30 pm">11:30 pm</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12">
+                                    <label>Table Type</label><hr />
+                                    <div class=" fl-wrap">
+                                        <select name="TableType" class="chosen-select no-search-select" required>
+                                            <optgroup label="Please select your subject to apply.">
+                                                <option value="In The Garden">In The Garden</option>
+                                                <option value="Inside The Restaurant">Inside The Restaurant</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>Date</label><hr />
+                                    <input type="date" class="form-control" name="Date" required />
+                                    <div class="clearfix"></div><br />
+                                </div>
+                                <div class="col-sm-6">
+                                    <label>Phone</label><hr />
+                                    <input type="text" maxlength="15" name="Phone" placeholder="Phone *" required />
+                                </div>
+                                <div class="col-sm-12">
+                                    <label>Message</label><hr />
+                                    <textarea name="Message" cols="40" rows="3" placeholder="Your Message:"></textarea>
+                                    <div class="clearfix"></div><br />
+                                </div>
+                            </div>
+                           
+                            <div class="g-recaptcha" data-sitekey="6Ldm9uciAAAAAHoTITQOTWp0gIhV8r92rY7Qb-wr"></div><br />
+                            <div class="clearfix"></div>
+                            <button class="btn float-btn flat-btn color-bg" id="submit_cnt">Send Application <i class="fal fa-long-arrow-right"></i></button>
                         </form>
                     </div>
                     <div class="section-dec sec-dec_top"></div>
-                </div>
-                <div class="col-md-5">
-                    <div class="column-text_inside fl-wrap dark-bg">
-                        <div class="column-text">
-                            <div class="section-title">
-                                <h4>Call For Reservations</h4>
-                                <h2>Opening Hours</h2>
-                                <div class="dots-separator fl-wrap"><span></span></div>
-                            </div>
-                            <div class="work-time fl-wrap">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <h3>Sunday to Tuesday</h3>
-                                        <div class="hours">
-                                            09:00<br>
-                                            22:00
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <h3>Friday to Saturday</h3>
-                                        <div class="hours">
-                                            11:00<br>
-                                            19:00
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="illustration_bg">
-                            <div class="bg" data-bg="/Site/images/bg/dec/6.png"></div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -107,6 +189,6 @@
         </div>
     </section>
     <!--  section end  -->
-    <div class="brush-dec2 brush-dec_bottom"></div>
+    <div class="section-dec sec-dec_top"></div>
+    <div class="wave-bg" data-scrollax="properties: { translateY: '-150px' }"></div>
 </div>
-<!-- content end  -->

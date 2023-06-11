@@ -1,0 +1,96 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="content">
+    <!--  section  -->
+    <section class="parallax-section hero-section hidden-section" data-scrollax-parent="true">
+        <div class="bg par-elem " data-bg="/Site/images/bg/10.jpg" data-scrollax="properties: { translateY: '30%' }"></div>
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="section-title">
+                <h4>Enjoy your time in our restaurant with pleasure.</h4>
+                <h2>HR Form our Restaurant.</h2>
+                <div class="dots-separator fl-wrap"><span></span></div>
+            </div>
+        </div>
+        <div class="hero-section-scroll">
+            <div class="mousey">
+                <div class="scroller"></div>
+            </div>
+        </div>
+        <div class="brush-dec"></div>
+    </section>
+    <!--  section  end-->
+    <!--  section  -->
+    <section class="hidden-section big-padding con-sec" data-scrollax-parent="true" id="sec3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-align_left">
+                        <h2>Get in touch</h2>
+                        <div class="dots-separator fl-wrap"><span></span></div>
+                    </div>
+                    <div class="text-block ">
+                        <p>
+                            Would you like to work with us? If you want to work with us, you can contact us by filling out the form below.
+                        </p>
+                    </div>
+                    <div class="contactform-wrap">
+                        <div id="message"></div>
+                        <form class="custom-form" action="/human-resources" method="post" enctype="multipart/form-data">
+                            <div class="row">
+                                @if (ViewBag.Hata != null)
+                                {
+                                    <div class="col-sm-12" style="background-color:red">
+                                        <div class="alert alert-danger">
+                                            <p class="text-white">@ViewBag.Hata</p>
+                                        </div>
+                                    </div>
+                                    <hr />
+                                }
+                                @if (ViewBag.Mesaj != null)
+                                {
+                                    <div class="col-sm-12" style="background-color:palegreen">
+                                        <div class="alert alert-success">
+                                            <p class="text-black">@ViewBag.Mesaj</p>
+                                        </div>
+                                    </div>
+                                    <hr />
+                                }
+                                <div class="col-sm-4">
+                                    <h3>Please Upload Resume(PDF)</h3>
+                                </div>
+                                <div class="col-sm-8"></div>
+                                <input type="file" placeholder="Resume" required />
+                                <div class="col-sm-6">
+                                    <input type="text" name="NameSurname" placeholder="Your Name *" required />
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="email" name="Email" placeholder="Email Address *" required />
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="text" maxlength="15" name="Phone" placeholder="Phone *" required />
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="text" name="Subject" placeholder="Subject *" required />
+                                </div>
+                            </div>
+                            <textarea name="Message" cols="40" rows="3" placeholder="Your Message:"></textarea>
+                            <div class="clearfix"></div><br />
+                            <div class="g-recaptcha" data-sitekey="6Ldm9uciAAAAAHoTITQOTWp0gIhV8r92rY7Qb-wr"></div><br />
+                            <div class="clearfix"></div>
+                            <button class="btn float-btn flat-btn color-bg" id="submit_cnt">Send HR Form <i class="fal fa-long-arrow-right"></i></button>
+                        </form>
+                    </div>
+                    <div class="section-dec sec-dec_top"></div>
+                </div>
+            </div>
+        </div>
+        <div class="section-bg">
+            <div class="bg" data-bg="/Site/images/bg/dec/section-bg.png"></div>
+        </div>
+    </section>
+    <!--  section end  -->
+    <div class="section-dec sec-dec_top"></div>
+    <div class="wave-bg" data-scrollax="properties: { translateY: '-150px' }"></div>
+</div>

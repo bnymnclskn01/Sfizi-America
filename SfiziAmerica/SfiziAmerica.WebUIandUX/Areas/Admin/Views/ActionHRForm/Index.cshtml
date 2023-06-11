@@ -15,14 +15,12 @@
                 <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap">
                     <thead>
                         <tr>
-                            <th>Name Surname</th>
-                            <th>Email</th>
-                            <th>Phone</th>
-                            <th>Subject</th>
-                            <th>Create Date</th>
-                            <th>Update Date</th>
-                            <th>Status</th>
-                            <th>Read Status</th>
+                            <th>Özgeçmiş</th>
+                            <th>Adı Soyadı</th>
+                            <th>E-posta</th>
+                            <th>Telefon</th>
+                            <th>Statü</th>
+                            <th>Okunma Durumu</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -32,27 +30,25 @@
                         @foreach (var item in Model)
                         {
                             <tr>
+                                <td><a href="/Pdf/Resume/@item.Resume" class="btn btn-outline-success"><i class="fa fa-file"></i>PDF</a></td>
                                 <td>@item.NameSurname</td>
                                 <td>@item.Email</td>
                                 <td>@item.Phone</td>
-                                <td>@item.Subject</td>
-                                <td>@item.CreateDate.ToShortDateString()</td>
-                                <td>@item.LastDate.ToShortDateString()</td>
                                 @if (item.IsActive)
                                 {
-                                    <td>Active</td>
+                                    <td>Aktif</td>
                                 }
                                 else
                                 {
-                                    <td>Passive</td>
+                                    <td>Pasif</td>
                                 }
                                 @if (item.IsRead)
                                 {
-                                    <td>Read</td>
+                                    <td>Okundu</td>
                                 }
                                 else
                                 {
-                                    <td>Unread</td>
+                                    <td>Okunmadı</td>
                                 }
                                 <td>
                                     <a href="/admin/hr-formu-detayi/@item.ID" class="btn btn-sm btn-warning"><i class='fa fa-eye'></i></a>

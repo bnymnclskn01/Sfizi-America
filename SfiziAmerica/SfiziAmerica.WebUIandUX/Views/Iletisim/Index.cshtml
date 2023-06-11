@@ -12,7 +12,7 @@
         <div class="container">
             <div class="section-title">
                 <h4>Enjoy your time in our restaurant with pleasure.</h4>
-                <h2>About our Restaurant</h2>
+                <h2>Contact our Restaurant</h2>
                 <div class="dots-separator fl-wrap"><span></span></div>
             </div>
         </div>
@@ -35,64 +35,64 @@
                     </div>
                     <div class="contactform-wrap">
                         <div id="message"></div>
-                        <form class="custom-form">
-                            <fieldset>
-                                <div id="message2"></div>
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <input type="text" name="NameSurname" id="NameSurname" placeholder="Your Name Surname *" />
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input type="email" name="Email" placeholder="Email Address *" value="" />
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input type="tel" name="Phone" placeholder="Phone *" value="" />
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class=" fl-wrap">
-                                            <input type="text" name="Subject" placeholder="Your Subject *" />
+                        <form class="custom-form" action="/contact" method="post">
+                            <div class="row">
+                                @if (ViewBag.Hata != null)
+                                {
+                                    <div class="col-sm-12" style="background-color:red">
+                                        <div class="alert alert-danger">
+                                            <p class="text-white">@ViewBag.Hata</p>
                                         </div>
                                     </div>
+                                    <hr />
+                                }
+                                @if (ViewBag.Mesaj != null)
+                                {
+                                    <div class="col-sm-12" style="background-color:palegreen">
+                                        <div class="alert alert-success">
+                                            <p class="text-black">@ViewBag.Mesaj</p>
+                                        </div>
+                                    </div>
+                                    <hr />
+                                }
+                                <div class="col-sm-6">
+                                    <input type="text" name="NameSurname" placeholder="Your Name *" required />
                                 </div>
-                                <textarea name="Message" cols="40" rows="3" placeholder="Your Message:"></textarea>
-                                <div class="clearfix"></div>
-                                <button class="btn float-btn flat-btn color-bg" id="submit_cnt">Send Message <i class="fal fa-long-arrow-right"></i></button>
-                            </fieldset>
+                                <div class="col-sm-6">
+                                    <input type="email" name="Email" placeholder="Email Address *" required />
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="text" maxlength="15" name="Phone" placeholder="Phone *" required />
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="text" maxlength="110" name="Subject" required placeholder="Subject*" />
+                                </div>
+                            </div>
+                            <textarea name="Message" cols="40" rows="3" placeholder="Your Message:"></textarea>
+                            <div class="clearfix"></div><br />
+                            <div class="g-recaptcha" data-sitekey="6Ldm9uciAAAAAHoTITQOTWp0gIhV8r92rY7Qb-wr"></div><br />
+                            <div class="clearfix"></div>
+                            <button class="btn float-btn flat-btn color-bg" id="submit_cnt">Send Contact us <i class="fal fa-long-arrow-right"></i></button>
                         </form>
                     </div>
                     <div class="section-dec sec-dec_top"></div>
                 </div>
                 <div class="col-md-5">
-                    <div class="column-text_inside fl-wrap dark-bg">
-                        <div class="column-text">
-                            <div class="section-title">
-                                <h4>Call For Reservations</h4>
-                                <h2>Opening Hours</h2>
-                                <div class="dots-separator fl-wrap"><span></span></div>
-                            </div>
-                            <div class="work-time fl-wrap">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <h3>Sunday to Tuesday</h3>
-                                        <div class="hours">
-                                            09:00<br>
-                                            22:00
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <h3>Friday to Saturday</h3>
-                                        <div class="hours">
-                                            11:00<br>
-                                            19:00
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="illustration_bg">
-                            <div class="bg" data-bg="/Site/images/bg/dec/6.png"></div>
+                    <!-- map-view-wrap -->
+                    <div class="map-view-wrap_item">
+                        <div class="contact-details">
+                            <h4>Contacts Details</h4>
+                            <ul>
+                                @if (ViewBag.contactInformation != null)
+                                {
+                                    <li><span><i class="fal fa-map-marked-alt"></i> Adress :</span> <a href="#">@ViewBag.contactInformation.Address</a></li>
+                                    <li><span><i class="fal fa-phone-rotary"></i> Phone :</span> <a href="tel:@ViewBag.contactInformation.Phone">@ViewBag.contactInformation.Phone</a></li>
+                                    <li><span><i class="fal fa-mailbox"></i> Mail :</span> <a href="mailto:@ViewBag.contactInformation.Email">@ViewBag.contactInformation.Email</a></li>
+                                }
+                            </ul>
                         </div>
                     </div>
+                    <!--map-view-wrap end -->
                 </div>
             </div>
         </div>
