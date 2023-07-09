@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Mapster;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SfiziAmerica.BusinessLayer.Repository.Concrete;
 using SfiziAmerica.DataAccessLayer.ModelContext;
@@ -27,6 +28,34 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.Controllers
             var model = await unitOfWork.bookCommentRepository.GetAllAsync();
             return View(model);
         }
+
+        [HttpGet]
+        [Route("admin/musteri-yorumlari-ekle")]
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Route("admin/musteri-yorumlari-ekle")]
+        public async Task<IActionResult> Create(AddBookCommentViewDTO addBookCommentViewDTO)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(new { errorMessage = "Please make sure you have entered the information correctly." });
+            BookComment bookComment = addBookCommentViewDTO.Adapt<BookComment>();
+            if (addBookCommentViewDTO.ImageUrl != null)
+            {
+                string imgPath = ImageHelper.CreateImage(addBookCommentViewDTO.ImageUrl, "BookComment");
+                if (imgPath == string.Empty)
+                    return BadRequest();
+                bookComment.ImageUrl = imgPath;
+            }
+            await unitOfWork.bookCommentRepository.AddAsync(bookComment);
+            await unitOfWork.SaveAsync();
+            return Ok();
+        }
+
 
         [Route("admin/musteri-yorumlari-detay/{id}")]
         public async Task<IActionResult> Details(Guid id)
