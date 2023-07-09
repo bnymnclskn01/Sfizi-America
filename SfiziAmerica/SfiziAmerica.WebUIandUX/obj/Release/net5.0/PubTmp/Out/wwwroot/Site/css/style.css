@@ -3254,7 +3254,9 @@ h4.cart-title {
 .custom-form textarea,
 .custom-form input[type="text"],
 .custom-form input[type=email],
-.custom-form input[type=password] {
+.custom-form input[type=password],
+.custom-form input[type=date],
+.custom-form input[type=tel]{
 	float: left;
 	border: none;
 	border: 1px solid #e1e1e1;
@@ -3406,10 +3408,9 @@ h4.cart-title {
 .map-view-wrap_item {
 	position:relative;
 	float:left;
-	width:350px;
+	width:100%;
 	background:#f9f9f9;
-	padding:25px 30px;
-	top:220px;
+	top:95px;
 }
 .map-view-wrap .container {
 	height:1px;

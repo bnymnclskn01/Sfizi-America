@@ -10,5 +10,7 @@ namespace SfiziAmerica.WebUIandUX.Areas.Admin.ViewDTO
         public string Phone { get; set; }
         public string Email { get; set; }
         public string Message { get; set; }
+        [Required]
+        public bool IsActive { get; set; }
     }
 }

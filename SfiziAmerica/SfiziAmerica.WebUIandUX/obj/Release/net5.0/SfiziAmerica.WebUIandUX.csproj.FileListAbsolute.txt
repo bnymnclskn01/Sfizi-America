@@ -468,3 +468,6 @@ C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIand
 C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\Razor\Views\Shared\Components\HeaderAboutComponent\Default.cshtml.g.cs
 C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\Razor\Views\Shared\Components\HeadLogoComponent\Default.cshtml.g.cs
 C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\Razor\Views\Shared\Components\SocialMediaComponentList\Default.cshtml.g.cs
+C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\Razor\Areas\Admin\Views\ActionBookComment\Create.cshtml.g.cs
+C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\Razor\Views\Basvuru\Index.cshtml.g.cs
+C:\Users\fnsss\Documents\GitHub\Sfizi-America\SfiziAmerica\SfiziAmerica.WebUIandUX\obj\Release\net5.0\Razor\Views\InsanKaynaklari\Index.cshtml.g.cs
