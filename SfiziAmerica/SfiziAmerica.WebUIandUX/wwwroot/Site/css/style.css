@@ -281,15 +281,14 @@ blockquote p {
 }
 .logo-holder {
 	float:left;
-	height:120px;
+	height:25px;
 	position:relative;
 	top:23px;
 	left:25px;
 }
 .logo-holder img {
 	width:auto;
-	margin-top:-20px;
-	height:65px;
+	height:25px;
 }
 .header-inner {
 	top:50px;
@@ -760,7 +759,7 @@ blockquote p {
 	float:left;
 	width:100%;
 	text-align:left;
-	padding:5px 7px;
+	padding:5px 15px;
 	font-size: 12px;
 }
 .dark-header .nav-holder nav li ul a{
@@ -800,8 +799,7 @@ footer.fixed-footer:before {
 	top:4px;
 }
 .footer-logo img {
-	height:65px;
-	margin-top:-20px;
+	height:25px;
 	width:auto;
 }
 .footer-top .lang-wrap {
@@ -3254,9 +3252,7 @@ h4.cart-title {
 .custom-form textarea,
 .custom-form input[type="text"],
 .custom-form input[type=email],
-.custom-form input[type=password],
-.custom-form input[type=date],
-.custom-form input[type=tel]{
+.custom-form input[type=password] {
 	float: left;
 	border: none;
 	border: 1px solid #e1e1e1;
@@ -3408,9 +3404,10 @@ h4.cart-title {
 .map-view-wrap_item {
 	position:relative;
 	float:left;
-	width:100%;
+	width:350px;
 	background:#f9f9f9;
-	top:95px;
+	padding:25px 30px;
+	top:220px;
 }
 .map-view-wrap .container {
 	height:1px;
@@ -4774,7 +4771,4 @@ section {
 		-webkit-background-size: cover;
 		background-position: center;
 	}
-}
-h5 p{
-	color:white;
 }
